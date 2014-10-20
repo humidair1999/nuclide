@@ -460,6 +460,7 @@ th {
 
   .gutters .span_12 {
     width: 100%; } }
+/*  GENERAL UTILITY STYLES AND CLASSES */
 /*  SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
 * {
   -webkit-box-sizing: border-box;
@@ -490,6 +491,49 @@ th {
   clear: both; }
 
 /*  FRAMEWORK IMPORTS : ATOMIC */
+.pos-r {
+  position: relative; }
+
+.pos-s {
+  position: static; }
+
+.pos-a {
+  position: absolute; }
+
+.pos-f {
+  position: fixed; }
+
+.trbl {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0; }
+
+.t {
+  top: 0; }
+
+.r {
+  right: 0; }
+
+.b {
+  bottom: 0; }
+
+.l {
+  left: 0; }
+
+.t-a {
+  top: auto; }
+
+.r-a {
+  right: auto; }
+
+.b-a {
+  bottom: auto; }
+
+.l-a {
+  left: auto; }
+
 .fl-st {
   float: left; }
 
@@ -498,6 +542,60 @@ th {
 
 .fl-n {
   float: none; }
+
+.d-b {
+  display: block; }
+
+.d-n {
+  display: none; }
+
+.d-i {
+  display: inline; }
+
+.d-ib {
+  display: inline-block; }
+
+.v-h {
+  visibility: hidden; }
+
+.v-v {
+  visibility: visible; }
+
+.ov-h {
+  overflow: hidden; }
+
+.ov-v {
+  overflow: visible; }
+
+.ov-s {
+  overflow: scroll; }
+
+.ov-a {
+  overflow: auto; }
+
+.ovx-h {
+  overflow-x: hidden; }
+
+.ovx-v {
+  overflow-x: visible; }
+
+.ovx-s {
+  overflow-x: scroll; }
+
+.ovx-a {
+  overflow-x: auto; }
+
+.ovy-h {
+  overflow-y: hidden; }
+
+.ovy-v {
+  overflow-y: visible; }
+
+.ovy-s {
+  overflow-y: scroll; }
+
+.ovy-a {
+  overflow-y: auto; }
 
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 

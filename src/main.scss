@@ -5,6 +5,8 @@
 
 @import 'grid';
 
+/*  GENERAL UTILITY STYLES AND CLASSES */
+
 /*  SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
 * { 
     -webkit-box-sizing: border-box;
@@ -40,6 +42,10 @@
 }
 
 /*  FRAMEWORK IMPORTS : ATOMIC */
-@import 'atoms/floats';
+@import 'atoms/position';
+@import 'atoms/float';
+@import 'atoms/display';
+@import 'atoms/visibility';
+@import 'atoms/overflow';
 
 /*  FRAMEWORK IMPORTS : MOLECULAR */
