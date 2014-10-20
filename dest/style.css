@@ -597,6 +597,54 @@ th {
 .ovy-a {
   overflow-y: auto; }
 
+.m-a {
+  margin: auto; }
+
+.mt-a {
+  margin-top: auto; }
+
+.mr-a {
+  margin-right: auto; }
+
+.mb-a {
+  margin-bottom: auto; }
+
+.ml-a {
+  margin-left: auto; }
+
+.mtb-a {
+  margin-top: auto;
+  margin-bottom: auto; }
+
+.mlr-a {
+  margin-left: auto;
+  margin-right: auto; }
+
+/* TODO: add calculated classes for numeric styles */
+.p-a {
+  padding: auto; }
+
+.pt-a {
+  padding-top: auto; }
+
+.pr-a {
+  padding-right: auto; }
+
+.pb-a {
+  padding-bottom: auto; }
+
+.pl-a {
+  padding-left: auto; }
+
+.ptb-a {
+  padding-top: auto;
+  padding-bottom: auto; }
+
+.plr-a {
+  padding-left: auto;
+  padding-right: auto; }
+
+/* TODO: add calculated classes for numeric styles */
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */
