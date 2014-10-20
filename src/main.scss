@@ -1,3 +1,4 @@
+/*  IMPORTS : LIBS AND VARIABLES */
 @import 'normalize';
 
 @import 'vars';
@@ -29,3 +30,16 @@
 .debug {
     border: 1px solid red;
 }
+
+/*  CLEARFIX
+    Used to clear containers containing floated elements */
+.cf:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/*  FRAMEWORK IMPORTS : ATOMIC */
+@import 'atoms/floats';
+
+/*  FRAMEWORK IMPORTS : MOLECULAR */

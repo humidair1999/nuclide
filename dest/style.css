@@ -1,3 +1,4 @@
+/*  IMPORTS : LIBS AND VARIABLES */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -480,5 +481,24 @@ th {
     Used for debugging layout issues */
 .debug {
   border: 1px solid red; }
+
+/*  CLEARFIX
+    Used to clear containers containing floated elements */
+.cf:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*  FRAMEWORK IMPORTS : ATOMIC */
+.fl-st {
+  float: left; }
+
+.fl-nd {
+  float: right; }
+
+.fl-n {
+  float: none; }
+
+/*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */
