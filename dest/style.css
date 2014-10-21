@@ -357,6 +357,7 @@ td,
 th {
   padding: 0; }
 
+/* TODO: add more color variables */
 /*  12 COLUMN : RESPONSIVE GRID SYSTEM
     DEVELOPER : DENIS LEBLANC
     URL : http://responsive.gs
@@ -1123,6 +1124,46 @@ th {
 .ta-j {
   text-align: justify; }
 
+/* BACKGROUND */
+.bg-n {
+  background: none; }
+
+.bgc-w {
+  background-color: white; }
+
+.bgc-b {
+  background-color: black; }
+
+.bgc-t {
+  background-color: transparent; }
+
+.bgc-pr {
+  background-color: #FF0000; }
+
+.bgc-ac {
+  background-color: #00FFFF; }
+
+.bgc-prlt {
+  background-color: #ffbfbf; }
+
+.bgc-aclt {
+  background-color: #bfffff; }
+
+/* TODO: add more mixed color options */
+/* COLOR */
+.c-w {
+  color: white; }
+
+.c-b {
+  color: black; }
+
+.c-pr {
+  color: #FF0000; }
+
+.c-ac {
+  color: #00FFFF; }
+
+/* TODO: add more mixed color options */
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */

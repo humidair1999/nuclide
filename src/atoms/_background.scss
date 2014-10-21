@@ -1,0 +1,12 @@
+/* BACKGROUND */
+
+.bg-n { background: none; }
+.bgc-w { background-color: white; }
+.bgc-b { background-color: black; }
+.bgc-t { background-color: transparent; }
+.bgc-pr { background-color: $color-primary; }
+.bgc-ac { background-color: $color-accent; }
+.bgc-prlt { background-color: mix($color-primary, white, 25%); }
+.bgc-aclt { background-color: mix($color-accent, white, 25%); }
+
+/* TODO: add more mixed color options */
