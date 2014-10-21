@@ -1,10 +1,12 @@
+> NOTE: nuclide is a work in progress! Many features still forthcoming!
+
 # nuclide
 
 A CSS framework for utilizing the Atomic design pattern
 
 ### How to use
 
-The source for nuclide is implemented in Sass.
+The source for nuclide is implemented in [Sass](http://sass-lang.com/).
 
 Assuming you have Sass installed via Rubygems, either compile the source Sass:
 
