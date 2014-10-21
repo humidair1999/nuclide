@@ -22,3 +22,10 @@ sass --watch src/main.scss:dest/style.css
 
 Alternatively, you can grab the compiled `style.css` in the `dest` directory and
 replace any unit values manually.
+
+### What's included
+
+- Basis for many styles and naming conventions from [nemophrost's atomic-css project](https://github.com/nemophrost/atomic-css)
+- [normalize.css](https://github.com/necolas/normalize.css)
+- [responsive grid system](http://responsive.gs/)
+- Snippets from [HTML5 Boilerplate](http://html5boilerplate.com/)
