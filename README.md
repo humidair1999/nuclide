@@ -4,6 +4,22 @@
 
 A CSS framework for utilizing the Atomic design pattern
 
+### Summary
+
+nuclide is a Sass-based CSS framework that attempts to follow Atomic CSS design
+conventions.
+
+Its emphasis is simplicity: it will not include fancy modals, form validation
+elements, and so on; leave those things to frameworks and libraries like
+Bootstrap and Foundation. nuclide offers a generalized set of classes to make
+quickly building rock-solid, mobile-first layouts a breeze, without bogging you
+down too much with the fancy widgets other libraries offer.
+
+nuclide will eventually contain both atomic and molecular units:
+
+- **atoms**, for providing individual styles with which you can compose elements
+- **molecules**, for providing pre-determined combinations of atoms, representing commonly-used sets of styles
+
 ### How to use
 
 The source for nuclide is implemented in [Sass](http://sass-lang.com/).
@@ -22,6 +38,11 @@ sass --watch src/main.scss:dest/style.css
 
 Alternatively, you can grab the compiled `style.css` in the `dest` directory and
 replace any unit values manually.
+
+### Browser support
+
+All styles and utility classes built into nuclide should work properly in IE8
+and above.
 
 ### What's included
 
