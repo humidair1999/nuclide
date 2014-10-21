@@ -29,3 +29,12 @@ replace any unit values manually.
 - [normalize.css](https://github.com/necolas/normalize.css)
 - [responsive grid system](http://responsive.gs/)
 - Snippets from [HTML5 Boilerplate](http://html5boilerplate.com/)
+
+### Atomic CSS resources
+
+- http://bradfrostweb.com/blog/post/atomic-web-design/
+- https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/
+- http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/
+- http://www.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/
+- http://krasimir.github.io/organic-css/
+- http://java.dzone.com/articles/atomic-css-tool-set
