@@ -1007,6 +1007,122 @@ th {
 .mah-1-1 {
   max-height: 100%; }
 
+/* TYPOGRAPHY */
+.fw-n {
+  font-weight: normal; }
+
+.fw-b {
+  font-weight: bold; }
+
+.fw-br {
+  font-weight: bolder; }
+
+.fw-lr {
+  font-weight: lighter; }
+
+.fw-1 {
+  font-weight: 100; }
+
+.fw-2 {
+  font-weight: 200; }
+
+.fw-3 {
+  font-weight: 300; }
+
+.fw-4 {
+  font-weight: 400; }
+
+.fw-5 {
+  font-weight: 500; }
+
+.fw-6 {
+  font-weight: 600; }
+
+.fw-7 {
+  font-weight: 700; }
+
+.fw-8 {
+  font-weight: 800; }
+
+.fs-n {
+  font-style: normal; }
+
+.fs-i {
+  font-style: italic; }
+
+.fz-xs {
+  font-size: 0.6em; }
+
+.fz-sm {
+  font-size: 0.6em; }
+
+.fz-md {
+  font-size: 0.6em; }
+
+.fz-lg {
+  font-size: 0.6em; }
+
+.fz-xl {
+  font-size: 0.6em; }
+
+.td-n {
+  text-decoration: none; }
+
+.td-u {
+  text-decoration: underline; }
+
+.td-l {
+  text-decoration: line-through; }
+
+.tt-u {
+  text-transform: uppercase; }
+
+.tt-n {
+  text-transform: none; }
+
+.tt-c {
+  text-transform: capitalize; }
+
+.tt-l {
+  text-transform: lowercase; }
+
+.lh-1 {
+  line-height: 1; }
+
+.whs-n {
+  white-space: normal; }
+
+.whs-p {
+  white-space: pre; }
+
+.whs-nw {
+  white-space: nowrap; }
+
+/* ALIGNMENT */
+.va-t {
+  vertical-align: top; }
+
+.va-m {
+  vertical-align: middle; }
+
+.va-bl {
+  vertical-align: baseline; }
+
+.va-b {
+  vertical-align: bottom; }
+
+.ta-st {
+  text-align: left; }
+
+.ta-nd {
+  text-align: right; }
+
+.ta-c {
+  text-align: center; }
+
+.ta-j {
+  text-align: justify; }
+
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */
