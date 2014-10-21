@@ -491,6 +491,7 @@ th {
   clear: both; }
 
 /*  FRAMEWORK IMPORTS : ATOMIC */
+/* POSITION */
 .pos-r {
   position: relative; }
 
@@ -534,6 +535,7 @@ th {
 .l-a {
   left: auto; }
 
+/* FLOAT */
 .fl-st {
   float: left; }
 
@@ -543,6 +545,7 @@ th {
 .fl-n {
   float: none; }
 
+/* DISPLAY */
 .d-b {
   display: block; }
 
@@ -555,12 +558,14 @@ th {
 .d-ib {
   display: inline-block; }
 
+/* VISIBILITY */
 .v-h {
   visibility: hidden; }
 
 .v-v {
   visibility: visible; }
 
+/* OVERFLOW */
 .ov-h {
   overflow: hidden; }
 
