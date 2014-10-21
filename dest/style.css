@@ -597,6 +597,7 @@ th {
 .ovy-a {
   overflow-y: auto; }
 
+/* MARGIN */
 .m-a {
   margin: auto; }
 
@@ -620,7 +621,29 @@ th {
   margin-left: auto;
   margin-right: auto; }
 
-/* TODO: add calculated classes for numeric styles */
+.m-xs {
+  margin: 2px; }
+
+.mt-xs {
+  margin-top: 2px; }
+
+.mr-xs {
+  margin-right: 2px; }
+
+.mb-xs {
+  margin-bottom: 2px; }
+
+.ml-xs {
+  margin-left: 2px; }
+
+.mtb-xs {
+  margin-top: 2px;
+  margin-bottom: 2px; }
+
+.mlr-xs {
+  margin-left: 2px;
+  margin-right: 2px; }
+
 .m-sm {
   margin: 4px; }
 
@@ -713,40 +736,7 @@ th {
   margin-left: 32px;
   margin-right: 32px; }
 
-/*
-._atomic-margin-set(@suffix, @margin) {
-    .m-@{suffix} { margin: @margin; }
-    .mt-@{suffix} { margin-top: @margin; }
-    .mr-@{suffix} { margin-right: @margin; }
-    .mb-@{suffix} { margin-bottom: @margin; }
-    .ml-@{suffix} { margin-left: @margin; }
-    .mtb-@{suffix} {
-        margin-left: @margin;
-        margin-bottom: @margin;
-    }
-    .mlr-@{suffix} {
-        margin-left: @margin;
-        margin-right: @margin;
-    }
-}
-
-.atomic-margin-set(@n) {
-    ._atomic-margin-set(@n, @n*@atomic-spacing-base-unit);
-}
-
-.atomic-fractional-margin-set(@numerator, @denominator) {
-    ._atomic-margin-set(~"@{numerator}-@{denominator}", floor(@numerator*@atomic-spacing-base-unit/@denominator));
-}
-
-.atomic-margin-set(0);
-.atomic-margin-set(1);
-.atomic-margin-set(2);
-.atomic-margin-set(3);
-.atomic-fractional-margin-set(1,2);
-.atomic-fractional-margin-set(1,3);
-.atomic-fractional-margin-set(1,4);
-.atomic-fractional-margin-set(2,3);
-*/
+/* PADDING */
 .p-a {
   padding: auto; }
 
@@ -770,7 +760,121 @@ th {
   padding-left: auto;
   padding-right: auto; }
 
-/* TODO: add calculated classes for numeric styles */
+.p-xs {
+  padding: 2px; }
+
+.pt-xs {
+  padding-top: 2px; }
+
+.pr-xs {
+  padding-right: 2px; }
+
+.pb-xs {
+  padding-bottom: 2px; }
+
+.pl-xs {
+  padding-left: 2px; }
+
+.ptb-xs {
+  padding-top: 2px;
+  padding-bottom: 2px; }
+
+.plr-xs {
+  padding-left: 2px;
+  padding-right: 2px; }
+
+.p-sm {
+  padding: 4px; }
+
+.pt-sm {
+  padding-top: 4px; }
+
+.pr-sm {
+  padding-right: 4px; }
+
+.pb-sm {
+  padding-bottom: 4px; }
+
+.pl-sm {
+  padding-left: 4px; }
+
+.ptb-sm {
+  padding-top: 4px;
+  padding-bottom: 4px; }
+
+.plr-sm {
+  padding-left: 4px;
+  padding-right: 4px; }
+
+.p-md {
+  padding: 8px; }
+
+.pt-md {
+  padding-top: 8px; }
+
+.pr-md {
+  padding-right: 8px; }
+
+.pb-md {
+  padding-bottom: 8px; }
+
+.pl-md {
+  padding-left: 8px; }
+
+.ptb-md {
+  padding-top: 8px;
+  padding-bottom: 8px; }
+
+.plr-md {
+  padding-left: 8px;
+  padding-right: 8px; }
+
+.p-lg {
+  padding: 16px; }
+
+.pt-lg {
+  padding-top: 16px; }
+
+.pr-lg {
+  padding-right: 16px; }
+
+.pb-lg {
+  padding-bottom: 16px; }
+
+.pl-lg {
+  padding-left: 16px; }
+
+.ptb-lg {
+  padding-top: 16px;
+  padding-bottom: 16px; }
+
+.plr-lg {
+  padding-left: 16px;
+  padding-right: 16px; }
+
+.p-xl {
+  padding: 32px; }
+
+.pt-xl {
+  padding-top: 32px; }
+
+.pr-xl {
+  padding-right: 32px; }
+
+.pb-xl {
+  padding-bottom: 32px; }
+
+.pl-xl {
+  padding-left: 32px; }
+
+.ptb-xl {
+  padding-top: 32px;
+  padding-bottom: 32px; }
+
+.plr-xl {
+  padding-left: 32px;
+  padding-right: 32px; }
+
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */

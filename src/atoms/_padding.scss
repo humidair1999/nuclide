@@ -1,3 +1,5 @@
+/* PADDING */
+
 .p-a {    padding: auto; }
 .pt-a {   padding-top: auto; }
 .pr-a {   padding-right: auto; }
@@ -12,4 +14,24 @@
     padding-right: auto;
 }
 
-/* TODO: add calculated classes for numeric styles */
+@mixin atomic-padding-set($suffix, $padding) {
+    .p-#{$suffix} { padding: $padding; }
+    .pt-#{$suffix} { padding-top: $padding; }
+    .pr-#{$suffix} { padding-right: $padding; }
+    .pb-#{$suffix} { padding-bottom: $padding; }
+    .pl-#{$suffix} { padding-left: $padding; }
+    .ptb-#{$suffix} {
+        padding-top: $padding;
+        padding-bottom: $padding;
+    }
+    .plr-#{$suffix} {
+        padding-left: $padding;
+        padding-right: $padding;
+    }
+}
+
+@include atomic-padding-set("xs", ($base-spacing-unit / 4));
+@include atomic-padding-set("sm", ($base-spacing-unit / 2));
+@include atomic-padding-set("md", $base-spacing-unit);
+@include atomic-padding-set("lg", ($base-spacing-unit * 2));
+@include atomic-padding-set("xl", ($base-spacing-unit * 4));

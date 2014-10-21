@@ -1,3 +1,5 @@
+/* MARGIN */
+
 .m-a {   margin: auto; }
 .mt-a {  margin-top: auto; }
 .mr-a {  margin-right: auto; }
@@ -11,8 +13,6 @@
     margin-left: auto;
     margin-right: auto;
 }
-
-/* TODO: add calculated classes for numeric styles */
 
 @mixin atomic-margin-set($suffix, $margin) {
     .m-#{$suffix} { margin: $margin; }
@@ -30,42 +30,8 @@
     }
 }
 
+@include atomic-margin-set("xs", ($base-spacing-unit / 4));
 @include atomic-margin-set("sm", ($base-spacing-unit / 2));
 @include atomic-margin-set("md", $base-spacing-unit);
 @include atomic-margin-set("lg", ($base-spacing-unit * 2));
 @include atomic-margin-set("xl", ($base-spacing-unit * 4));
-
-/*
-._atomic-margin-set(@suffix, @margin) {
-    .m-@{suffix} { margin: @margin; }
-    .mt-@{suffix} { margin-top: @margin; }
-    .mr-@{suffix} { margin-right: @margin; }
-    .mb-@{suffix} { margin-bottom: @margin; }
-    .ml-@{suffix} { margin-left: @margin; }
-    .mtb-@{suffix} {
-        margin-left: @margin;
-        margin-bottom: @margin;
-    }
-    .mlr-@{suffix} {
-        margin-left: @margin;
-        margin-right: @margin;
-    }
-}
-
-.atomic-margin-set(@n) {
-    ._atomic-margin-set(@n, @n*@atomic-spacing-base-unit);
-}
-
-.atomic-fractional-margin-set(@numerator, @denominator) {
-    ._atomic-margin-set(~"@{numerator}-@{denominator}", floor(@numerator*@atomic-spacing-base-unit/@denominator));
-}
-
-.atomic-margin-set(0);
-.atomic-margin-set(1);
-.atomic-margin-set(2);
-.atomic-margin-set(3);
-.atomic-fractional-margin-set(1,2);
-.atomic-fractional-margin-set(1,3);
-.atomic-fractional-margin-set(1,4);
-.atomic-fractional-margin-set(2,3);
-*/
