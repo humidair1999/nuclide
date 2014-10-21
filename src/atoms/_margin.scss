@@ -21,7 +21,7 @@
     .mb-#{$suffix} { margin-bottom: $margin; }
     .ml-#{$suffix} { margin-left: $margin; }
     .mtb-#{$suffix} {
-        margin-left: $margin;
+        margin-top: $margin;
         margin-bottom: $margin;
     }
     .mlr-#{$suffix} {
@@ -30,7 +30,10 @@
     }
 }
 
-@include atomic-margin-set("small", 1);
+@include atomic-margin-set("sm", ($base-spacing-unit / 2));
+@include atomic-margin-set("md", $base-spacing-unit);
+@include atomic-margin-set("lg", ($base-spacing-unit * 2));
+@include atomic-margin-set("xl", ($base-spacing-unit * 4));
 
 /*
 ._atomic-margin-set(@suffix, @margin) {

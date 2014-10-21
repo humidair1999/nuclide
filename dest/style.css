@@ -621,28 +621,97 @@ th {
   margin-right: auto; }
 
 /* TODO: add calculated classes for numeric styles */
-.m-small {
-  margin: 1; }
+.m-sm {
+  margin: 4px; }
 
-.mt-small {
-  margin-top: 1; }
+.mt-sm {
+  margin-top: 4px; }
 
-.mr-small {
-  margin-right: 1; }
+.mr-sm {
+  margin-right: 4px; }
 
-.mb-small {
-  margin-bottom: 1; }
+.mb-sm {
+  margin-bottom: 4px; }
 
-.ml-small {
-  margin-left: 1; }
+.ml-sm {
+  margin-left: 4px; }
 
-.mtb-small {
-  margin-left: 1;
-  margin-bottom: 1; }
+.mtb-sm {
+  margin-top: 4px;
+  margin-bottom: 4px; }
 
-.mlr-small {
-  margin-left: 1;
-  margin-right: 1; }
+.mlr-sm {
+  margin-left: 4px;
+  margin-right: 4px; }
+
+.m-md {
+  margin: 8px; }
+
+.mt-md {
+  margin-top: 8px; }
+
+.mr-md {
+  margin-right: 8px; }
+
+.mb-md {
+  margin-bottom: 8px; }
+
+.ml-md {
+  margin-left: 8px; }
+
+.mtb-md {
+  margin-top: 8px;
+  margin-bottom: 8px; }
+
+.mlr-md {
+  margin-left: 8px;
+  margin-right: 8px; }
+
+.m-lg {
+  margin: 16px; }
+
+.mt-lg {
+  margin-top: 16px; }
+
+.mr-lg {
+  margin-right: 16px; }
+
+.mb-lg {
+  margin-bottom: 16px; }
+
+.ml-lg {
+  margin-left: 16px; }
+
+.mtb-lg {
+  margin-top: 16px;
+  margin-bottom: 16px; }
+
+.mlr-lg {
+  margin-left: 16px;
+  margin-right: 16px; }
+
+.m-xl {
+  margin: 32px; }
+
+.mt-xl {
+  margin-top: 32px; }
+
+.mr-xl {
+  margin-right: 32px; }
+
+.mb-xl {
+  margin-bottom: 32px; }
+
+.ml-xl {
+  margin-left: 32px; }
+
+.mtb-xl {
+  margin-top: 32px;
+  margin-bottom: 32px; }
+
+.mlr-xl {
+  margin-left: 32px;
+  margin-right: 32px; }
 
 /*
 ._atomic-margin-set(@suffix, @margin) {
