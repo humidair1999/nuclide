@@ -13,3 +13,56 @@
 }
 
 /* TODO: add calculated classes for numeric styles */
+
+@mixin atomic-margin-set($suffix, $margin) {
+    .m-#{$suffix} { margin: $margin; }
+    .mt-#{$suffix} { margin-top: $margin; }
+    .mr-#{$suffix} { margin-right: $margin; }
+    .mb-#{$suffix} { margin-bottom: $margin; }
+    .ml-#{$suffix} { margin-left: $margin; }
+    .mtb-#{$suffix} {
+        margin-left: $margin;
+        margin-bottom: $margin;
+    }
+    .mlr-#{$suffix} {
+        margin-left: $margin;
+        margin-right: $margin;
+    }
+}
+
+@include atomic-margin-set("small", 1);
+
+/*
+._atomic-margin-set(@suffix, @margin) {
+    .m-@{suffix} { margin: @margin; }
+    .mt-@{suffix} { margin-top: @margin; }
+    .mr-@{suffix} { margin-right: @margin; }
+    .mb-@{suffix} { margin-bottom: @margin; }
+    .ml-@{suffix} { margin-left: @margin; }
+    .mtb-@{suffix} {
+        margin-left: @margin;
+        margin-bottom: @margin;
+    }
+    .mlr-@{suffix} {
+        margin-left: @margin;
+        margin-right: @margin;
+    }
+}
+
+.atomic-margin-set(@n) {
+    ._atomic-margin-set(@n, @n*@atomic-spacing-base-unit);
+}
+
+.atomic-fractional-margin-set(@numerator, @denominator) {
+    ._atomic-margin-set(~"@{numerator}-@{denominator}", floor(@numerator*@atomic-spacing-base-unit/@denominator));
+}
+
+.atomic-margin-set(0);
+.atomic-margin-set(1);
+.atomic-margin-set(2);
+.atomic-margin-set(3);
+.atomic-fractional-margin-set(1,2);
+.atomic-fractional-margin-set(1,3);
+.atomic-fractional-margin-set(1,4);
+.atomic-fractional-margin-set(2,3);
+*/
