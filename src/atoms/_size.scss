@@ -1,0 +1,18 @@
+/* SIZE */
+
+@mixin atomic-size-set($numerator, $denominator) {
+    .w-#{$numerator}-#{$denominator} {   width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .h-#{$numerator}-#{$denominator} {   height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .miw-#{$numerator}-#{$denominator} { min-width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mih-#{$numerator}-#{$denominator} { min-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .maw-#{$numerator}-#{$denominator} { max-width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mah-#{$numerator}-#{$denominator} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+}
+
+@include atomic-size-set(1, 6);
+@include atomic-size-set(1, 4);
+@include atomic-size-set(1, 3);
+@include atomic-size-set(1, 2);
+@include atomic-size-set(2, 3);
+@include atomic-size-set(5, 6);
+@include atomic-size-set(1, 1);
