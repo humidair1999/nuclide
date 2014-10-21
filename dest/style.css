@@ -1164,6 +1164,68 @@ th {
   color: #00FFFF; }
 
 /* TODO: add more mixed color options */
+/* OPACITY */
+.op-0 {
+  opacity: 0; }
+
+.op-2 {
+  opacity: 0.2; }
+
+.op-4 {
+  opacity: 0.4; }
+
+.op-6 {
+  opacity: 0.6; }
+
+.op-8 {
+  opacity: 0.8; }
+
+.op-10 {
+  opacity: 1; }
+
+/* OUTLINE */
+.ol-n {
+  outline: none; }
+
+/* BORDER */
+.bd-n {
+  border: none; }
+
+.bdcl-c {
+  border-collapse: collapse; }
+
+.bdrs-0 {
+  border-radius: 0; }
+
+.bdtrrs-0 {
+  border-top-right-radius: 0; }
+
+.bdtlrs-0 {
+  border-top-left-radius: 0; }
+
+.bdbrrs-0 {
+  border-bottom-right-radius: 0; }
+
+.bdblrs-0 {
+  border-bottom-left-radius: 0; }
+
+.bdtrs-0 {
+  border-top-right-radius: 0;
+  border-top-left-radius: 0; }
+
+.bdrrs-0 {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+
+.bdbrs-0 {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
+
+.bdlrs-0 {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+
+/* TODO: add more border styles and mixins for browser prefixes */
 /*  FRAMEWORK IMPORTS : MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */
