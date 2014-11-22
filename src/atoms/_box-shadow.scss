@@ -1,0 +1,7 @@
+/* BOX-SHADOW */
+
+/* TODO: use real values! */
+.bxsh { box-shadow: inset hoff voff blur color; }
+.bxsh-r { box-shadow: inset hoff voff blur spread rgb(0, 0, 0); }
+.bxsh-ra { box-shadow: inset h v blur spread rgba(0, 0, 0, .5); }
+.bxsh-n { box-shadow: none; }

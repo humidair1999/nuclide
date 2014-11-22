@@ -16,8 +16,12 @@
 @import 'atoms/overflow';
 @import 'atoms/zoom';
 @import 'atoms/clip';
+@import 'atoms/resize';
+@import 'atoms/cursor';
 @import 'atoms/margin';
 @import 'atoms/padding';
+@import 'atoms/box-size';
+@import 'atoms/box-shadow';
 @import 'atoms/size';
 @import 'atoms/typography';
 @import 'atoms/alignment';
@@ -27,6 +31,5 @@
 @import 'atoms/outline';
 @import 'atoms/border';
 @import 'atoms/list';
-@import 'atoms/cursor';
 
 /*  FRAMEWORK IMPORTS : MOLECULAR */
