@@ -1,0 +1,35 @@
+/*  GENERAL UTILITY STYLES AND CLASSES */
+
+/*  SET ALL ELEMENTS TO BOX-SIZING : BORDER-BOX */
+* { 
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/*  MAIN CONTAINER 
+    Set the width to whatever you want the width of your site to be. */
+.container { 
+    max-width: $container-width;
+    margin: 0 auto; 
+}
+
+.container:after { 
+    content: ""; 
+    display: table; 
+    clear: both; 
+}
+
+/*  DEBUG STYLE
+    Used for debugging layout issues */
+.debug {
+    border: 1px solid red;
+}
+
+/*  CLEARFIX
+    Used to clear containers containing floated elements */
+.cf:after {
+    content: "";
+    display: table;
+    clear: both;
+}
