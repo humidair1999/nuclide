@@ -1370,8 +1370,14 @@ th {
   white-space: nowrap; }
 
 /* ALIGNMENT */
+.va-sup {
+  vertical-align: super; }
+
 .va-t {
   vertical-align: top; }
+
+.va-tt {
+  vertical-align: text-top; }
 
 .va-m {
   vertical-align: middle; }
@@ -1382,17 +1388,35 @@ th {
 .va-b {
   vertical-align: bottom; }
 
-.ta-st {
-  text-align: left; }
+.va-tb {
+  vertical-align: text-bottom; }
 
-.ta-nd {
-  text-align: right; }
+.va-sub {
+  vertical-align: sub; }
+
+.ta-l {
+  text-align: left; }
 
 .ta-c {
   text-align: center; }
 
+.ta-r {
+  text-align: right; }
+
 .ta-j {
   text-align: justify; }
+
+.tal-a {
+  text-align-last: auto; }
+
+.tal-l {
+  text-align-last: left; }
+
+.tal-c {
+  text-align-last: center; }
+
+.tal-r {
+  text-align-last: right; }
 
 /* BACKGROUND */
 .bg-n {
