@@ -1,16 +1,22 @@
 /* OVERFLOW */
 
-.ov-h { overflow: hidden; }
 .ov-v { overflow: visible; }
+.ov-h { overflow: hidden; }
 .ov-s { overflow: scroll; }
 .ov-a { overflow: auto; }
 
-.ovx-h { overflow-x: hidden; }
 .ovx-v { overflow-x: visible; }
+.ovx-h { overflow-x: hidden; }
 .ovx-s { overflow-x: scroll; }
 .ovx-a { overflow-x: auto; }
 
-.ovy-h { overflow-y: hidden; }
 .ovy-v { overflow-y: visible; }
+.ovy-h { overflow-y: hidden; }
 .ovy-s { overflow-y: scroll; }
 .ovy-a { overflow-y: auto; }
+
+.ovs-a { overflow-style:    auto; }
+.ovs-s { overflow-style:    scrollbar; }
+.ovs-p { overflow-style:    panner; }
+.ovs-m { overflow-style:    move; }
+.ovs-mq { overflow-style:   marquee; }
