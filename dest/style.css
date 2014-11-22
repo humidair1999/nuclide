@@ -688,6 +688,17 @@ th {
 .ovs-mq {
   overflow-style: marquee; }
 
+/* ZOOM */
+.zm {
+  zoom: 1; }
+
+/* CLIP */
+.cp-a {
+  clip: auto; }
+
+.cp-r {
+  clip: rect(0 0 0 0); }
+
 /* MARGIN */
 .m-a {
   margin: auto; }
