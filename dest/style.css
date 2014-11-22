@@ -1179,7 +1179,7 @@ th {
 .mah-1-1 {
   max-height: 100%; }
 
-/* TYPOGRAPHY */
+/* FONT */
 .fw-n {
   font-weight: normal; }
 
@@ -1222,6 +1222,15 @@ th {
 .fs-i {
   font-style: italic; }
 
+.fs-o {
+  font-style: oblique; }
+
+.fv-n {
+  font-variant: normal; }
+
+.fv-sc {
+  font-variant: small-caps; }
+
 .fz-xs {
   font-size: 0.6em; }
 
@@ -1236,6 +1245,96 @@ th {
 
 .fz-xl {
   font-size: 0.6em; }
+
+.fza-n {
+  font-size-adjust: none; }
+
+.ff-s {
+  font-family: serif; }
+
+.ff-ss {
+  font-family: sans-serif; }
+
+.ff-c {
+  font-family: cursive; }
+
+.ff-f {
+  font-family: fantasy; }
+
+.ff-m {
+  font-family: monospace; }
+
+.ff-a {
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+.fef-n {
+  font-effect: none; }
+
+.fef-eg {
+  font-effect: engrave; }
+
+.fef-eb {
+  font-effect: emboss; }
+
+.fef-o {
+  font-effect: outline; }
+
+.femp-b {
+  font-emphasize-position: before; }
+
+.femp-a {
+  font-emphasize-position: after; }
+
+.fems-n {
+  font-emphasize-style: none; }
+
+.fems-ac {
+  font-emphasize-style: accent; }
+
+.fems-dt {
+  font-emphasize-style: dot; }
+
+.fems-c {
+  font-emphasize-style: circle; }
+
+.fems-ds {
+  font-emphasize-style: disc; }
+
+.fsm-a {
+  font-smooth: auto; }
+
+.fsm-n {
+  font-smooth: never; }
+
+.fsm-aw {
+  font-smooth: always; }
+
+.fst-n {
+  font-stretch: normal; }
+
+.fst-uc {
+  font-stretch: ultra-condensed; }
+
+.fst-ec {
+  font-stretch: extra-condensed; }
+
+.fst-c {
+  font-stretch: condensed; }
+
+.fst-sc {
+  font-stretch: semi-condensed; }
+
+.fst-se {
+  font-stretch: semi-expanded; }
+
+.fst-e {
+  font-stretch: expanded; }
+
+.fst-ee {
+  font-stretch: extra-expanded; }
+
+.fst-ue {
+  font-stretch: ultra-expanded; }
 
 .td-n {
   text-decoration: none; }
