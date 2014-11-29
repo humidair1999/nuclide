@@ -1694,6 +1694,19 @@ th {
 .q-en {
   quotes: '\201C' '\201D' '\2018' '\2019'; }
 
+/* OUTLINE */
+.ol-n {
+  outline: none; }
+
+.olc-w {
+  outline-color: white; }
+
+.olc-b {
+  outline-color: black; }
+
+.olc-i {
+  outline-color: invert; }
+
 /* OPACITY */
 .op-0 {
   opacity: 0; }
@@ -1712,10 +1725,6 @@ th {
 
 .op-10 {
   opacity: 1; }
-
-/* OUTLINE */
-.ol-n {
-  outline: none; }
 
 /* BORDER */
 .bd-n {
