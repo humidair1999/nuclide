@@ -1707,6 +1707,25 @@ th {
 .olc-i {
   outline-color: invert; }
 
+/* TABLE */
+.tbl-a {
+  table-layout: auto; }
+
+.tbl-f {
+  table-layout: fixed; }
+
+.cps-t {
+  caption-side: top; }
+
+.cps-b {
+  caption-side: bottom; }
+
+.ec-s {
+  empty-cells: show; }
+
+.ec-h {
+  empty-cells: hide; }
+
 /* OPACITY */
 .op-0 {
   opacity: 0; }
