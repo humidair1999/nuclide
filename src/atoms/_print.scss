@@ -1,0 +1,14 @@
+/* PRINT */
+
+.pgbb-au { page-break-before: auto; }
+.pgbb-al { page-break-before: always; }
+.pgbb-l { page-break-before: left; }
+.pgbb-r { page-break-before: right; }
+
+.pgbi-au { page-break-inside: auto; }
+.pgbi-av { page-break-inside: avoid; }
+
+.pgba-au { page-break-after: auto; }
+.pgba-al { page-break-after: always; }
+.pgba-l { page-break-after: left; }
+.pgba-r { page-break-after: right; }
