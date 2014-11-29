@@ -1726,31 +1726,173 @@ th {
 .ec-h {
   empty-cells: hide; }
 
-/* OPACITY */
-.op-0 {
-  opacity: 0; }
-
-.op-2 {
-  opacity: 0.2; }
-
-.op-4 {
-  opacity: 0.4; }
-
-.op-6 {
-  opacity: 0.6; }
-
-.op-8 {
-  opacity: 0.8; }
-
-.op-10 {
-  opacity: 1; }
-
 /* BORDER */
 .bd-n {
   border: none; }
 
+.bdbk {
+  border-break: close; }
+
+.bdbk-c {
+  border-break: close; }
+
 .bdcl-c {
   border-collapse: collapse; }
+
+.bdcl-s {
+  border-collapse: separate; }
+
+/* TODO: add more border styles and mixins for browser prefixes */
+.bdc-t {
+  border-color: transparent; }
+
+.bdi-n {
+  border-image: none; }
+
+.bdti-n {
+  border-top-image: none; }
+
+.bdri-n {
+  border-right-image: none; }
+
+.bdbi-n {
+  border-bottom-image: none; }
+
+.bdli-n {
+  border-left-image: none; }
+
+.bdci-n {
+  border-corner-image: none; }
+
+.bdci-c {
+  border-corner-image: continue; }
+
+.bdtli-n {
+  border-top-left-image: none; }
+
+.bdtli-c {
+  border-top-left-image: continue; }
+
+.bdtri-n {
+  border-top-right-image: none; }
+
+.bdtri-c {
+  border-top-right-image: continue; }
+
+.bdbri-n {
+  border-bottom-right-image: none; }
+
+.bdbri-c {
+  border-bottom-right-image: continue; }
+
+.bdbli-n {
+  border-bottom-left-image: none; }
+
+.bdbli-c {
+  border-bottom-left-image: continue; }
+
+.bdf {
+  border-fit: repeat; }
+
+.bdf-c {
+  border-fit: clip; }
+
+.bdf-r {
+  border-fit: repeat; }
+
+.bdf-sc {
+  border-fit: scale; }
+
+.bdf-st {
+  border-fit: stretch; }
+
+.bdf-ow {
+  border-fit: overwrite; }
+
+.bdf-of {
+  border-fit: overflow; }
+
+.bdf-sp {
+  border-fit: space; }
+
+.bdlen-a {
+  border-length: auto; }
+
+.bds-n {
+  border-style: none; }
+
+.bds-h {
+  border-style: hidden; }
+
+.bds-dt {
+  border-style: dotted; }
+
+.bds-ds {
+  border-style: dashed; }
+
+.bds-s {
+  border-style: solid; }
+
+.bds-db {
+  border-style: double; }
+
+.bds-dtds {
+  border-style: dot-dash; }
+
+.bds-dtdtds {
+  border-style: dot-dot-dash; }
+
+.bds-w {
+  border-style: wave; }
+
+.bds-g {
+  border-style: groove; }
+
+.bds-r {
+  border-style: ridge; }
+
+.bds-i {
+  border-style: inset; }
+
+.bds-o {
+  border-style: outset; }
+
+/* TODO: add generated edge borders */
+.bdt-n {
+  border-top: none; }
+
+.bdts-n {
+  border-top-style: none; }
+
+.bdtc-t {
+  border-top-color: transparent; }
+
+.bdr-n {
+  border-right: none; }
+
+.bdrst-n {
+  border-right-style: none; }
+
+.bdrc-t {
+  border-right-color: transparent; }
+
+.bdb-n {
+  border-bottom: none; }
+
+.bdbs-n {
+  border-bottom-style: none; }
+
+.bdbc-t {
+  border-bottom-color: transparent; }
+
+.bdl-n {
+  border-left: none; }
+
+.bdls-n {
+  border-left-style: none; }
+
+.bdlc-t {
+  border-left-color: transparent; }
 
 .bdrs-0 {
   border-radius: 0; }
@@ -1783,7 +1925,25 @@ th {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0; }
 
-/* TODO: add more border styles and mixins for browser prefixes */
+/* OPACITY */
+.op-0 {
+  opacity: 0; }
+
+.op-2 {
+  opacity: 0.2; }
+
+.op-4 {
+  opacity: 0.4; }
+
+.op-6 {
+  opacity: 0.6; }
+
+.op-8 {
+  opacity: 0.8; }
+
+.op-10 {
+  opacity: 1; }
+
 /* LIST */
 .lis-n {
   list-style: none; }
