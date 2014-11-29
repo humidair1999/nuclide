@@ -1,6 +1,7 @@
 /* BACKGROUND */
 
 .bg-n { background: none; }
+
 .bgc-w { background-color: white; }
 .bgc-b { background-color: black; }
 .bgc-t { background-color: transparent; }
@@ -10,3 +11,34 @@
 .bgc-aclt { background-color: mix($color-accent, white, 25%); }
 
 /* TODO: add more mixed color options */
+
+.bgi-n { background-image: none; }
+
+.bgr-n { background-repeat: no-repeat; }
+.bgr-x { background-repeat: repeat-x; }
+.bgr-y { background-repeat: repeat-y; }
+.bgr-sp { background-repeat: space; }
+.bgr-rd { background-repeat: round; }
+
+.bga-f { background-attachment: fixed; }
+.bga-s { background-attachment: scroll; }
+
+.bgp-0 { background-position: 0 0; }
+
+.bgbk-bb { background-break: bounding-box; }
+.bgbk-eb { background-break: each-box; }
+.bgbk-c { background-break: continuous; }
+
+.bgcp { background-clip: padding-box; }
+.bgcp-bb { background-clip: border-box; }
+.bgcp-pb { background-clip: padding-box; }
+.bgcp-cb { background-clip: content-box; }
+.bgcp-nc { background-clip: no-clip; }
+
+.bgo-pb { background-origin: padding-box; }
+.bgo-bb { background-origin: border-box; }
+.bgo-cb { background-origin: content-box; }
+
+.bgsz-a { background-size: auto; }
+.bgsz-ct { background-size: contain; }
+.bgsz-cv { background-size: cover; }
