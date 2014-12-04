@@ -1586,6 +1586,7 @@ th {
 .bgsz-cv {
   background-size: cover; }
 
+/* Color */
 /* COLOR */
 .c-w {
   color: white; }
@@ -1600,6 +1601,26 @@ th {
   color: #00FFFF; }
 
 /* TODO: add more mixed color options */
+/* OPACITY */
+.op-0 {
+  opacity: 0; }
+
+.op-2 {
+  opacity: 0.2; }
+
+.op-4 {
+  opacity: 0.4; }
+
+.op-6 {
+  opacity: 0.6; }
+
+.op-8 {
+  opacity: 0.8; }
+
+.op-10 {
+  opacity: 1; }
+
+/* Generated Content */
 /* CONTENT */
 .cnt-n {
   content: normal; }
@@ -1625,6 +1646,14 @@ th {
 .q-en {
   quotes: '\201C' '\201D' '\2018' '\2019'; }
 
+.coi-n {
+  counter-increment: none; }
+
+.cor-n {
+  counter-reset: none; }
+
+/* TODO: add actual counter values? */
+/* Outline */
 /* OUTLINE */
 .ol-n {
   outline: none; }
@@ -1923,25 +1952,6 @@ th {
 
 .pgba-r {
   page-break-after: right; }
-
-/* OPACITY */
-.op-0 {
-  opacity: 0; }
-
-.op-2 {
-  opacity: 0.2; }
-
-.op-4 {
-  opacity: 0.4; }
-
-.op-6 {
-  opacity: 0.6; }
-
-.op-8 {
-  opacity: 0.8; }
-
-.op-10 {
-  opacity: 1; }
 
 /* TODO: FRAMEWORK IMPORTS: MOLECULAR */
 

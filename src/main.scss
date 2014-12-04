@@ -40,13 +40,19 @@
 
 /* Background */
 @import 'atoms/background';
+
+/* Color */
 @import 'atoms/color';
+@import 'atoms/opacity';
+
+/* Generated Content */
 @import 'atoms/content';
+
+/* Outline */
 @import 'atoms/outline';
 @import 'atoms/table';
 @import 'atoms/border';
 @import 'atoms/list';
 @import 'atoms/print';
-@import 'atoms/opacity';
 
 /* TODO: FRAMEWORK IMPORTS: MOLECULAR */
