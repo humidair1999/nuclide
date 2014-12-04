@@ -1,13 +1,10 @@
-/* IMPORTS: LIBS AND VARIABLES */
-@import 'normalize';
+/* IMPORTS: VARIABLES AND UTILITIES */
 
 @import 'vars';
 @import 'utils';
 
-@import 'grid';
-
-/* FRAMEWORK IMPORTS: ATOMIC */
-/*  Abbreviations from Emmet's cheat sheet: http://docs.emmet.io/cheat-sheet/ */
+/* IMPORTS: ATOMIC */
+/* Abbreviations from Emmet's cheat sheet: http://docs.emmet.io/cheat-sheet/ */
 
 /* Visual Formatting */
 @import 'atoms/position';
@@ -63,4 +60,4 @@
 /* Print */
 @import 'atoms/print';
 
-/* TODO: FRAMEWORK IMPORTS: MOLECULAR */
+/* TODO: IMPORTS: MOLECULAR */
