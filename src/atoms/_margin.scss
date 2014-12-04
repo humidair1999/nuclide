@@ -1,34 +1,15 @@
 /* MARGIN */
 
-.m-a {   margin: auto; }
-.mt-a {  margin-top: auto; }
-.mr-a {  margin-right: auto; }
-.mb-a {  margin-bottom: auto; }
-.ml-a {  margin-left: auto; }
-.mtb-a {
-    margin-top: auto;
-    margin-bottom: auto;
-}
-.mlr-a {
-    margin-left: auto;
-    margin-right: auto;
+@mixin atomic-margin-set($suffix, $margin) {
+    .m-#{$suffix} {  margin:        $margin; }
+    .mt-#{$suffix} { margin-top:    $margin; }
+    .mr-#{$suffix} { margin-right:  $margin; }
+    .mb-#{$suffix} { margin-bottom: $margin; }
+    .ml-#{$suffix} { margin-left:   $margin; }
 }
 
-@mixin atomic-margin-set($suffix, $margin) {
-    .m-#{$suffix} { margin: $margin; }
-    .mt-#{$suffix} { margin-top: $margin; }
-    .mr-#{$suffix} { margin-right: $margin; }
-    .mb-#{$suffix} { margin-bottom: $margin; }
-    .ml-#{$suffix} { margin-left: $margin; }
-    .mtb-#{$suffix} {
-        margin-top: $margin;
-        margin-bottom: $margin;
-    }
-    .mlr-#{$suffix} {
-        margin-left: $margin;
-        margin-right: $margin;
-    }
-}
+@include atomic-margin-set("0", 0);
+@include atomic-margin-set("a", auto);
 
 @include atomic-margin-set("xs", ($base-spacing-unit / 4));
 @include atomic-margin-set("sm", ($base-spacing-unit / 2));
