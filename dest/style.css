@@ -1667,6 +1667,7 @@ th {
 .olc-i {
   outline-color: invert; }
 
+/* Tables */
 /* TABLE */
 .tbl-a {
   table-layout: auto; }
@@ -1686,13 +1687,12 @@ th {
 .ec-h {
   empty-cells: hide; }
 
+/* Border */
 /* BORDER */
 .bd-n {
   border: none; }
 
-.bdbk {
-  border-break: close; }
-
+/* TODO: add classes for user's custom borders */
 .bdbk-c {
   border-break: close; }
 
@@ -1705,6 +1705,12 @@ th {
 /* TODO: add more border styles and mixins for browser prefixes */
 .bdc-t {
   border-color: transparent; }
+
+.bdc-w {
+  border-color: white; }
+
+.bdc-b {
+  border-color: black; }
 
 .bdi-n {
   border-image: none; }
@@ -1750,9 +1756,6 @@ th {
 
 .bdbli-c {
   border-bottom-left-image: continue; }
-
-.bdf {
-  border-fit: repeat; }
 
 .bdf-c {
   border-fit: clip; }
@@ -1869,22 +1872,7 @@ th {
 .bdblrs-0 {
   border-bottom-left-radius: 0; }
 
-.bdtrs-0 {
-  border-top-right-radius: 0;
-  border-top-left-radius: 0; }
-
-.bdrrs-0 {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0; }
-
-.bdbrs-0 {
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
-
-.bdlrs-0 {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0; }
-
+/* Lists */
 /* LIST */
 .lis-n {
   list-style: none; }
