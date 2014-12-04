@@ -507,16 +507,16 @@ th {
 .pos-f {
   position: fixed; }
 
-.t {
+.t-0 {
   top: 0; }
 
-.r {
+.r-0 {
   right: 0; }
 
-.b {
+.b-0 {
   bottom: 0; }
 
-.l {
+.l-0 {
   left: 0; }
 
 .t-a {
@@ -691,7 +691,7 @@ th {
   overflow-style: marquee; }
 
 /* ZOOM */
-.zm {
+.zm-1 {
   zoom: 1; }
 
 /* CLIP */
