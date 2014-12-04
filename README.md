@@ -12,8 +12,8 @@ conventions.
 Its emphasis is simplicity: it will not include fancy modals, form validation
 elements, and so on; leave those things to frameworks and libraries like
 Bootstrap and Foundation. nuclide offers a generalized set of classes to make
-quickly building rock-solid, mobile-first layouts a breeze, without bogging you
-down too much with the fancy widgets other libraries offer.
+quickly building rock-solid layouts a breeze, without bogging you down too much
+with the fancy widgets other libraries offer.
 
 nuclide will eventually contain both atomic and molecular units:
 
@@ -39,17 +39,13 @@ sass --watch src/main.scss:dest/style.css
 Alternatively, you can grab the compiled `style.css` in the `dest` directory and
 replace any unit values manually.
 
-### Browser support
+Don't forget to add a [normalize](http://necolas.github.io/normalize.css/) and
+[grid](http://responsive.gs/), also!
 
-All styles and utility classes built into nuclide should work properly in IE8
-and above.
+### Inspiration and sources
 
-### What's included
-
-- Basis for many styles and naming conventions from [nemophrost's atomic-css project](https://github.com/nemophrost/atomic-css)
-- [normalize.css](https://github.com/necolas/normalize.css)
-- [responsive grid system](http://responsive.gs/)
-- Snippets from [HTML5 Boilerplate](http://html5boilerplate.com/)
+- Class names and styles from the [Emmet toolkit](http://docs.emmet.io/cheat-sheet/)
+- Basis for other styles from [nemophrost's atomic-css project](https://github.com/nemophrost/atomic-css)
 
 ### Atomic CSS resources
 
