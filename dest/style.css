@@ -532,7 +532,7 @@ th {
   left: auto; }
 
 /* Z-INDEX */
-.z {
+.z-0 {
   z-index: 0; }
 
 .z-a {
@@ -1387,6 +1387,7 @@ th {
 .tj-t {
   text-justify: tibetan; }
 
+/* TODO: default text outlines? */
 .to-n {
   text-outline: none; }
 
@@ -1417,20 +1418,20 @@ th {
 .tw-s {
   text-wrap: suppress; }
 
-.tsh {
-  text-shadow: hoff voff blur #000; }
-
-.tsh-r {
-  text-shadow: h v blur black; }
-
-.tsh-ra {
-  text-shadow: h v blur rgba(0, 0, 0, 0.5); }
-
 .tsh-n {
   text-shadow: none; }
 
-.lh-1 {
-  line-height: 1; }
+/* TODO: are we able to supply some default text shadows?
+    .tsh { text-shadow:     hoff voff blur #000; }
+    .tsh-r { text-shadow:   h v blur rgb(0, 0, 0); }
+    .tsh-ra { text-shadow:  h v blur rgba(0, 0, 0, .5); }
+*/
+.lh-n {
+  line-height: normal; }
+
+/* TODO: custom line heights? */
+.lts-n {
+  letter-spacing: normal; }
 
 .whs-n {
   white-space: normal; }
