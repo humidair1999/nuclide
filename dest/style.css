@@ -691,19 +691,19 @@
   font-variant: small-caps; }
 
 .fz-xs {
-  font-size: 0.6em; }
+  font-size: 0.5em; }
 
 .fz-sm {
-  font-size: 0.6em; }
+  font-size: 0.75em; }
 
 .fz-md {
-  font-size: 0.6em; }
+  font-size: 1em; }
 
 .fz-lg {
-  font-size: 0.6em; }
+  font-size: 1.5em; }
 
 .fz-xl {
-  font-size: 0.6em; }
+  font-size: 2em; }
 
 .fza-n {
   font-size-adjust: none; }

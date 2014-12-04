@@ -20,11 +20,11 @@
 .fv-n {  font-variant: normal; }
 .fv-sc { font-variant: small-caps; }
 
-.fz-xs { font-size: $base-font-size-xs; }
-.fz-sm { font-size: $base-font-size-sm; }
-.fz-md { font-size: $base-font-size-md; }
-.fz-lg { font-size: $base-font-size-lg; }
-.fz-xl { font-size: $base-font-size-xl; }
+.fz-xs { font-size: ($base-font-size * 0.5); }
+.fz-sm { font-size: ($base-font-size * 0.75); }
+.fz-md { font-size: ($base-font-size * 1.0); }
+.fz-lg { font-size: ($base-font-size * 1.5); }
+.fz-xl { font-size: ($base-font-size * 2.0); }
 
 .fza-n { font-size-adjust: none; }
 
