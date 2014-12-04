@@ -2,11 +2,11 @@
 
 .bg-n { background: none; }
 
-.bgc-w { background-color: white; }
-.bgc-b { background-color: black; }
-.bgc-t { background-color: transparent; }
-.bgc-pr { background-color: $color-primary; }
-.bgc-ac { background-color: $color-accent; }
+.bgc-w {    background-color: white; }
+.bgc-b {    background-color: black; }
+.bgc-t {    background-color: transparent; }
+.bgc-pr {   background-color: $color-primary; }
+.bgc-ac {   background-color: $color-accent; }
 .bgc-prlt { background-color: mix($color-primary, white, 25%); }
 .bgc-aclt { background-color: mix($color-accent, white, 25%); }
 
@@ -14,9 +14,9 @@
 
 .bgi-n { background-image: none; }
 
-.bgr-n { background-repeat: no-repeat; }
-.bgr-x { background-repeat: repeat-x; }
-.bgr-y { background-repeat: repeat-y; }
+.bgr-n {  background-repeat: no-repeat; }
+.bgr-x {  background-repeat: repeat-x; }
+.bgr-y {  background-repeat: repeat-y; }
 .bgr-sp { background-repeat: space; }
 .bgr-rd { background-repeat: round; }
 
@@ -27,9 +27,8 @@
 
 .bgbk-bb { background-break: bounding-box; }
 .bgbk-eb { background-break: each-box; }
-.bgbk-c { background-break: continuous; }
+.bgbk-c {  background-break: continuous; }
 
-.bgcp { background-clip: padding-box; }
 .bgcp-bb { background-clip: border-box; }
 .bgcp-pb { background-clip: padding-box; }
 .bgcp-cb { background-clip: content-box; }
@@ -39,6 +38,6 @@
 .bgo-bb { background-origin: border-box; }
 .bgo-cb { background-origin: content-box; }
 
-.bgsz-a { background-size: auto; }
+.bgsz-a {  background-size: auto; }
 .bgsz-ct { background-size: contain; }
 .bgsz-cv { background-size: cover; }

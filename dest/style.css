@@ -1493,6 +1493,7 @@ th {
 .wow-b {
   word-wrap: break-word; }
 
+/* Background */
 /* BACKGROUND */
 .bg-n {
   background: none; }
@@ -1554,9 +1555,6 @@ th {
 
 .bgbk-c {
   background-break: continuous; }
-
-.bgcp {
-  background-clip: padding-box; }
 
 .bgcp-bb {
   background-clip: border-box; }
