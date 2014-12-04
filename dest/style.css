@@ -1,4 +1,4 @@
-/*  IMPORTS : LIBS AND VARIABLES */
+/* IMPORTS: LIBS AND VARIABLES */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
  * 1. Set default font family to sans-serif.
@@ -491,7 +491,9 @@ th {
 
   .gutters .span_12 {
     width: 100%; } }
-/*  FRAMEWORK IMPORTS : ATOMIC */
+/* FRAMEWORK IMPORTS: ATOMIC */
+/*  Abbreviations from Emmet's cheat sheet: http://docs.emmet.io/cheat-sheet/ */
+/* Visual Formatting */
 /* POSITION */
 .pos-r {
   position: relative; }
@@ -2012,6 +2014,6 @@ th {
 .op-10 {
   opacity: 1; }
 
-/*  FRAMEWORK IMPORTS : MOLECULAR */
+/* FRAMEWORK IMPORTS: MOLECULAR */
 
 /*# sourceMappingURL=style.css.map */
