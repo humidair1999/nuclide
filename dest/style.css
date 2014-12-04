@@ -952,10 +952,8 @@ th {
 .pl-xl {
   padding-left: 32px; }
 
+/* Box Sizing */
 /* BOX-SIZE */
-.bxz {
-  box-sizing: border-box; }
-
 .bxz-cb {
   box-sizing: content-box; }
 
@@ -963,19 +961,14 @@ th {
   box-sizing: border-box; }
 
 /* BOX-SHADOW */
-/* TODO: use real values! */
-.bxsh {
-  box-shadow: inset hoff voff blur color; }
-
-.bxsh-r {
-  box-shadow: inset hoff voff blur spread black; }
-
-.bxsh-ra {
-  box-shadow: inset h v blur spread rgba(0, 0, 0, 0.5); }
-
 .bxsh-n {
   box-shadow: none; }
 
+/* TODO: are we able to supply some default box shadows?
+    .bxsh { box-shadow: inset hoff voff blur color; }
+    .bxsh-r { box-shadow: inset hoff voff blur spread rgb(0, 0, 0); }
+    .bxsh-ra { box-shadow: inset h v blur spread rgba(0, 0, 0, .5); }
+*/
 /* SIZE */
 .w-a {
   width: auto; }
@@ -1115,6 +1108,7 @@ th {
 .mah-1-1 {
   max-height: 100%; }
 
+/* Font */
 /* FONT */
 .fw-n {
   font-weight: normal; }

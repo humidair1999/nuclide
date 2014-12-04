@@ -2,15 +2,16 @@
 
 .w-a { width: auto; }
 .h-a { height: auto; }
+
 .maw-n { max-width: none; }
 .mah-n { max-height: none; }
 
 @mixin atomic-size-set($numerator, $denominator) {
-    .w-#{$numerator}-#{$denominator} {   width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
-    .h-#{$numerator}-#{$denominator} {   height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
-    .miw-#{$numerator}-#{$denominator} { min-width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .w-#{$numerator}-#{$denominator} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .h-#{$numerator}-#{$denominator} {   height:     percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .miw-#{$numerator}-#{$denominator} { min-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
     .mih-#{$numerator}-#{$denominator} { min-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
-    .maw-#{$numerator}-#{$denominator} { max-width: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .maw-#{$numerator}-#{$denominator} { max-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
     .mah-#{$numerator}-#{$denominator} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
 }
 
