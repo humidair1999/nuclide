@@ -5,9 +5,9 @@
 
 @mixin atomic-color-set($suffix, $color) {
     .c-#{$suffix} {   color: $color; }
-    .c-#{$suffix}lt { color: mix($text-color, white, 25%); }
-    .c-#{$suffix}md { color: mix($text-color, white, 50%); }
-    .c-#{$suffix}dk { color: mix($text-color, white, 75%); }
+    .c-#{$suffix}lt { color: mix($color, white, 25%); }
+    .c-#{$suffix}md { color: mix($color, white, 50%); }
+    .c-#{$suffix}dk { color: mix($color, white, 75%); }
 }
 
 @include atomic-color-set("tc", $text-color);
