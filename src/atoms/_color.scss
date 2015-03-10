@@ -2,7 +2,20 @@
 
 .c-w {  color: white; }
 .c-b {  color: black; }
-.c-pr { color: $color-primary; }
-.c-ac { color: $color-accent; }
 
-/* TODO: add more mixed color options */
+@mixin atomic-color-set($suffix, $color) {
+    .c-#{$suffix} {   color: $color; }
+    .c-#{$suffix}lt { color: mix($text-color, white, 25%); }
+    .c-#{$suffix}md { color: mix($text-color, white, 50%); }
+    .c-#{$suffix}dk { color: mix($text-color, white, 75%); }
+}
+
+@include atomic-color-set("tc", $text-color);
+
+@include atomic-color-set("pr", $color-primary);
+@include atomic-color-set("se", $color-secondary);
+@include atomic-color-set("te", $color-tertiary);
+@include atomic-color-set("qa", $color-quaternary);
+@include atomic-color-set("qi", $color-quinary);
+
+@include atomic-color-set("ac", $color-accent);

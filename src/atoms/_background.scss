@@ -6,7 +6,13 @@
 .bgc-b {    background-color: black; }
 .bgc-t {    background-color: transparent; }
 .bgc-pr {   background-color: $color-primary; }
+.bgc-se {   background-color: $color-secondary; }
+.bgc-te {   background-color: $color-tertiary; }
+.bgc-qa {   background-color: $color-quaternary; }
+.bgc-qi {   background-color: $color-quinary; }
+
 .bgc-ac {   background-color: $color-accent; }
+
 .bgc-prlt { background-color: mix($color-primary, white, 25%); }
 .bgc-aclt { background-color: mix($color-accent, white, 25%); }
 

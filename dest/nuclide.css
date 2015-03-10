@@ -1,6 +1,5 @@
 /* IMPORTS: VARIABLES AND UTILITIES */
 /* SASS VARIABLES */
-/* TODO: add more color variables */
 /*  GENERAL UTILITY STYLES AND CLASSES */
 /*  SET ALL ELEMENTS TO BOX-SIZING: BORDER-BOX */
 * {
@@ -1039,6 +1038,18 @@
 .bgc-pr {
   background-color: #FF0000; }
 
+.bgc-se {
+  background-color: #ffffff; }
+
+.bgc-te {
+  background-color: #ffffff; }
+
+.bgc-qa {
+  background-color: #ffffff; }
+
+.bgc-qi {
+  background-color: #ffffff; }
+
 .bgc-ac {
   background-color: #00FFFF; }
 
@@ -1123,13 +1134,90 @@
 .c-b {
   color: black; }
 
+.c-tc {
+  color: #333; }
+
+.c-tclt {
+  color: #cccccc; }
+
+.c-tcmd {
+  color: #999999; }
+
+.c-tcdk {
+  color: #666666; }
+
 .c-pr {
   color: #FF0000; }
+
+.c-prlt {
+  color: #cccccc; }
+
+.c-prmd {
+  color: #999999; }
+
+.c-prdk {
+  color: #666666; }
+
+.c-se {
+  color: #ffffff; }
+
+.c-selt {
+  color: #cccccc; }
+
+.c-semd {
+  color: #999999; }
+
+.c-sedk {
+  color: #666666; }
+
+.c-te {
+  color: #ffffff; }
+
+.c-telt {
+  color: #cccccc; }
+
+.c-temd {
+  color: #999999; }
+
+.c-tedk {
+  color: #666666; }
+
+.c-qa {
+  color: #ffffff; }
+
+.c-qalt {
+  color: #cccccc; }
+
+.c-qamd {
+  color: #999999; }
+
+.c-qadk {
+  color: #666666; }
+
+.c-qi {
+  color: #ffffff; }
+
+.c-qilt {
+  color: #cccccc; }
+
+.c-qimd {
+  color: #999999; }
+
+.c-qidk {
+  color: #666666; }
 
 .c-ac {
   color: #00FFFF; }
 
-/* TODO: add more mixed color options */
+.c-aclt {
+  color: #cccccc; }
+
+.c-acmd {
+  color: #999999; }
+
+.c-acdk {
+  color: #666666; }
+
 /* OPACITY */
 .op-0 {
   opacity: 0; }
