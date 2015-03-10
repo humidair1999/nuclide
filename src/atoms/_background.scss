@@ -5,18 +5,21 @@
 .bgc-w {    background-color: white; }
 .bgc-b {    background-color: black; }
 .bgc-t {    background-color: transparent; }
-.bgc-pr {   background-color: $color-primary; }
-.bgc-se {   background-color: $color-secondary; }
-.bgc-te {   background-color: $color-tertiary; }
-.bgc-qa {   background-color: $color-quaternary; }
-.bgc-qi {   background-color: $color-quinary; }
 
-.bgc-ac {   background-color: $color-accent; }
+@mixin atomic-background-color-set($suffix, $background-color) {
+    .bgc-#{$suffix} {   background-color: $background-color; }
+    .bgc-#{$suffix}lt { background-color: mix($background-color, white, 25%); }
+    .bgc-#{$suffix}md { background-color: mix($background-color, white, 50%); }
+    .bgc-#{$suffix}dk { background-color: mix($background-color, white, 75%); }
+}
 
-.bgc-prlt { background-color: mix($color-primary, white, 25%); }
-.bgc-aclt { background-color: mix($color-accent, white, 25%); }
+@include atomic-background-color-set("pr", $color-primary);
+@include atomic-background-color-set("se", $color-secondary);
+@include atomic-background-color-set("te", $color-tertiary);
+@include atomic-background-color-set("qa", $color-quaternary);
+@include atomic-background-color-set("qi", $color-quinary);
 
-/* TODO: add more mixed color options */
+@include atomic-background-color-set("ac", $color-accent);
 
 .bgi-n { background-image: none; }
 

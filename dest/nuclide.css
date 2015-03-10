@@ -1038,28 +1038,75 @@
 .bgc-pr {
   background-color: #FF0000; }
 
+.bgc-prlt {
+  background-color: #ffbfbf; }
+
+.bgc-prmd {
+  background-color: #ff7f7f; }
+
+.bgc-prdk {
+  background-color: #ff3f3f; }
+
 .bgc-se {
   background-color: #ffffff; }
+
+.bgc-selt {
+  background-color: white; }
+
+.bgc-semd {
+  background-color: white; }
+
+.bgc-sedk {
+  background-color: white; }
 
 .bgc-te {
   background-color: #ffffff; }
 
+.bgc-telt {
+  background-color: white; }
+
+.bgc-temd {
+  background-color: white; }
+
+.bgc-tedk {
+  background-color: white; }
+
 .bgc-qa {
   background-color: #ffffff; }
+
+.bgc-qalt {
+  background-color: white; }
+
+.bgc-qamd {
+  background-color: white; }
+
+.bgc-qadk {
+  background-color: white; }
 
 .bgc-qi {
   background-color: #ffffff; }
 
+.bgc-qilt {
+  background-color: white; }
+
+.bgc-qimd {
+  background-color: white; }
+
+.bgc-qidk {
+  background-color: white; }
+
 .bgc-ac {
   background-color: #00FFFF; }
-
-.bgc-prlt {
-  background-color: #ffbfbf; }
 
 .bgc-aclt {
   background-color: #bfffff; }
 
-/* TODO: add more mixed color options */
+.bgc-acmd {
+  background-color: #7fffff; }
+
+.bgc-acdk {
+  background-color: #3fffff; }
+
 .bgi-n {
   background-image: none; }
 
