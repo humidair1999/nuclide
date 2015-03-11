@@ -1,1 +1,7 @@
 /* BUTTONS */
+
+.button {
+    @extend .d-b;
+    @extend .p-lg;
+    @extend .cur-p;
+}
