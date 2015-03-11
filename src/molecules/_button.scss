@@ -1,7 +1,11 @@
 /* BUTTONS */
 
-.button {
-    @extend .d-b;
-    @extend .p-lg;
-    @extend .cur-p;
+$size-list: "xs" "sm" "md" "lg" "xl";
+
+@each $current-size in $size-list {
+    .button-#{$current-size} {
+        @extend .d-b;
+        @extend .p-#{$current-size};
+        @extend .cur-p;
+    }
 }

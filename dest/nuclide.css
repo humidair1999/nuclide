@@ -93,7 +93,7 @@
 .d-n {
   display: none; }
 
-.d-b, .button {
+.d-b, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   display: block; }
 
 .d-i {
@@ -261,7 +261,7 @@
 .cur-m {
   cursor: move; }
 
-.cur-p, .button {
+.cur-p, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   cursor: pointer; }
 
 .cur-t {
@@ -405,7 +405,7 @@
 .pl-a {
   padding-left: auto; }
 
-.p-xs {
+.p-xs, .button-xs {
   padding: 2px; }
 
 .pt-xs {
@@ -420,7 +420,7 @@
 .pl-xs {
   padding-left: 2px; }
 
-.p-sm {
+.p-sm, .button-sm {
   padding: 4px; }
 
 .pt-sm {
@@ -435,7 +435,7 @@
 .pl-sm {
   padding-left: 4px; }
 
-.p-md {
+.p-md, .button-md {
   padding: 8px; }
 
 .pt-md {
@@ -450,7 +450,7 @@
 .pl-md {
   padding-left: 8px; }
 
-.p-lg, .button {
+.p-lg, .button-lg {
   padding: 16px; }
 
 .pt-lg {
@@ -465,7 +465,7 @@
 .pl-lg {
   padding-left: 16px; }
 
-.p-xl {
+.p-xl, .button-xl {
   padding: 32px; }
 
 .pt-xl {
