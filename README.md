@@ -55,3 +55,9 @@ Don't forget to add a [normalize](http://necolas.github.io/normalize.css/) and
 - http://www.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/
 - http://krasimir.github.io/organic-css/
 - http://java.dzone.com/articles/atomic-css-tool-set
+
+### Upcoming
+
+Molecules via patterns from:
+
+- http://pea.rs/
