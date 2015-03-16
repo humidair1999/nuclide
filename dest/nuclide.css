@@ -7,6 +7,15 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
+/* http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting */
+.user-select-none, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
 /*  DEBUG STYLE
     Used for debugging layout issues */
 .debug {
@@ -93,13 +102,13 @@
 .d-n {
   display: none; }
 
-.d-b {
+.d-b, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   display: block; }
 
 .d-i {
   display: inline; }
 
-.d-ib, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+.d-ib {
   display: inline-block; }
 
 .d-li {
@@ -704,6 +713,9 @@
 .fz-xl {
   font-size: 2em; }
 
+.fz-i, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+  font-size: inherit; }
+
 .fza-n {
   font-size-adjust: none; }
 
@@ -725,6 +737,9 @@
 
 .ff-a {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+
+.ff-i, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+  font-family: inherit; }
 
 .fef-n {
   font-effect: none; }
@@ -846,7 +861,7 @@
   text-align-last: right; }
 
 /* TEXT */
-.td-n {
+.td-n, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   text-decoration: none; }
 
 .td-u {
@@ -1036,64 +1051,64 @@
   background-color: transparent; }
 
 .bgc-pr, .button-pr {
-  background-color: #FF0000; }
+  background-color: #468966; }
 
 .bgc-prdk, .button-pr:hover {
-  background-color: #ff3f3f; }
+  background-color: #74a68c; }
 
-.bgc-prmd, .button-pr:focus, .button-pr:active {
-  background-color: #ff7f7f; }
+.bgc-prmd, .button-pr:active, .button-pr:focus {
+  background-color: #a2c4b2; }
 
 .bgc-prlt {
-  background-color: #ffbfbf; }
+  background-color: #d0e1d8; }
 
 .bgc-se, .button-se {
-  background-color: #ffffff; }
+  background-color: #8E2800; }
 
 .bgc-sedk, .button-se:hover {
-  background-color: white; }
+  background-color: #aa5d3f; }
 
-.bgc-semd, .button-se:focus, .button-se:active {
-  background-color: white; }
+.bgc-semd, .button-se:active, .button-se:focus {
+  background-color: #c6937f; }
 
 .bgc-selt {
-  background-color: white; }
+  background-color: #e2c9bf; }
 
 .bgc-te, .button-te {
-  background-color: #ffffff; }
+  background-color: #B64926; }
 
 .bgc-tedk, .button-te:hover {
-  background-color: white; }
+  background-color: #c8765c; }
 
-.bgc-temd, .button-te:focus, .button-te:active {
-  background-color: white; }
+.bgc-temd, .button-te:active, .button-te:focus {
+  background-color: #daa492; }
 
 .bgc-telt {
-  background-color: white; }
+  background-color: #ecd1c8; }
 
 .bgc-qa, .button-qa {
-  background-color: #ffffff; }
+  background-color: #FFB03B; }
 
 .bgc-qadk, .button-qa:hover {
-  background-color: white; }
+  background-color: #ffc36c; }
 
-.bgc-qamd, .button-qa:focus, .button-qa:active {
-  background-color: white; }
+.bgc-qamd, .button-qa:active, .button-qa:focus {
+  background-color: #ffd79d; }
 
 .bgc-qalt {
-  background-color: white; }
+  background-color: #ffebce; }
 
 .bgc-qi, .button-qi {
-  background-color: #ffffff; }
+  background-color: #FFF0A5; }
 
 .bgc-qidk, .button-qi:hover {
-  background-color: white; }
+  background-color: #fff3bb; }
 
-.bgc-qimd, .button-qi:focus, .button-qi:active {
-  background-color: white; }
+.bgc-qimd, .button-qi:active, .button-qi:focus {
+  background-color: #fff7d2; }
 
 .bgc-qilt {
-  background-color: white; }
+  background-color: #fffbe8; }
 
 .bgc-ac, .button-ac {
   background-color: #00FFFF; }
@@ -1101,7 +1116,7 @@
 .bgc-acdk, .button-ac:hover {
   background-color: #3fffff; }
 
-.bgc-acmd, .button-ac:focus, .button-ac:active {
+.bgc-acmd, .button-ac:active, .button-ac:focus {
   background-color: #7fffff; }
 
 .bgc-aclt {
@@ -1181,7 +1196,7 @@
 .c-b {
   color: black; }
 
-.c-tc {
+.c-tc, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   color: #333; }
 
 .c-tcdk {
@@ -1194,64 +1209,64 @@
   color: #cccccc; }
 
 .c-pr {
-  color: #FF0000; }
+  color: #468966; }
 
 .c-prdk {
-  color: #ff3f3f; }
+  color: #74a68c; }
 
 .c-prmd {
-  color: #ff7f7f; }
+  color: #a2c4b2; }
 
 .c-prlt {
-  color: #ffbfbf; }
+  color: #d0e1d8; }
 
 .c-se {
-  color: #ffffff; }
+  color: #8E2800; }
 
 .c-sedk {
-  color: white; }
+  color: #aa5d3f; }
 
 .c-semd {
-  color: white; }
+  color: #c6937f; }
 
 .c-selt {
-  color: white; }
+  color: #e2c9bf; }
 
 .c-te {
-  color: #ffffff; }
+  color: #B64926; }
 
 .c-tedk {
-  color: white; }
+  color: #c8765c; }
 
 .c-temd {
-  color: white; }
+  color: #daa492; }
 
 .c-telt {
-  color: white; }
+  color: #ecd1c8; }
 
 .c-qa {
-  color: #ffffff; }
+  color: #FFB03B; }
 
 .c-qadk {
-  color: white; }
+  color: #ffc36c; }
 
 .c-qamd {
-  color: white; }
+  color: #ffd79d; }
 
 .c-qalt {
-  color: white; }
+  color: #ffebce; }
 
 .c-qi {
-  color: #ffffff; }
+  color: #FFF0A5; }
 
 .c-qidk {
-  color: white; }
+  color: #fff3bb; }
 
 .c-qimd {
-  color: white; }
+  color: #fff7d2; }
 
 .c-qilt {
-  color: white; }
+  color: #fffbe8; }
 
 .c-ac {
   color: #00FFFF; }
@@ -1445,7 +1460,7 @@
 .bdlen-a {
   border-length: auto; }
 
-.bds-n {
+.bds-n, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   border-style: none; }
 
 .bds-h {
@@ -1483,6 +1498,9 @@
 
 .bds-o {
   border-style: outset; }
+
+.bdw-0, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+  border-width: 0; }
 
 /* TODO: add generated edge borders */
 .bdt-n {
@@ -1607,6 +1625,8 @@
   page-break-after: right; }
 
 /* TODO: IMPORTS: MOLECULAR */
+/* TODO: add more thorough/prettier hover/active/focus effects */
+/* TODO: use darken effect on hover, instead of lighten? */
 /* BUTTONS */
 /* FLAG ELEMENT */
 /* FORM ELEMENTS */

@@ -1,14 +1,24 @@
+/* TODO: add more thorough/prettier hover/active/focus effects */
+/* TODO: use darken effect on hover, instead of lighten? */
+
 /* BUTTONS */
 
 $size-list: "xs" "sm" "md" "lg" "xl";
 
 @each $current-size in $size-list {
     .button-#{$current-size} {
-        @extend .d-ib;
+        @extend .d-b;
         @extend .p-#{$current-size};
         @extend .cur-p;
         @extend .whs-nw;
         @extend .ta-c;
+        @extend .bds-n;
+        @extend .bdw-0;
+        @extend .ff-i;
+        @extend .fz-i;
+        @extend .td-n;
+        @extend .c-tc;
+        @extend .user-select-none;
     }
 }
 
@@ -18,11 +28,18 @@ $color-list: "pr" "se" "te" "qa" "qi" "ac";
     .button-#{$current-color} {
         @extend .bgc-#{$current-color};
 
+        // NOTE: link pseudo-classes are attached to individual atomic color classes,
+        //  so their order in the .css file may affect their functionality!
+
         &:hover {
             @extend .bgc-#{$current-color}dk;
         }
 
-        &:focus, &:active {
+        &:active {
+            @extend .bgc-#{$current-color}md;
+        }
+
+        &:focus {
             @extend .bgc-#{$current-color}md;
         }
     }
