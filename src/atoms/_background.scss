@@ -8,9 +8,9 @@
 
 @mixin atomic-background-color-set($suffix, $background-color) {
     .bgc-#{$suffix} {   background-color: $background-color; }
-    .bgc-#{$suffix}lt { background-color: mix($background-color, white, 25%); }
-    .bgc-#{$suffix}md { background-color: mix($background-color, white, 50%); }
     .bgc-#{$suffix}dk { background-color: mix($background-color, white, 75%); }
+    .bgc-#{$suffix}md { background-color: mix($background-color, white, 50%); }
+    .bgc-#{$suffix}lt { background-color: mix($background-color, white, 25%); }
 }
 
 @include atomic-background-color-set("pr", $color-primary);

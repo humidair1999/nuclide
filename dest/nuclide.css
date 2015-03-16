@@ -93,13 +93,13 @@
 .d-n {
   display: none; }
 
-.d-b, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
+.d-b {
   display: block; }
 
 .d-i {
   display: inline; }
 
-.d-ib {
+.d-ib, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   display: inline-block; }
 
 .d-li {
@@ -824,7 +824,7 @@
 .ta-l {
   text-align: left; }
 
-.ta-c {
+.ta-c, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   text-align: center; }
 
 .ta-r {
@@ -967,7 +967,7 @@
 .whs-p {
   white-space: pre; }
 
-.whs-nw {
+.whs-nw, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   white-space: nowrap; }
 
 .whs-pw {
@@ -1035,77 +1035,77 @@
 .bgc-t {
   background-color: transparent; }
 
-.bgc-pr {
+.bgc-pr, .button-pr {
   background-color: #FF0000; }
+
+.bgc-prdk, .button-pr:hover {
+  background-color: #ff3f3f; }
+
+.bgc-prmd, .button-pr:focus, .button-pr:active {
+  background-color: #ff7f7f; }
 
 .bgc-prlt {
   background-color: #ffbfbf; }
 
-.bgc-prmd {
-  background-color: #ff7f7f; }
-
-.bgc-prdk {
-  background-color: #ff3f3f; }
-
-.bgc-se {
+.bgc-se, .button-se {
   background-color: #ffffff; }
+
+.bgc-sedk, .button-se:hover {
+  background-color: white; }
+
+.bgc-semd, .button-se:focus, .button-se:active {
+  background-color: white; }
 
 .bgc-selt {
   background-color: white; }
 
-.bgc-semd {
-  background-color: white; }
-
-.bgc-sedk {
-  background-color: white; }
-
-.bgc-te {
+.bgc-te, .button-te {
   background-color: #ffffff; }
+
+.bgc-tedk, .button-te:hover {
+  background-color: white; }
+
+.bgc-temd, .button-te:focus, .button-te:active {
+  background-color: white; }
 
 .bgc-telt {
   background-color: white; }
 
-.bgc-temd {
-  background-color: white; }
-
-.bgc-tedk {
-  background-color: white; }
-
-.bgc-qa {
+.bgc-qa, .button-qa {
   background-color: #ffffff; }
+
+.bgc-qadk, .button-qa:hover {
+  background-color: white; }
+
+.bgc-qamd, .button-qa:focus, .button-qa:active {
+  background-color: white; }
 
 .bgc-qalt {
   background-color: white; }
 
-.bgc-qamd {
-  background-color: white; }
-
-.bgc-qadk {
-  background-color: white; }
-
-.bgc-qi {
+.bgc-qi, .button-qi {
   background-color: #ffffff; }
+
+.bgc-qidk, .button-qi:hover {
+  background-color: white; }
+
+.bgc-qimd, .button-qi:focus, .button-qi:active {
+  background-color: white; }
 
 .bgc-qilt {
   background-color: white; }
 
-.bgc-qimd {
-  background-color: white; }
-
-.bgc-qidk {
-  background-color: white; }
-
-.bgc-ac {
+.bgc-ac, .button-ac {
   background-color: #00FFFF; }
+
+.bgc-acdk, .button-ac:hover {
+  background-color: #3fffff; }
+
+.bgc-acmd, .button-ac:focus, .button-ac:active {
+  background-color: #7fffff; }
 
 .bgc-aclt {
   background-color: #bfffff; }
-
-.bgc-acmd {
-  background-color: #7fffff; }
-
-.bgc-acdk {
-  background-color: #3fffff; }
 
 .bgi-n {
   background-image: none; }
@@ -1184,86 +1184,86 @@
 .c-tc {
   color: #333; }
 
-.c-tclt {
-  color: #cccccc; }
+.c-tcdk {
+  color: #666666; }
 
 .c-tcmd {
   color: #999999; }
 
-.c-tcdk {
-  color: #666666; }
+.c-tclt {
+  color: #cccccc; }
 
 .c-pr {
   color: #FF0000; }
 
-.c-prlt {
-  color: #ffbfbf; }
+.c-prdk {
+  color: #ff3f3f; }
 
 .c-prmd {
   color: #ff7f7f; }
 
-.c-prdk {
-  color: #ff3f3f; }
+.c-prlt {
+  color: #ffbfbf; }
 
 .c-se {
   color: #ffffff; }
 
-.c-selt {
+.c-sedk {
   color: white; }
 
 .c-semd {
   color: white; }
 
-.c-sedk {
+.c-selt {
   color: white; }
 
 .c-te {
   color: #ffffff; }
 
-.c-telt {
+.c-tedk {
   color: white; }
 
 .c-temd {
   color: white; }
 
-.c-tedk {
+.c-telt {
   color: white; }
 
 .c-qa {
   color: #ffffff; }
 
-.c-qalt {
+.c-qadk {
   color: white; }
 
 .c-qamd {
   color: white; }
 
-.c-qadk {
+.c-qalt {
   color: white; }
 
 .c-qi {
   color: #ffffff; }
 
-.c-qilt {
+.c-qidk {
   color: white; }
 
 .c-qimd {
   color: white; }
 
-.c-qidk {
+.c-qilt {
   color: white; }
 
 .c-ac {
   color: #00FFFF; }
 
-.c-aclt {
-  color: #bfffff; }
+.c-acdk {
+  color: #3fffff; }
 
 .c-acmd {
   color: #7fffff; }
 
-.c-acdk {
-  color: #3fffff; }
+.c-aclt {
+  color: #bfffff; }
 
 /* OPACITY */
 .op-0 {

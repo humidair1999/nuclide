@@ -4,8 +4,26 @@ $size-list: "xs" "sm" "md" "lg" "xl";
 
 @each $current-size in $size-list {
     .button-#{$current-size} {
-        @extend .d-b;
+        @extend .d-ib;
         @extend .p-#{$current-size};
         @extend .cur-p;
+        @extend .whs-nw;
+        @extend .ta-c;
+    }
+}
+
+$color-list: "pr" "se" "te" "qa" "qi" "ac";
+
+@each $current-color in $color-list {
+    .button-#{$current-color} {
+        @extend .bgc-#{$current-color};
+
+        &:hover {
+            @extend .bgc-#{$current-color}dk;
+        }
+
+        &:focus, &:active {
+            @extend .bgc-#{$current-color}md;
+        }
     }
 }
