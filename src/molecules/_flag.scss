@@ -1,1 +1,40 @@
 /* FLAG ELEMENT */
+
+/* http://csswizardry.com/2013/05/the-flag-object/ */
+
+.flag {
+    @extend .d-tb;
+    @extend .w-1-1;
+}
+
+.flag__image,
+.flag__body {
+    @extend .d-tbc;
+    @extend .va-m;
+
+    .flag--top & {
+        @extend .va-t;
+    }
+
+    .flag--bottom & {
+        @extend .va-b;
+    }
+}
+
+.flag__image {
+    @extend .pr-md;
+
+    > img {
+        @extend .d-b;
+        @extend .maw-n;
+    }
+
+    .flag--rev & {
+        @extend .pr-0;
+        @extend .pl-md;
+    }
+}
+
+.flag__body {
+    @extend .w-1-1;
+}
