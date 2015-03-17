@@ -3,14 +3,19 @@
 .c-w {  color: white; }
 .c-b {  color: black; }
 
-@mixin atomic-color-set($suffix, $color) {
-    .c-#{$suffix} {   color: $color; }
-    .c-#{$suffix}dk { color: mix($color, white, 75%); }
-    .c-#{$suffix}md { color: mix($color, white, 50%); }
-    .c-#{$suffix}lt { color: mix($color, white, 25%); }
-}
+.c-tcxlt { color: lighten($text-color, 75%); }
+.c-tclt {  color: lighten($text-color, 25%); }
+.c-tc {    color: $text-color; }
+.c-tcdk {  color: darken($text-color, 25%); }
+.c-tcxdk { color: darken($text-color, 75%); }
 
-@include atomic-color-set("tc", $text-color);
+@mixin atomic-color-set($suffix, $color) {
+    .c-#{$suffix}xlt { color: lighten($color, 10%); }
+    .c-#{$suffix}lt {  color: lighten($color, 5%); }
+    .c-#{$suffix} {    color: $color; }
+    .c-#{$suffix}dk {  color: darken($color, 5%); }
+    .c-#{$suffix}xdk { color: darken($color, 10%); }
+}
 
 @include atomic-color-set("pr", $color-primary);
 @include atomic-color-set("se", $color-secondary);

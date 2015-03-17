@@ -2,15 +2,16 @@
 
 .bg-n { background: none; }
 
-.bgc-w {    background-color: white; }
-.bgc-b {    background-color: black; }
-.bgc-t {    background-color: transparent; }
+.bgc-w { background-color: white; }
+.bgc-b { background-color: black; }
+.bgc-t { background-color: transparent; }
 
 @mixin atomic-background-color-set($suffix, $background-color) {
-    .bgc-#{$suffix} {   background-color: $background-color; }
-    .bgc-#{$suffix}dk { background-color: mix($background-color, white, 75%); }
-    .bgc-#{$suffix}md { background-color: mix($background-color, white, 50%); }
-    .bgc-#{$suffix}lt { background-color: mix($background-color, white, 25%); }
+    .bgc-#{$suffix}xlt { background-color: lighten($background-color, 10%); }
+    .bgc-#{$suffix}lt {  background-color: lighten($background-color, 5%); }
+    .bgc-#{$suffix} {    background-color: $background-color; }
+    .bgc-#{$suffix}dk {  background-color: darken($background-color, 5%); }
+    .bgc-#{$suffix}xdk { background-color: darken($background-color, 10%); }
 }
 
 @include atomic-background-color-set("pr", $color-primary);

@@ -309,79 +309,79 @@
   margin-left: auto; }
 
 .m-xs {
-  margin: 2px; }
+  margin: 2.5px; }
 
 .mt-xs {
-  margin-top: 2px; }
+  margin-top: 2.5px; }
 
 .mr-xs {
-  margin-right: 2px; }
+  margin-right: 2.5px; }
 
 .mb-xs {
-  margin-bottom: 2px; }
+  margin-bottom: 2.5px; }
 
 .ml-xs {
-  margin-left: 2px; }
+  margin-left: 2.5px; }
 
 .m-sm {
-  margin: 4px; }
+  margin: 5px; }
 
 .mt-sm {
-  margin-top: 4px; }
+  margin-top: 5px; }
 
 .mr-sm {
-  margin-right: 4px; }
+  margin-right: 5px; }
 
 .mb-sm {
-  margin-bottom: 4px; }
+  margin-bottom: 5px; }
 
 .ml-sm {
-  margin-left: 4px; }
+  margin-left: 5px; }
 
 .m-md {
-  margin: 8px; }
+  margin: 10px; }
 
 .mt-md {
-  margin-top: 8px; }
+  margin-top: 10px; }
 
 .mr-md {
-  margin-right: 8px; }
+  margin-right: 10px; }
 
 .mb-md {
-  margin-bottom: 8px; }
+  margin-bottom: 10px; }
 
 .ml-md {
-  margin-left: 8px; }
+  margin-left: 10px; }
 
 .m-lg {
-  margin: 16px; }
+  margin: 20px; }
 
 .mt-lg {
-  margin-top: 16px; }
+  margin-top: 20px; }
 
 .mr-lg {
-  margin-right: 16px; }
+  margin-right: 20px; }
 
 .mb-lg {
-  margin-bottom: 16px; }
+  margin-bottom: 20px; }
 
 .ml-lg {
-  margin-left: 16px; }
+  margin-left: 20px; }
 
 .m-xl {
-  margin: 32px; }
+  margin: 40px; }
 
 .mt-xl {
-  margin-top: 32px; }
+  margin-top: 40px; }
 
 .mr-xl {
-  margin-right: 32px; }
+  margin-right: 40px; }
 
 .mb-xl {
-  margin-bottom: 32px; }
+  margin-bottom: 40px; }
 
 .ml-xl {
-  margin-left: 32px; }
+  margin-left: 40px; }
 
 /* PADDING */
 .p-0 {
@@ -415,79 +415,79 @@
   padding-left: auto; }
 
 .p-xs, .button-xs {
-  padding: 2px; }
+  padding: 2.5px; }
 
 .pt-xs {
-  padding-top: 2px; }
+  padding-top: 2.5px; }
 
 .pr-xs {
-  padding-right: 2px; }
+  padding-right: 2.5px; }
 
 .pb-xs {
-  padding-bottom: 2px; }
+  padding-bottom: 2.5px; }
 
 .pl-xs {
-  padding-left: 2px; }
+  padding-left: 2.5px; }
 
 .p-sm, .button-sm {
-  padding: 4px; }
+  padding: 5px; }
 
 .pt-sm {
-  padding-top: 4px; }
+  padding-top: 5px; }
 
 .pr-sm {
-  padding-right: 4px; }
+  padding-right: 5px; }
 
 .pb-sm {
-  padding-bottom: 4px; }
+  padding-bottom: 5px; }
 
 .pl-sm {
-  padding-left: 4px; }
+  padding-left: 5px; }
 
 .p-md, .button-md {
-  padding: 8px; }
+  padding: 10px; }
 
 .pt-md {
-  padding-top: 8px; }
+  padding-top: 10px; }
 
 .pr-md {
-  padding-right: 8px; }
+  padding-right: 10px; }
 
 .pb-md {
-  padding-bottom: 8px; }
+  padding-bottom: 10px; }
 
 .pl-md {
-  padding-left: 8px; }
+  padding-left: 10px; }
 
 .p-lg, .button-lg {
-  padding: 16px; }
+  padding: 20px; }
 
 .pt-lg {
-  padding-top: 16px; }
+  padding-top: 20px; }
 
 .pr-lg {
-  padding-right: 16px; }
+  padding-right: 20px; }
 
 .pb-lg {
-  padding-bottom: 16px; }
+  padding-bottom: 20px; }
 
 .pl-lg {
-  padding-left: 16px; }
+  padding-left: 20px; }
 
 .p-xl, .button-xl {
-  padding: 32px; }
+  padding: 40px; }
 
 .pt-xl {
-  padding-top: 32px; }
+  padding-top: 40px; }
 
 .pr-xl {
-  padding-right: 32px; }
+  padding-right: 40px; }
 
 .pb-xl {
-  padding-bottom: 32px; }
+  padding-bottom: 40px; }
 
 .pl-xl {
-  padding-left: 32px; }
+  padding-left: 40px; }
 
 /* Box Sizing */
 /* BOX-SIZE */
@@ -699,19 +699,19 @@
   font-variant: small-caps; }
 
 .fz-xs {
-  font-size: 0.5em; }
+  font-size: 0.7em; }
 
 .fz-sm {
-  font-size: 0.75em; }
+  font-size: 1.05em; }
 
 .fz-md {
-  font-size: 1em; }
+  font-size: 1.4em; }
 
 .fz-lg {
-  font-size: 1.5em; }
+  font-size: 2.1em; }
 
 .fz-xl {
-  font-size: 2em; }
+  font-size: 2.8em; }
 
 .fz-i, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   font-size: inherit; }
@@ -1050,77 +1050,95 @@
 .bgc-t {
   background-color: transparent; }
 
+.bgc-prxlt {
+  background-color: #58aa7f; }
+
+.bgc-prlt, .button-pr:hover {
+  background-color: #4f9a73; }
+
 .bgc-pr, .button-pr {
   background-color: #468966; }
 
-.bgc-prdk, .button-pr:hover {
-  background-color: #74a68c; }
+.bgc-prdk, .button-pr:active, .button-pr:focus {
+  background-color: #3d7859; }
 
-.bgc-prmd, .button-pr:active, .button-pr:focus {
-  background-color: #a2c4b2; }
+.bgc-prxdk {
+  background-color: #35674d; }
 
-.bgc-prlt {
-  background-color: #d0e1d8; }
+.bgc-sexlt {
+  background-color: #c13600; }
+
+.bgc-selt, .button-se:hover {
+  background-color: #a82f00; }
 
 .bgc-se, .button-se {
   background-color: #8E2800; }
 
-.bgc-sedk, .button-se:hover {
-  background-color: #aa5d3f; }
+.bgc-sedk, .button-se:active, .button-se:focus {
+  background-color: #752100; }
 
-.bgc-semd, .button-se:active, .button-se:focus {
-  background-color: #c6937f; }
+.bgc-sexdk {
+  background-color: #5b1a00; }
 
-.bgc-selt {
-  background-color: #e2c9bf; }
+.bgc-texlt {
+  background-color: #d65f39; }
+
+.bgc-telt, .button-te:hover {
+  background-color: #cb512a; }
 
 .bgc-te, .button-te {
   background-color: #B64926; }
 
-.bgc-tedk, .button-te:hover {
-  background-color: #c8765c; }
+.bgc-tedk, .button-te:active, .button-te:focus {
+  background-color: #a14122; }
 
-.bgc-temd, .button-te:active, .button-te:focus {
-  background-color: #daa492; }
+.bgc-texdk {
+  background-color: #8c381d; }
 
-.bgc-telt {
-  background-color: #ecd1c8; }
+.bgc-qaxlt {
+  background-color: #ffc56e; }
+
+.bgc-qalt, .button-qa:hover {
+  background-color: #ffba55; }
 
 .bgc-qa, .button-qa {
   background-color: #FFB03B; }
 
-.bgc-qadk, .button-qa:hover {
-  background-color: #ffc36c; }
+.bgc-qadk, .button-qa:active, .button-qa:focus {
+  background-color: #ffa621; }
 
-.bgc-qamd, .button-qa:active, .button-qa:focus {
-  background-color: #ffd79d; }
+.bgc-qaxdk {
+  background-color: #ff9b08; }
 
-.bgc-qalt {
-  background-color: #ffebce; }
+.bgc-qixlt {
+  background-color: #fff9d8; }
+
+.bgc-qilt, .button-qi:hover {
+  background-color: #fff4be; }
 
 .bgc-qi, .button-qi {
   background-color: #FFF0A5; }
 
-.bgc-qidk, .button-qi:hover {
-  background-color: #fff3bb; }
+.bgc-qidk, .button-qi:active, .button-qi:focus {
+  background-color: #ffec8c; }
 
-.bgc-qimd, .button-qi:active, .button-qi:focus {
-  background-color: #fff7d2; }
+.bgc-qixdk {
+  background-color: #ffe772; }
 
-.bgc-qilt {
-  background-color: #fffbe8; }
+.bgc-acxlt {
+  background-color: #ffc56e; }
+
+.bgc-aclt, .button-ac:hover {
+  background-color: #ffba55; }
 
 .bgc-ac, .button-ac {
-  background-color: #00FFFF; }
+  background-color: #FFB03B; }
 
-.bgc-acdk, .button-ac:hover {
-  background-color: #3fffff; }
+.bgc-acdk, .button-ac:active, .button-ac:focus {
+  background-color: #ffa621; }
 
-.bgc-acmd, .button-ac:active, .button-ac:focus {
-  background-color: #7fffff; }
-
-.bgc-aclt {
-  background-color: #bfffff; }
+.bgc-acxdk {
+  background-color: #ff9b08; }
 
 .bgi-n {
   background-image: none; }
@@ -1196,89 +1214,110 @@
 .c-b {
   color: black; }
 
+.c-tcxlt {
+  color: #f2f2f2; }
+
+.c-tclt {
+  color: #737373; }
+
 .c-tc, .button-xs, .button-sm, .button-md, .button-lg, .button-xl {
   color: #333; }
 
 .c-tcdk {
-  color: #666666; }
+  color: black; }
 
-.c-tcmd {
-  color: #999999; }
+.c-tcxdk {
+  color: black; }
 
-.c-tclt {
-  color: #cccccc; }
+.c-prxlt {
+  color: #58aa7f; }
+
+.c-prlt {
+  color: #4f9a73; }
 
 .c-pr {
   color: #468966; }
 
 .c-prdk {
-  color: #74a68c; }
+  color: #3d7859; }
 
-.c-prmd {
-  color: #a2c4b2; }
+.c-prxdk {
+  color: #35674d; }
 
-.c-prlt {
-  color: #d0e1d8; }
+.c-sexlt {
+  color: #c13600; }
+
+.c-selt {
+  color: #a82f00; }
 
 .c-se {
   color: #8E2800; }
 
 .c-sedk {
-  color: #aa5d3f; }
+  color: #752100; }
 
-.c-semd {
-  color: #c6937f; }
+.c-sexdk {
+  color: #5b1a00; }
 
-.c-selt {
-  color: #e2c9bf; }
+.c-texlt {
+  color: #d65f39; }
+
+.c-telt {
+  color: #cb512a; }
 
 .c-te {
   color: #B64926; }
 
 .c-tedk {
-  color: #c8765c; }
+  color: #a14122; }
 
-.c-temd {
-  color: #daa492; }
+.c-texdk {
+  color: #8c381d; }
 
-.c-telt {
-  color: #ecd1c8; }
+.c-qaxlt {
+  color: #ffc56e; }
+
+.c-qalt {
+  color: #ffba55; }
 
 .c-qa {
   color: #FFB03B; }
 
 .c-qadk {
-  color: #ffc36c; }
+  color: #ffa621; }
 
-.c-qamd {
-  color: #ffd79d; }
+.c-qaxdk {
+  color: #ff9b08; }
 
-.c-qalt {
-  color: #ffebce; }
+.c-qixlt {
+  color: #fff9d8; }
+
+.c-qilt {
+  color: #fff4be; }
 
 .c-qi {
   color: #FFF0A5; }
 
 .c-qidk {
-  color: #fff3bb; }
+  color: #ffec8c; }
 
-.c-qimd {
-  color: #fff7d2; }
+.c-qixdk {
+  color: #ffe772; }
 
-.c-qilt {
-  color: #fffbe8; }
-
-.c-ac {
-  color: #00FFFF; }
-
-.c-acdk {
-  color: #3fffff; }
-
-.c-acmd {
-  color: #7fffff; }
+.c-acxlt {
+  color: #ffc56e; }
 
 .c-aclt {
-  color: #bfffff; }
+  color: #ffba55; }
+
+.c-ac {
+  color: #FFB03B; }
+
+.c-acdk {
+  color: #ffa621; }
+
+.c-acxdk {
+  color: #ff9b08; }
 
 /* OPACITY */
 .op-0 {
@@ -1628,6 +1667,30 @@
 /* TODO: add more thorough/prettier hover/active/focus effects */
 /* TODO: use darken effect on hover, instead of lighten? */
 /* BUTTONS */
+.button-pr {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
+.button-se {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
+.button-te {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
+.button-qa {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
+.button-qi {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
+.button-ac {
+  /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+      so their order in the .css file may affect their functionality! */ }
+
 /* FLAG ELEMENT */
 /* FORM ELEMENTS */
 /* LISTS */

@@ -28,19 +28,19 @@ $color-list: "pr" "se" "te" "qa" "qi" "ac";
     .button-#{$current-color} {
         @extend .bgc-#{$current-color};
 
-        // NOTE: link pseudo-classes are attached to individual atomic color classes,
-        //  so their order in the .css file may affect their functionality!
+        /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+            so their order in the .css file may affect their functionality! */
 
         &:hover {
-            @extend .bgc-#{$current-color}dk;
+            @extend .bgc-#{$current-color}lt;
         }
 
         &:active {
-            @extend .bgc-#{$current-color}md;
+            @extend .bgc-#{$current-color}dk;
         }
 
         &:focus {
-            @extend .bgc-#{$current-color}md;
+            @extend .bgc-#{$current-color}dk;
         }
     }
 }

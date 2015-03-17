@@ -22,7 +22,7 @@
 
 .fz-xs { font-size: ($base-font-size * 0.5); }
 .fz-sm { font-size: ($base-font-size * 0.75); }
-.fz-md { font-size: ($base-font-size * 1.0); }
+.fz-md { font-size: $base-font-size; }
 .fz-lg { font-size: ($base-font-size * 1.5); }
 .fz-xl { font-size: ($base-font-size * 2.0); }
 
