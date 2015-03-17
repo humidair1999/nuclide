@@ -1,1 +1,27 @@
 /* MEDIA ELEMENT */
+
+/* https://github.com/csswizardry/inuit.css/blob/master/objects/_media.scss */
+
+.media {
+    @extend .d-b;
+    @extend .cf;
+}
+
+.media__img {
+    @extend .fl-l;
+    @extend .mr-md;
+
+    > img {
+        @extend .d-b;
+    }
+
+    .media--rev & {
+        @extend .fl-r;
+        @extend .ml-md;
+        @extend .mr-0;
+    }
+}
+
+.media__body {
+    @extend .ov-h;
+}
