@@ -36,3 +36,5 @@ build/
 .DS_Store
 
 .sass-cache/
+
+dest/
