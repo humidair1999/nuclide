@@ -3,29 +3,32 @@
 
 /* BUTTONS */
 
+.button {
+    @extend .d-b;
+    @extend .cur-p;
+    @extend .whs-nw;
+    @extend .ta-c;
+    @extend .bds-n;
+    @extend .bdw-0;
+    @extend .ff-i;
+    @extend .fz-i;
+    @extend .td-n;
+    @extend .c-tc;
+    @extend .user-select-none;
+}
+
 $size-list: "xs" "sm" "md" "lg" "xl";
 
 @each $current-size in $size-list {
-    .button-#{$current-size} {
-        @extend .d-b;
+    .button--#{$current-size} {
         @extend .p-#{$current-size};
-        @extend .cur-p;
-        @extend .whs-nw;
-        @extend .ta-c;
-        @extend .bds-n;
-        @extend .bdw-0;
-        @extend .ff-i;
-        @extend .fz-i;
-        @extend .td-n;
-        @extend .c-tc;
-        @extend .user-select-none;
     }
 }
 
 $color-list: "pr" "se" "te" "qa" "qi" "ac";
 
 @each $current-color in $color-list {
-    .button-#{$current-color} {
+    .button--#{$current-color} {
         @extend .bgc-#{$current-color};
 
         /* NOTE: link pseudo-classes are attached to individual atomic color classes,
