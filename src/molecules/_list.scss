@@ -13,3 +13,42 @@
     @extend .ml-0;
     @extend .c-tclt;
 }
+
+/* stabs tabs */
+/* http://pea.rs/lists/stats-tabs */
+
+.stats-tabs {
+    @extend .lis-n;
+    @extend .cf;
+}
+
+.stats-tabs li {
+    @extend .fl-l;
+    @extend .mr-md;
+    @extend .pr-md;
+
+    @extend .bdrw-1;
+    @extend .bdrst-s;
+    @extend .bdrc-tclt;
+}
+
+.stats-tabs li:last-child {
+    @extend .m-0;
+    @extend .p-0;
+    @extend .bd-n;
+}
+
+.stats-tabs li a {
+    @extend .d-b;
+
+    @extend .fz-md;
+    @extend .fw-b;
+}
+
+.stats-tabs li a span {
+    @extend .d-b;
+    @extend .mt-xs;
+
+    @extend .fz-xs;
+    @extend .fw-n;
+}

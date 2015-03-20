@@ -61,23 +61,19 @@
 
 .bdw-0 { border-width: 0; }
 
-/* TODO: add generated edge borders */
+@mixin atomic-border-set($edgeAbbr, $edgeFull) {
+    .bd#{$edgeAbbr}-n {     border-#{$edgeFull}:       none; }
+    .bd#{$edgeAbbr}w-1 {    border-#{$edgeFull}-width: 1px; }
+    .bd#{$edgeAbbr}st-n {   border-#{$edgeFull}-style: none; }
+    .bd#{$edgeAbbr}st-s {   border-#{$edgeFull}-style: solid; }
+    .bd#{$edgeAbbr}c-t {    border-#{$edgeFull}-color: transparent; }
+    .bd#{$edgeAbbr}c-tclt { border-#{$edgeFull}-color: lighten($text-color, 25%); }
+}
 
-.bdt-n {  border-top:       none; }
-.bdts-n { border-top-style: none; }
-.bdtc-t { border-top-color: transparent; }
-
-.bdr-n {   border-right:       none; }
-.bdrst-n { border-right-style: none; }
-.bdrc-t {  border-right-color: transparent; }
-
-.bdb-n {  border-bottom:       none; }
-.bdbs-n { border-bottom-style: none; }
-.bdbc-t { border-bottom-color: transparent; }
-
-.bdl-n {  border-left:       none; }
-.bdls-n { border-left-style: none; }
-.bdlc-t { border-left-color: transparent; }
+@include atomic-border-set("t", "top");
+@include atomic-border-set("r", "right");
+@include atomic-border-set("b", "bottom");
+@include atomic-border-set("l", "left");
 
 .bdrs-0 { border-radius: 0; }
 

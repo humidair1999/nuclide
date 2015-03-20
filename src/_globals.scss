@@ -1,0 +1,33 @@
+/* GLOBAL STYLES AND CLASSES */
+
+/* SET ALL ELEMENTS TO BOX-SIZING: BORDER-BOX */
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+a {
+    @extend .td-n;
+    @extend .c-tc;
+}
+
+a:hover {
+    @extend .c-tclt;
+}
+
+a:active {
+    @extend .c-tclt;
+}
+
+a:focus {
+    @extend .c-tclt;
+}

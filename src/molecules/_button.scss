@@ -35,14 +35,17 @@ $color-list: "pr" "se" "te" "qa" "qi" "ac";
             so their order in the .css file may affect their functionality! */
 
         &:hover {
+            @extend .c-tclt;
             @extend .bgc-#{$current-color}lt;
         }
 
         &:active {
+            @extend .c-tclt;
             @extend .bgc-#{$current-color}dk;
         }
 
         &:focus {
+            @extend .c-tclt;
             @extend .bgc-#{$current-color}dk;
         }
     }
