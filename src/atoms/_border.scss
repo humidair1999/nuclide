@@ -75,9 +75,31 @@
 @include atomic-border-set("b", "bottom");
 @include atomic-border-set("l", "left");
 
-.bdrs-0 { border-radius: 0; }
+@mixin atomic-border-radius-set($suffix, $pixels) {
+    .bdrs-#{$suffix} {
+        border-radius: #{$pixels}px;
+        background-clip: padding-box;
+    }
 
-.bdtrrs-0 { border-top-right-radius:    0; }
-.bdtlrs-0 { border-top-left-radius:     0; }
-.bdbrrs-0 { border-bottom-right-radius: 0; }
-.bdblrs-0 { border-bottom-left-radius:  0; }
+    .bdtrrs-#{$suffix} {
+        border-top-right-radius: #{$pixels}px;
+        background-clip: padding-box;
+    }
+    .bdtlrs-#{$suffix} {
+        border-top-left-radius: #{$pixels}px;
+        background-clip: padding-box;
+    }
+    .bdbrrs-#{$suffix} {
+        border-bottom-right-radius: #{$pixels}px;
+        background-clip: padding-box;
+    }
+    .bdblrs-#{$suffix} {
+        border-bottom-left-radius: #{$pixels}px;
+        background-clip: padding-box;
+    }
+}
+
+@include atomic-border-radius-set("0", 0);
+@include atomic-border-radius-set("sm", 2);
+@include atomic-border-radius-set("md", 4);
+@include atomic-border-radius-set("lg", 6);
