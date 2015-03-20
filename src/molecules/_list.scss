@@ -25,14 +25,14 @@
 
     > li {
         @extend .fl-l;
-        @extend .mr-md;
-        @extend .pr-md;
+        @extend .ml-md;
+        @extend .pl-md;
 
-        @extend .bdrw-1;
-        @extend .bdrst-s;
-        @extend .bdrc-tclt;
+        @extend .bdlw-1;
+        @extend .bdlst-s;
+        @extend .bdlc-tclt;
 
-        &:last-child {
+        &:first-child {
             @extend .m-0;
             @extend .p-0;
             @extend .bd-n;
