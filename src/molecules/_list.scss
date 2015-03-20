@@ -1,3 +1,6 @@
+/* TODO: more fancy CSS3 effects and animations? */
+/* TODO: make button tags look like actual tags with pseudo elements? */
+
 /* LISTS */
 
 /* definition list */
@@ -100,4 +103,40 @@
         @extend .c-w;
         @extend .bgc-prdk;
     }
+}
+
+/* vertical tags */
+/* http://pea.rs/lists/tags-vertical */
+
+.vertical-tags {
+    @extend .w-1-4;
+}
+
+.vertical-tags__item {
+    @extend .d-b;
+    @extend .p-sm;
+
+    @extend .cf;
+
+    &:hover {
+        @extend .c-w;
+        @extend .bgc-prlt;
+
+        @extend .bdrs-md;
+    }
+
+    &:active {
+        @extend .c-w;
+        @extend .bgc-prdk;
+    }
+
+    &:focus {
+        @extend .c-w;
+        @extend .bgc-prdk;
+    }
+}
+
+.vertical-tags__subtext {
+    @extend .fl-r;
+    @extend .c-tclt;
 }
