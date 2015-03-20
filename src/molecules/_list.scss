@@ -54,3 +54,52 @@
     @extend .fz-xs;
     @extend .fw-n;
 }
+
+/* button tags */
+/* http://pea.rs/lists/tags-buttons */
+
+.button-tags {
+    @extend .lis-n;
+    @extend .cf;
+
+    > li {
+        @extend .fl-l;
+        @extend .ml-xs;
+
+        &:first-child {
+            @extend .m-0;
+        }
+    }
+}
+
+.button-tags__item {
+    @extend .pos-r;
+    @extend .d-b;
+    @extend .pt-xs;
+    @extend .pr-sm;
+    @extend .pb-xs;
+    @extend .pl-lg;
+
+    @extend .c-w;
+
+    @extend .bgc-prxdk;
+
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+
+    &:hover {
+        @extend .c-w;
+        @extend .bgc-prlt;
+    }
+
+    &:active {
+        @extend .c-w;
+        @extend .bgc-prdk;
+    }
+
+    &:focus {
+        @extend .c-w;
+        @extend .bgc-prdk;
+    }
+}
