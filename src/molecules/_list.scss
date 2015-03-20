@@ -1,1 +1,15 @@
 /* LISTS */
+
+/* definition list */
+/* http://pea.rs/lists/definition */
+
+.definition-list dt {
+    @extend .fw-b;
+    @extend .mb-xs;
+}
+
+.definition-list dd {
+    @extend .mb-md;
+    @extend .ml-0;
+    @extend .c-tclt;
+}
