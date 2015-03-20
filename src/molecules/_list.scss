@@ -3,49 +3,51 @@
 /* definition list */
 /* http://pea.rs/lists/definition */
 
-.definition-list dt {
-    @extend .fw-b;
-    @extend .mb-xs;
+.definition-list {
+    > dt {
+        @extend .fw-b;
+        @extend .mb-xs;
+    }
+
+    > dd {
+        @extend .mb-md;
+        @extend .ml-0;
+        @extend .c-tclt;
+    }
 }
 
-.definition-list dd {
-    @extend .mb-md;
-    @extend .ml-0;
-    @extend .c-tclt;
-}
-
-/* stabs tabs */
+/* stats tabs */
 /* http://pea.rs/lists/stats-tabs */
 
 .stats-tabs {
     @extend .lis-n;
     @extend .cf;
+
+    > li {
+        @extend .fl-l;
+        @extend .mr-md;
+        @extend .pr-md;
+
+        @extend .bdrw-1;
+        @extend .bdrst-s;
+        @extend .bdrc-tclt;
+
+        &:last-child {
+            @extend .m-0;
+            @extend .p-0;
+            @extend .bd-n;
+        }
+    }
 }
 
-.stats-tabs li {
-    @extend .fl-l;
-    @extend .mr-md;
-    @extend .pr-md;
-
-    @extend .bdrw-1;
-    @extend .bdrst-s;
-    @extend .bdrc-tclt;
-}
-
-.stats-tabs li:last-child {
-    @extend .m-0;
-    @extend .p-0;
-    @extend .bd-n;
-}
-
-.stats-tabs li a {
+.stats-tabs__item {
     @extend .d-b;
 
     @extend .fz-md;
     @extend .fw-b;
 }
 
-.stats-tabs li a span {
+.stats-tabs__subtext {
     @extend .d-b;
     @extend .mt-xs;
 
