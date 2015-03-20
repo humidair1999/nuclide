@@ -15,6 +15,10 @@
     -webkit-padding-start: 0;
 }
 
+table {
+    border-spacing: 0;
+}
+
 a {
     @extend .td-n;
     @extend .c-tc;

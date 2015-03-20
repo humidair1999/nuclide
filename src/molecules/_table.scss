@@ -1,1 +1,33 @@
 /* TABLES */
+
+.data-table {
+    @extend .m-0;
+    @extend .p-0;
+
+    tr {
+        > th, td {
+            @extend .pt-md;
+            @extend .pr-lg;
+            @extend .pb-md;
+            @extend .pl-lg;
+
+            @extend .ta-l;
+        }
+
+        > th {
+            @extend .bdbw-1;
+            @extend .bdbst-s;
+            @extend .bdbc-tclt;
+        }
+
+        > td {
+            @extend .bdtw-1;
+            @extend .bdtst-s;
+            @extend .bdtc-tclt;
+        }
+
+        &:nth-child(even) {
+            @extend .bgc-prxlt;
+        }
+    }
+}

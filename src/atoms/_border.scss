@@ -64,6 +64,7 @@
 @mixin atomic-border-set($edgeAbbr, $edgeFull) {
     .bd#{$edgeAbbr}-n {     border-#{$edgeFull}:       none; }
     .bd#{$edgeAbbr}w-1 {    border-#{$edgeFull}-width: 1px; }
+    .bd#{$edgeAbbr}w-2 {    border-#{$edgeFull}-width: 2px; }
     .bd#{$edgeAbbr}st-n {   border-#{$edgeFull}-style: none; }
     .bd#{$edgeAbbr}st-s {   border-#{$edgeFull}-style: solid; }
     .bd#{$edgeAbbr}c-t {    border-#{$edgeFull}-color: transparent; }
