@@ -58,15 +58,15 @@ Don't forget to add a [normalize](http://necolas.github.io/normalize.css/) and
 
 ### Upcoming
 
-Molecules via patterns from:
-
-- http://pea.rs/
+- Molecules via patterns from: http://pea.rs/
+- Plugins for patterns implemented via: https://ux.mailchimp.com/patterns
 
 ### Philosophy
 
 - All styles should be easily traceable - every root class in the Style panel should be an atomic one (e.g. `.button` traces down to `.d-b`, `.p-lg`, etc.)
 - All styles that appear in the Style panel class lists should be usable; there shouldn't be any molecules
-that are "incomplete" (e.g. an incomplete `.button` class that a complete class `.button-lg` extends)
+that are "incomplete" (e.g. an incomplete `.button` class that a complete class `.button--lg` extends)
 - Every molecule should be 100% composed of individual atomic classes
-- Every molecule should be top-level and usable regardless of HTML structure - NO NESTING/DESCENDANTS
+- Every molecule should be top-level and usable regardless of HTML structure - NO NESTING/DESCENDANTS (exceptions: HTML elements with required structure (`ol`, `ul`, `dl`, etc.))
 - Molecules should provide baseline, pragmatic, "80/20" functionality - no flair or edge cases
+- Molecules should adhere to BEM methodology
