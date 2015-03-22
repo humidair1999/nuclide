@@ -3,59 +3,83 @@
 /* https://css-tricks.com/snippets/css/using-font-face/ */
 
 @font-face {
-    font-family: 'open_sanslight';
-    src: url('../fonts/OpenSans-Light-webfont.eot');
-    src: url('../fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Light-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Light-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Light-webfont.svg#open_sanslight') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-extralight-webfont.eot');
+    src: url('../fonts/sourcesanspro-extralight-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-extralight-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-extralight-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-extralight-webfont.svg#sourcesanspro') format('svg');
 }
 
 @font-face {
-    font-family: 'open_sansregular';
-    src: url('../fonts/OpenSans-Regular-webfont.eot');
-    src: url('../fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Regular-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-light-webfont.eot');
+    src: url('../fonts/sourcesanspro-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-light-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-light-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-light-webfont.svg#sourcesanspro') format('svg');
 }
 
 @font-face {
-    font-family: 'open_sanslight_italic';
-    src: url('../fonts/OpenSans-LightItalic-webfont.eot');
-    src: url('../fonts/OpenSans-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-LightItalic-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-LightItalic-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-LightItalic-webfont.svg#open_sanslight_italic') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-regular-webfont.eot');
+    src: url('../fonts/sourcesanspro-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-regular-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-regular-webfont.svg#sourcesanspro') format('svg');
 }
 
 @font-face {
-    font-family: 'open_sansitalic';
-    src: url('../fonts/OpenSans-Italic-webfont.eot');
-    src: url('../fonts/OpenSans-Italic-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Italic-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Italic-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Italic-webfont.svg#open_sansitalic') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot');
+    src: url('../fonts/sourcesanspro-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-semibold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-semibold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-semibold-webfont.svg#sourcesanspro') format('svg');
 }
 
 @font-face {
-    font-family: 'open_sansbold';
-    src: url('../fonts/OpenSans-Bold-webfont.eot');
-    src: url('../fonts/OpenSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Bold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Bold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Bold-webfont.svg#open_sansbold') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-bold-webfont.eot');
+    src: url('../fonts/sourcesanspro-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-bold-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-bold-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-bold-webfont.svg#sourcesanspro') format('svg');
 }
 
 @font-face {
-    font-family: 'open_sanssemibold';
-    src: url('../fonts/OpenSans-Semibold-webfont.eot');
-    src: url('../fonts/OpenSans-Semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/OpenSans-Semibold-webfont.woff') format('woff'),
-         url('../fonts/OpenSans-Semibold-webfont.ttf') format('truetype'),
-         url('../fonts/OpenSans-Semibold-webfont.svg#open_sanssemibold') format('svg');
+    font-family: 'sourcesanspro';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/sourcesanspro-black-webfont.eot');
+    src: url('../fonts/sourcesanspro-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-black-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-black-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-black-webfont.svg#sourcesanspro') format('svg');
+}
+
+@font-face {
+    font-family: 'sourcesanspro';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/sourcesanspro-it-webfont.eot');
+    src: url('../fonts/sourcesanspro-it-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/sourcesanspro-it-webfont.woff') format('woff'),
+         url('../fonts/sourcesanspro-it-webfont.ttf') format('truetype'),
+         url('../fonts/sourcesanspro-it-webfont.svg#sourcesanspro') format('svg');
 }
 
 body {
-    font-family: 'open_sanslight';
+    font-family: 'sourcesanspro';
+    font-weight: 300;
 }
