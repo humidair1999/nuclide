@@ -29,12 +29,14 @@
 
 .fz-i { font-size: inherit; }
 
-/* TODO: add classes for user's custom fonts */
-
 .ff-s {  font-family: serif; }
 .ff-ss { font-family: sans-serif; }
 .ff-c {  font-family: cursive; }
 .ff-f {  font-family: fantasy; }
 .ff-m {  font-family: monospace; }
-.ff-a {  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; }
+.ff-a {  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 .ff-i {  font-family: inherit; }
+
+/* TODO: add classes for user's custom fonts */
+
+.ff-sourcesanspro { font-family: 'sourcesanspro', 'Helvetica Neue', Helvetica, sans-serif; }

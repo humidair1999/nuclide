@@ -2,9 +2,9 @@
 
 /* SET ALL ELEMENTS TO BOX-SIZING: BORDER-BOX */
 *, *:before, *:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 * {
@@ -13,6 +13,16 @@
     -webkit-margin-start: 0;
     -webkit-margin-end: 0;
     -webkit-padding-start: 0;
+}
+
+/* http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html */
+
+body {
+    @extend .ff-sourcesanspro;
+    @extend .fw-3;
+    @extend .fs-n;
+
+    font-size: 100%;
 }
 
 a {
