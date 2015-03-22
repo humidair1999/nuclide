@@ -1,3 +1,37 @@
 /* STATS & DATA */
 
 /* https://ux.mailchimp.com/patterns/stats */
+
+/* meter block */
+
+.meter-block {
+    @extend .w-1-1;
+
+    @extend .pr-md;
+    @extend .pl-md;
+}
+
+.meter-block__label-container {
+    @extend .cf;
+}
+
+.meter-block__label-text {
+    @extend .fl-l;
+    @extend .fw-b;
+}
+
+.meter-block__label-percentage {
+    @extend .fl-r;
+}
+
+.meter-block__bar-background {
+    @extend .bgc-prxlt;
+}
+
+.meter-block__bar-foreground {
+    @extend .d-b;
+    @extend .p-sm;
+    @extend .mt-sm;
+
+    @extend .bgc-pr;
+}
