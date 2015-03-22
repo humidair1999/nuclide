@@ -1,3 +1,109 @@
 /* FEEDBACK BLOCKS */
 
 /* https://ux.mailchimp.com/patterns/feedback */
+
+.feedback {
+    @extend .pt-lg;
+    @extend .pb-lg;
+    @extend .pr-md;
+    @extend .pl-md;
+}
+
+.feedback--success {
+    @extend .bgc-pr;
+}
+
+.feedback--alert {
+    @extend .bgc-qa;
+}
+
+.feedback--error {
+    @extend .bgc-se;
+}
+
+.feedback--info {
+    @extend .bgc-qi;
+}
+
+.feedback__container {
+    @extend .cf;
+}
+
+.feedback__icon {
+    @extend .fl-l;
+
+    .feedback--success & {
+        @extend .c-w;
+    }
+
+    .feedback--error & {
+        @extend .c-w;
+    }
+}
+
+.feedback__header {
+    @extend .pl-xl;
+    @extend .mb-md;
+
+    .feedback--success & {
+        @extend .c-w;
+    }
+
+    .feedback--error & {
+        @extend .c-w;
+    }
+}
+
+.feedback__body {
+    @extend .pl-xl;
+    @extend .c-tclt;
+
+    .feedback--success & {
+        @extend .c-tcxlt;
+    }
+
+    .feedback--error & {
+        @extend .c-w;
+    }
+}
+
+/* no-data blocks */
+
+.no-data {
+    @extend .pl-md;
+    @extend .pr-md;
+}
+
+.no-data__content {
+    @extend .ta-c;
+
+    @extend .p-xl;
+
+    @extend .bdtw-1;
+    @extend .bdtst-s;
+    @extend .bdtc-tclt;
+
+    @extend .bdrw-1;
+    @extend .bdrst-s;
+    @extend .bdrc-tclt;
+
+    @extend .bdbw-1;
+    @extend .bdbst-s;
+    @extend .bdbc-tclt;
+
+    @extend .bdlw-1;
+    @extend .bdlst-s;
+    @extend .bdlc-tclt;
+}
+
+.no-data__image {
+    @extend .mb-xl;
+}
+
+.no-data__header {
+    @extend .mb-md;
+}
+
+.no-data__body {
+    @extend .c-tclt;
+}
