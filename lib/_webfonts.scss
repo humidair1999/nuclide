@@ -78,3 +78,14 @@
          url('../fonts/sourcesanspro-it-webfont.ttf') format('truetype'),
          url('../fonts/sourcesanspro-it-webfont.svg#sourcesanspro-it-webfont') format('svg');
 }
+
+@font-face {
+    font-family: 'Simple-Line-Icons';
+    font-weight: normal;
+    font-style: normal;
+    src:url('../fonts/Simple-Line-Icons.eot');
+    src:url('../fonts/Simple-Line-Icons.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Simple-Line-Icons.woff') format('woff'),
+        url('../fonts/Simple-Line-Icons.ttf') format('truetype'),
+        url('../fonts/Simple-Line-Icons.svg#Simple-Line-Icons') format('svg');
+}

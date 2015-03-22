@@ -97,6 +97,7 @@
 }
 
 .no-data__image {
+    @extend .d-b;
     @extend .mb-xl;
 }
 
