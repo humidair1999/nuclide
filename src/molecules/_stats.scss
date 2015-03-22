@@ -35,3 +35,50 @@
 
     @extend .bgc-pr;
 }
+
+/* stat blocks */
+
+.stat-blocks {
+    @extend .cf;
+
+    @extend .pr-md;
+    @extend .pl-md;
+}
+
+.stat-blocks__block {
+    @extend .fl-l;
+    @extend .w-1-3;
+    @extend .ta-c;
+
+    @extend .pt-xl;
+    @extend .pb-xl;
+
+    @extend .bdtw-1;
+    @extend .bdtst-s;
+    @extend .bdtc-tclt;
+
+    @extend .bdrw-1;
+    @extend .bdrst-s;
+    @extend .bdrc-tclt;
+
+    @extend .bdbw-1;
+    @extend .bdbst-s;
+    @extend .bdbc-tclt;
+}
+
+.stat-blocks__block:first-child {
+    @extend .bdlw-1;
+    @extend .bdlst-s;
+    @extend .bdlc-tclt;
+}
+
+.stat-blocks__header {
+    @extend .mb-sm;
+    @extend .fz-lg;
+    @extend .c-tcdk;
+}
+
+.stat-blocks__subtext {
+    @extend .fz-sm;
+    @extend .c-tclt;
+}
