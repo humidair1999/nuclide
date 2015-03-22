@@ -2,6 +2,22 @@
 
 .ol-n { outline: none; }
 
+.olw-tn { outline-width: thin; }
+.olw-m {  outline-width: medium; }
+.olw-tc { outline-width: thick; }
+
+.ols-n {  outline-style: none; }
+.ols-dt { outline-style: dotted; }
+.ols-ds { outline-style: dashed; }
+.ols-s {  outline-style: solid; }
+.ols-db { outline-style: double; }
+.ols-g {  outline-style: groove; }
+.ols-r {  outline-style: ridge; }
+.ols-i {  outline-style: inset; }
+.ols-o {  outline-style: outset; }
+
+.olc-0 { outline-color: #000; }
+
 .olc-w { outline-color: white; }
 .olc-b { outline-color: black; }
 .olc-i { outline-color: invert; }
