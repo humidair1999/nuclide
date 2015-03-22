@@ -1,0 +1,18 @@
+/* TODO: determine most flexible media queries? */
+
+/* RESPONSIVE CLASSES */
+/* http://www.zell-weekeat.com/how-to-write-mobile-first-css/ */
+
+.show-on-desktop {
+    display: none;
+}
+
+@media (min-width: $desktop-min-breakpoint) {
+    .show-on-desktop {
+        display: block;
+    }
+
+    .show-on-mobile {
+        display: none;
+    }
+}

@@ -24,9 +24,36 @@
             <p>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <a href="#lists">Lists</a>
-        <a href="#table">Table</a>
-        <a href="#slats">Slats</a>
+        <h2 class="mb-lg">Navigation</h2>
+
+        <h3 class="td-u mb-md">footer nav</h3>
+
+        <header id="header" class="mb-lg">
+            <nav>
+                <a href="#footer-nav" class="show-on-mobile">Skip to navigation</a>
+
+                <ul class="nav-simple show-on-desktop">
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#table">Table</a></li>
+                    <li><a href="#slats">Slats</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <h3 class="td-u mb-md">toggle nav (requires JS)</h3>
+
+        <header class="mb-lg">
+            <nav>
+                <a href="#" id="toggle-nav-menu" class="show-on-mobile">Toggle menu</a>
+
+                <ul id="nav-menu" class="nav-simple show-on-desktop">
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#table">Table</a></li>
+                    <li><a href="#slats">Slats</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <hr class="mb-lg">
 
@@ -325,5 +352,20 @@
             <span class="fz-lg fl-l">large</span>
             <span class="fz-xl fl-l">extra large</span>
         </div>
+
+        <footer>
+            <nav id="footer-nav" class="show-on-mobile">
+                <ul class="nav-simple">
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#table">Table</a></li>
+                    <li><a href="#slats">Slats</a></li>
+                </ul>
+            </nav>
+
+            <a href="#header" class="show-on-mobile">Back to top</a>
+        </footer>
+
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/nuclide.js"></script>
     </body>
 </html>

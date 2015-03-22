@@ -1,1 +1,28 @@
 /* NAVIGATION */
+
+/* NOTE: if you're implementing the toggle menu, don't forget to include
+    nuclide.js */
+
+.nav-simple {
+    @extend .lis-n;
+    @extend .cf;
+
+    @extend .bgc-pr;
+
+    > li {
+        /* TODO: hopefully sass will let us use @extend in media queries soon:
+            http://www.sitepoint.com/cross-media-query-extend-sass/ */
+        @media (min-width: $desktop-min-breakpoint) {
+            float: left;
+        }
+
+        > a {
+            @extend .d-b;
+            @extend .p-md;
+
+            &:hover {
+                @extend .bgc-prlt;
+            }
+        }
+    }
+}
