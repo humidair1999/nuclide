@@ -2,10 +2,6 @@
 
 .bd-n { border: none; }
 
-/* TODO: add classes for user's custom borders */
-
-.bdbk-c { border-break: close; }
-
 .bdcl-c { border-collapse: collapse; }
 .bdcl-s { border-collapse: separate; }
 
@@ -14,36 +10,6 @@
 .bdc-t { border-color: transparent; }
 .bdc-w { border-color: white; }
 .bdc-b { border-color: black; }
-
-.bdi-n { border-image: none; }
-
-.bdti-n { border-top-image:    none; }
-.bdri-n { border-right-image:  none; }
-.bdbi-n { border-bottom-image: none; }
-.bdli-n { border-left-image:   none; }
-
-.bdci-n { border-corner-image: none; }
-.bdci-c { border-corner-image: continue; }
-
-.bdtli-n { border-top-left-image:  none; }
-.bdtli-c { border-top-left-image:  continue; }
-.bdtri-n { border-top-right-image: none; }
-.bdtri-c { border-top-right-image: continue; }
-
-.bdbri-n { border-bottom-right-image: none; }
-.bdbri-c { border-bottom-right-image: continue; }
-.bdbli-n { border-bottom-left-image:  none; }
-.bdbli-c { border-bottom-left-image:  continue; }
-
-.bdf-c {  border-fit: clip; }
-.bdf-r {  border-fit: repeat; }
-.bdf-sc { border-fit: scale; }
-.bdf-st { border-fit: stretch; }
-.bdf-ow { border-fit: overwrite; }
-.bdf-of { border-fit: overflow; }
-.bdf-sp { border-fit: space; }
-
-.bdlen-a { border-length: auto; }
 
 .bds-n {      border-style: none; }
 .bds-h {      border-style: hidden; }
