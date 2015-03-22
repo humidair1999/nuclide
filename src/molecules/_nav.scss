@@ -21,7 +21,18 @@
             @extend .p-md;
 
             &:hover {
+                @extend .c-w;
                 @extend .bgc-prlt;
+            }
+
+            &:active {
+                @extend .c-w;
+                @extend .bgc-prdk;
+            }
+
+            &:focus {
+                @extend .c-w;
+                @extend .bgc-prdk;
             }
         }
     }
