@@ -37,4 +37,5 @@ build/
 
 .sass-cache/
 
-dest/
+css/nuclide.css
+css/nuclide.css.map

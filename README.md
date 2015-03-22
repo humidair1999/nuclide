@@ -27,17 +27,14 @@ The source for nuclide is implemented in [Sass](http://sass-lang.com/).
 Assuming you have Sass installed via Rubygems, either compile the source Sass:
 
 ```
-sass src/main.scss dest/nuclide.css
+sass lib/nuclide.scss css/nuclide.css
 ```
 
 or use the `watch` directive from the command line:
 
 ```
-sass --watch src/main.scss:dest/nuclide.css
+sass --watch lib/nuclide.scss:css/nuclide.css
 ```
-
-Alternatively, you can grab the compiled `nuclide.css` in the `dest` directory and
-replace any unit values manually.
 
 Don't forget to add a [normalize](http://necolas.github.io/normalize.css/) and
 [grid](http://responsive.gs/), also!
