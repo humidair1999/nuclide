@@ -21,6 +21,18 @@
 
     > li {
         @extend .mt-md;
+
+        label {
+            .form-simple__label-main {
+                @extend .d-b;
+            }
+
+            .form-simple__label-additional {
+                @extend .d-b;
+                @extend .fz-xs;
+                @extend .c-tclt;
+            }
+        }
     }
 
     > li:first-child {
@@ -36,6 +48,16 @@
     > li {
         @extend .fl-l;
         @extend .ml-md;
+
+        label {
+            @extend .cf;
+
+            .form-simple__label-main {
+                @extend .fl-l;
+
+                @extend .mr-md;
+            }
+        }
     }
 
     > li:first-child {

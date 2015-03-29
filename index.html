@@ -377,11 +377,7 @@
                 </li>
                 <li>
                     <label>
-                        <span class="form-simple__label-main">
-                            YouTube Username
-
-                            <span class="form-simple__label-additional">helper text</span>
-                        </span>
+                        <span class="form-simple__label-main">YouTube Username</span>
 
                         <input type="text">
                     </label>
@@ -398,27 +394,31 @@
                 <input type="text">
             </label>
 
-            <fieldset>
+            <fieldset class="mt-md">
                 <legend>Output format:</legend>
 
                 <ul class="form-simple__check-list">
                     <li>
                         <label>
-                            <span>FLV</span>
+                            <span class="form-simple__label-main">
+                                FLV
+
+                                <span class="form-simple__label-additional">helper text</span>
+                            </span>
 
                             <input type="radio" name="format" value="flv" />
                         </label>
                     </li>
                     <li>
                         <label>
-                            <span>AVI</span>
+                            <span class="form-simple__label-main">AVI</span>
 
                             <input type="radio" name="format" value="avi" />
                         </label>
                     </li>
                     <li>
                         <label>
-                            <span>MP3</span>
+                            <span class="form-simple__label-main">MP3</span>
 
                             <input type="radio" name="format" value="mp3" />
                         </label>
@@ -426,7 +426,41 @@
                 </ul>
             </fieldset>
 
-            <input type="submit" value="Submit" />
+            <ul class="form-simple__check-list mt-md">
+                <li>
+                    <label>
+                        <span class="form-simple__label-main">
+                            FLV
+
+                            <span class="form-simple__label-additional">helper text</span>
+                        </span>
+
+                        <input type="radio" name="format2" value="flv" />
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span class="form-simple__label-main">AVI</span>
+
+                        <input type="radio" name="format2" value="avi" />
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span class="form-simple__label-main">MP3</span>
+
+                        <input type="radio" name="format2" value="mp3" />
+                    </label>
+                </li>
+            </ul>
+
+            <label class="mt-md">
+                <span class="form-simple__label-main">FLV</span>
+
+                <input type="radio" name="format3" value="flv" />
+            </label>
+
+            <input type="submit" class="mt-md" value="Submit" />
         </form>
 
         <hr class="mb-lg">
