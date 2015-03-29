@@ -8,6 +8,24 @@
 
     fieldset {
         @extend .p-md;
+        @extend .ml-0;
+        @extend .mr-0;
+
+        @extend .bdtw-1;
+        @extend .bdtst-s;
+        @extend .bdtc-tclt;
+
+        @extend .bdrw-1;
+        @extend .bdrst-s;
+        @extend .bdrc-tclt;
+
+        @extend .bdbw-1;
+        @extend .bdbst-s;
+        @extend .bdbc-tclt;
+
+        @extend .bdlw-1;
+        @extend .bdlst-s;
+        @extend .bdlc-tclt;
     }
 
     label {
@@ -21,18 +39,6 @@
 
     > li {
         @extend .mt-md;
-
-        label {
-            .form-simple__label-main {
-                @extend .d-b;
-            }
-
-            .form-simple__label-additional {
-                @extend .d-b;
-                @extend .fz-xs;
-                @extend .c-tclt;
-            }
-        }
     }
 
     > li:first-child {
@@ -47,7 +53,7 @@
 
     > li {
         @extend .fl-l;
-        @extend .ml-md;
+        @extend .ml-lg;
 
         label {
             @extend .cf;
