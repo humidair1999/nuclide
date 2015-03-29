@@ -363,8 +363,37 @@
         <h3 class="td-u mb-md">simple form</h3>
 
         <form class="form-simple mb-lg">
-            <label>
-                <span>YouTube ID:</span>
+            <ul class="form-simple__field-list">
+                <li>
+                    <label>
+                        <span class="form-simple__label-main">
+                            YouTube ID
+
+                            <span class="form-simple__label-additional">helper text</span>
+                        </span>
+
+                        <input type="text">
+                    </label>
+                </li>
+                <li>
+                    <label>
+                        <span class="form-simple__label-main">
+                            YouTube Username
+
+                            <span class="form-simple__label-additional">helper text</span>
+                        </span>
+
+                        <input type="text">
+                    </label>
+                </li>
+            </ul>
+
+            <label class="mt-md">
+                <span class="form-simple__label-main">
+                    YouTube Username
+
+                    <span class="form-simple__label-additional">helper text</span>
+                </span>
 
                 <input type="text">
             </label>
@@ -372,23 +401,29 @@
             <fieldset>
                 <legend>Output format:</legend>
 
-                <label>
-                    <span>FLV</span>
+                <ul class="form-simple__check-list">
+                    <li>
+                        <label>
+                            <span>FLV</span>
 
-                    <input type="radio" name="format" value="flv" />
-                </label>
+                            <input type="radio" name="format" value="flv" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span>AVI</span>
 
-                <label>
-                    <span>AVI</span>
+                            <input type="radio" name="format" value="avi" />
+                        </label>
+                    </li>
+                    <li>
+                        <label>
+                            <span>MP3</span>
 
-                    <input type="radio" name="format" value="avi" />
-                </label>
-
-                <label>
-                    <span>MP3</span>
-
-                    <input type="radio" name="format" value="mp3" />
-                </label>
+                            <input type="radio" name="format" value="mp3" />
+                        </label>
+                    </li>
+                </ul>
             </fieldset>
 
             <input type="submit" value="Submit" />

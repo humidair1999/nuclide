@@ -5,4 +5,61 @@
 
 .form-simple {
     @extend .p-md;
+
+    fieldset {
+        @extend .p-md;
+    }
+
+    label {
+        @extend .d-b;
+    }
+}
+
+.form-simple__field-list {
+    @extend .lis-n;
+    @extend .m-0;
+
+    > li {
+        @extend .mt-md;
+    }
+
+    > li:first-child {
+        @extend .mt-0;
+    }
+}
+
+.form-simple__check-list {
+    @extend .lis-n;
+    @extend .m-0;
+    @extend .cf;
+
+    > li {
+        @extend .fl-l;
+        @extend .ml-md;
+    }
+
+    > li:first-child {
+        @extend .ml-0;
+    }
+}
+
+/* Instead of a `[type]` selector for each kind of form input, we just use a
+    class to target any/every one, e.g.:
+    <input type=text class=text-input>
+    <input type=email class=text-input>
+    <input type=password class=text-input>
+*/
+
+.form-simple__text-input {
+
+}
+
+.form-simple__label-main {
+    @extend .d-b;
+}
+
+.form-simple__label-additional {
+    @extend .d-b;
+    @extend .fz-xs;
+    @extend .c-tclt;
 }
