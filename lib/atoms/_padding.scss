@@ -1,6 +1,8 @@
 /* PADDING */
 
-@mixin atomic-padding-set($suffix, $padding) {
+/* standard paddings, independent of device */
+
+@mixin atomic-padding-set-standard($suffix, $padding) {
     .p-#{$suffix} {  padding:        $padding; }
     .pt-#{$suffix} { padding-top:    $padding; }
     .pr-#{$suffix} { padding-right:  $padding; }
@@ -8,11 +10,50 @@
     .pl-#{$suffix} { padding-left:   $padding; }
 }
 
-@include atomic-padding-set("0", 0);
-@include atomic-padding-set("a", auto);
+@include atomic-padding-set-standard("0", 0);
+@include atomic-padding-set-standard("a", auto);
 
-@include atomic-padding-set("xs", ($base-spacing-unit / 4));
-@include atomic-padding-set("sm", ($base-spacing-unit / 2));
-@include atomic-padding-set("md", $base-spacing-unit);
-@include atomic-padding-set("lg", ($base-spacing-unit * 2));
-@include atomic-padding-set("xl", ($base-spacing-unit * 4));
+@each $size-suffix, $size-value in map-get($spacing-units, standard) {
+    @include atomic-padding-set-standard($size-suffix, $size-value);
+}
+
+/* device-specific paddings */
+
+@mixin atomic-padding-set-device($suffix, $device, $padding) {
+    .p-#{$suffix}-#{$device} {  padding:        $padding; }
+    .pt-#{$suffix}-#{$device} { padding-top:    $padding; }
+    .pr-#{$suffix}-#{$device} { padding-right:  $padding; }
+    .pb-#{$suffix}-#{$device} { padding-bottom: $padding; }
+    .pl-#{$suffix}-#{$device} { padding-left:   $padding; }
+}
+
+/* mobile */
+
+@include atomic-padding-set-device("0", "mobile", 0);
+@include atomic-padding-set-device("a", "mobile", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units, mobile) {
+    @include atomic-padding-set-device($size-suffix, "mobile", $size-value);
+}
+
+/* tablet */
+
+@media (min-width: $tablet-min-breakpoint) {
+    @include atomic-padding-set-device("0", "tablet", 0);
+    @include atomic-padding-set-device("a", "tablet", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units, tablet) {
+        @include atomic-padding-set-device($size-suffix, "tablet", $size-value);
+    }
+}
+
+/* desktop */
+
+@media (min-width: $desktop-min-breakpoint) {
+    @include atomic-padding-set-device("0", "desktop", 0);
+    @include atomic-padding-set-device("a", "desktop", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units, desktop) {
+        @include atomic-padding-set-device($size-suffix, "desktop", $size-value);
+    }
+}
