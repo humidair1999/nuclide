@@ -21,13 +21,45 @@
 .fv-n {  font-variant: normal; }
 .fv-sc { font-variant: small-caps; }
 
-.fz-xs { font-size: ($base-font-size * 0.5); }
-.fz-sm { font-size: ($base-font-size * 0.75); }
-.fz-md { font-size: $base-font-size; }
-.fz-lg { font-size: ($base-font-size * 1.5); }
-.fz-xl { font-size: ($base-font-size * 2.0); }
-
 .fz-i { font-size: inherit; }
+
+/* standard font sizes, independent of device */
+
+@mixin atomic-font-size-set-standard($suffix, $font-size) {
+    .fz-#{$suffix} { font-size: $font-size; }
+}
+
+@each $size-suffix, $size-value in map-get($font-sizes, standard) {
+    @include atomic-font-size-set-standard($size-suffix, $size-value);
+}
+
+/* device-specific font sizes */
+
+@mixin atomic-font-size-set-device($suffix, $device, $font-size) {
+    .fz-#{$suffix}-#{$device} { font-size: $font-size; }
+}
+
+/* mobile */
+
+@each $size-suffix, $size-value in map-get($font-sizes, mobile) {
+    @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
+}
+
+/* tablet */
+
+@media (min-width: $tablet-min-breakpoint) {
+    @each $size-suffix, $size-value in map-get($font-sizes, tablet) {
+        @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
+    }
+}
+
+/* desktop */
+
+@media (min-width: $desktop-min-breakpoint) {
+    @each $size-suffix, $size-value in map-get($font-sizes, desktop) {
+        @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
+    }
+}
 
 .ff-s {  font-family: serif; }
 .ff-ss { font-family: sans-serif; }

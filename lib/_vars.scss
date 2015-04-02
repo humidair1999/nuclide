@@ -5,8 +5,6 @@
 
 $base-spacing-unit: 10px;
 
-$base-font-size: 1.4em;
-
 $text-color: #333;
 
 $color-primary: #468966;
@@ -19,3 +17,48 @@ $color-accent: #FFB03B;
 
 $tablet-min-breakpoint: 720px;
 $desktop-min-breakpoint: 1024px;
+
+/* font sizes, used for text and icon fonts */
+
+$font-sizes: (
+    standard: (
+        xxs: 0.2em,
+        xs: 0.4em,
+        sm: 0.7em,
+        md: 1.0em,
+        lg: 1.3em,
+        xl: 1.8em,
+        xxl: 2.2em,
+        xxxl: 2.6em
+    ),
+    mobile: (
+        xxs: 0.2em,
+        xs: 0.4em,
+        sm: 0.7em,
+        md: 1.0em,
+        lg: 1.3em,
+        xl: 1.8em,
+        xxl: 2.2em,
+        xxxl: 2.6em
+    ),
+    tablet: (
+        xxs: 0.2em,
+        xs: 0.4em,
+        sm: 0.7em,
+        md: 1.0em,
+        lg: 1.3em,
+        xl: 1.8em,
+        xxl: 2.2em,
+        xxxl: 2.6em
+    ),
+    desktop: (
+        xxs: 0.2em,
+        xs: 0.4em,
+        sm: 0.7em,
+        md: 1.0em,
+        lg: 1.3em,
+        xl: 1.8em,
+        xxl: 2.2em,
+        xxxl: 2.6em
+    )
+);
