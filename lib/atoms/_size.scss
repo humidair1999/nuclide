@@ -1,12 +1,19 @@
 /* SIZE */
 
-.w-a { width: auto; }
-.h-a { height: auto; }
+$size-fractions: (
+    (1, 6),
+    (1, 4),
+    (1, 3),
+    (1, 2),
+    (2, 3),
+    (3, 4),
+    (5, 6),
+    (1, 1),
+);
 
-.maw-n { max-width: none; }
-.mah-n { max-height: none; }
+/* standard sizes, independent of device */
 
-@mixin atomic-size-set($numerator, $denominator) {
+@mixin atomic-size-set-standard($numerator, $denominator) {
     .w-#{$numerator}-#{$denominator} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
     .h-#{$numerator}-#{$denominator} {   height:     percentage(floor(100000 * $numerator / $denominator) / 100000); }
     .miw-#{$numerator}-#{$denominator} { min-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
@@ -15,12 +22,63 @@
     .mah-#{$numerator}-#{$denominator} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
 }
 
-@include atomic-size-set(1, 6);
-@include atomic-size-set(1, 4);
-@include atomic-size-set(1, 3);
-@include atomic-size-set(1, 2);
-@include atomic-size-set(2, 3);
-@include atomic-size-set(3, 4);
-@include atomic-size-set(5, 6);
+.w-a { width: auto; }
+.h-a { height: auto; }
 
-@include atomic-size-set(1, 1);
+.maw-n { max-width: none; }
+.mah-n { max-height: none; }
+
+@each $fraction in $size-fractions {
+    @include atomic-size-set-standard(nth($fraction, 1), nth($fraction, 2));
+}
+
+/* device-specific sizes */
+
+@mixin atomic-size-set-device($numerator, $denominator, $device) {
+    .w-#{$numerator}-#{$denominator}-#{$device} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .h-#{$numerator}-#{$denominator}-#{$device} {   height:     percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .miw-#{$numerator}-#{$denominator}-#{$device} { min-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mih-#{$numerator}-#{$denominator}-#{$device} { min-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .maw-#{$numerator}-#{$denominator}-#{$device} { max-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mah-#{$numerator}-#{$denominator}-#{$device} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+}
+
+/* mobile */
+
+.w-a-mobile { width: auto; }
+.h-a-mobile { height: auto; }
+
+.maw-n-mobile { max-width: none; }
+.mah-n-mobile { max-height: none; }
+
+@each $fraction in $size-fractions {
+    @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "mobile");
+}
+
+/* tablet */
+
+@media (min-width: $tablet-min-breakpoint) {
+    .w-a-tablet { width: auto; }
+    .h-a-tablet { height: auto; }
+
+    .maw-n-tablet { max-width: none; }
+    .mah-n-tablet { max-height: none; }
+
+    @each $fraction in $size-fractions {
+        @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "tablet");
+    }
+}
+
+/* desktop */
+
+@media (min-width: $desktop-min-breakpoint) {
+    .w-a-desktop { width: auto; }
+    .h-a-desktop { height: auto; }
+
+    .maw-n-desktop { max-width: none; }
+    .mah-n-desktop { max-height: none; }
+
+    @each $fraction in $size-fractions {
+        @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "desktop");
+    }
+}
