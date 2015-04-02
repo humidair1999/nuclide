@@ -1,6 +1,8 @@
 /* MARGIN */
 
-@mixin atomic-margin-set($suffix, $margin) {
+/* standard margins, independent of device */
+
+@mixin atomic-margin-set-standard($suffix, $margin) {
     .m-#{$suffix} {  margin:        $margin; }
     .mt-#{$suffix} { margin-top:    $margin; }
     .mr-#{$suffix} { margin-right:  $margin; }
@@ -8,11 +10,50 @@
     .ml-#{$suffix} { margin-left:   $margin; }
 }
 
-@include atomic-margin-set("0", 0);
-@include atomic-margin-set("a", auto);
+@include atomic-margin-set-standard("0", 0);
+@include atomic-margin-set-standard("a", auto);
 
-@include atomic-margin-set("xs", ($base-spacing-unit / 4));
-@include atomic-margin-set("sm", ($base-spacing-unit / 2));
-@include atomic-margin-set("md", $base-spacing-unit);
-@include atomic-margin-set("lg", ($base-spacing-unit * 2));
-@include atomic-margin-set("xl", ($base-spacing-unit * 4));
+@each $size-suffix, $size-value in map-get($spacing-units, standard) {
+    @include atomic-margin-set-standard($size-suffix, $size-value);
+}
+
+/* device-specific margins */
+
+@mixin atomic-margin-set-device($suffix, $device, $margin) {
+    .m-#{$suffix}-#{$device} {  margin:        $margin; }
+    .mt-#{$suffix}-#{$device} { margin-top:    $margin; }
+    .mr-#{$suffix}-#{$device} { margin-right:  $margin; }
+    .mb-#{$suffix}-#{$device} { margin-bottom: $margin; }
+    .ml-#{$suffix}-#{$device} { margin-left:   $margin; }
+}
+
+/* mobile */
+
+@include atomic-margin-set-device("0", "mobile", 0);
+@include atomic-margin-set-device("a", "mobile", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units, mobile) {
+    @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
+}
+
+/* tablet */
+
+@media (min-width: $tablet-min-breakpoint) {
+    @include atomic-margin-set-device("0", "tablet", 0);
+    @include atomic-margin-set-device("a", "tablet", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units, tablet) {
+        @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
+    }
+}
+
+/* desktop */
+
+@media (min-width: $desktop-min-breakpoint) {
+    @include atomic-margin-set-device("0", "desktop", 0);
+    @include atomic-margin-set-device("a", "desktop", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units, desktop) {
+        @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
+    }
+}

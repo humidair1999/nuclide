@@ -15,6 +15,8 @@ $color-quinary: #FFF0A5;
 
 $color-accent: #FFB03B;
 
+/* responsive breakpoints */
+
 $tablet-min-breakpoint: 720px;
 $desktop-min-breakpoint: 1024px;
 
@@ -60,5 +62,50 @@ $font-sizes: (
         xl: 1.8em,
         xxl: 2.2em,
         xxxl: 2.6em
+    )
+);
+
+/* spacing units, used for margin and padding */
+
+$spacing-units: (
+    standard: (
+        xxs: 6px,
+        xs: 12px,
+        sm: 20px,
+        md: 30px,
+        lg: 45px,
+        xl: 60px,
+        xxl: 75px,
+        xxxl: 90px
+    ),
+    mobile: (
+        xxs: 6px,
+        xs: 12px,
+        sm: 20px,
+        md: 30px,
+        lg: 45px,
+        xl: 60px,
+        xxl: 75px,
+        xxxl: 90px
+    ),
+    tablet: (
+        xxs: 10px,
+        xs: 20px,
+        sm: 30px,
+        md: 40px,
+        lg: 60px,
+        xl: 80px,
+        xxl: 100px,
+        xxxl: 130px
+    ),
+    desktop: (
+        xxs: 10px,
+        xs: 20px,
+        sm: 30px,
+        md: 40px,
+        lg: 60px,
+        xl: 80px,
+        xxl: 100px,
+        xxxl: 130px
     )
 );
