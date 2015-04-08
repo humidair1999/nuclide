@@ -1,4 +1,8 @@
-> NOTE: nuclide is a work in progress! Many features still forthcoming!
+> NOTE: If you're looking for [Facebook's IDE for React Native](http://nuclide.io/),
+you're in the wrong place! Different project!
+
+> NOTE: nuclide is a work in progress! It's not yet considered a stable release,
+and should be treated as a beta project!
 
 # nuclide
 
