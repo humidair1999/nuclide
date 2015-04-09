@@ -13,7 +13,7 @@
     }
 
     > dd {
-        @extend .mb-md;
+        @extend .mb-std;
         @extend .ml-0;
         @extend .c-tundora-lt;
     }
@@ -28,8 +28,8 @@
 
     > li {
         @extend .fl-l;
-        @extend .ml-md;
-        @extend .pl-md;
+        @extend .ml-std;
+        @extend .pl-std;
 
         @extend .bdlw-1;
         @extend .bdlst-s;

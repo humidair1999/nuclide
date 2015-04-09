@@ -18,11 +18,9 @@
     @extend .user-select-none;
 }
 
-$size-list: "xs" "sm" "md" "lg" "xl";
-
-@each $current-size in $size-list {
-    .button--#{$current-size} {
-        @extend .p-#{$current-size};
+@each $size-suffix, $size-value in $spacing-units {
+    .button--#{$size-suffix} {
+        @extend .p-#{$size-suffix};
     }
 }
 

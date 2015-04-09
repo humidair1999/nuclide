@@ -24,7 +24,7 @@
 }
 
 .flag__image {
-    @extend .pr-md;
+    @extend .pr-std;
 
     > img {
         @extend .d-b;
@@ -33,7 +33,7 @@
 
     .flag--rev & {
         @extend .pr-0;
-        @extend .pl-md;
+        @extend .pl-std;
     }
 }
 

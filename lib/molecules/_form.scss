@@ -4,10 +4,10 @@
 /* https://github.com/csswizardry/inuit.css/blob/master/base/_forms.scss */
 
 .form-simple {
-    @extend .p-md;
+    @extend .p-std;
 
     fieldset {
-        @extend .p-md;
+        @extend .p-std;
         @extend .ml-0;
         @extend .mr-0;
 
@@ -38,7 +38,7 @@
     @extend .m-0;
 
     > li {
-        @extend .mt-md;
+        @extend .mt-std;
     }
 
     > li:first-child {
@@ -61,7 +61,7 @@
             .form-simple__label-main {
                 @extend .fl-l;
 
-                @extend .mr-md;
+                @extend .mr-std;
             }
         }
     }

@@ -13,7 +13,7 @@
 @include atomic-margin-set-standard("0", 0);
 @include atomic-margin-set-standard("a", auto);
 
-@each $size-suffix, $size-value in map-get($spacing-units, standard) {
+@each $size-suffix, $size-value in $spacing-units {
     @include atomic-margin-set-standard($size-suffix, $size-value);
 }
 
@@ -32,7 +32,7 @@
 @include atomic-margin-set-device("0", "mobile", 0);
 @include atomic-margin-set-device("a", "mobile", auto);
 
-@each $size-suffix, $size-value in map-get($spacing-units, mobile) {
+@each $size-suffix, $size-value in $spacing-units {
     @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
 }
 
@@ -42,7 +42,7 @@
     @include atomic-margin-set-device("0", "tablet", 0);
     @include atomic-margin-set-device("a", "tablet", auto);
 
-    @each $size-suffix, $size-value in map-get($spacing-units, tablet) {
+    @each $size-suffix, $size-value in $spacing-units {
         @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
     }
 }
@@ -53,7 +53,7 @@
     @include atomic-margin-set-device("0", "desktop", 0);
     @include atomic-margin-set-device("a", "desktop", auto);
 
-    @each $size-suffix, $size-value in map-get($spacing-units, desktop) {
+    @each $size-suffix, $size-value in $spacing-units {
         @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
     }
 }

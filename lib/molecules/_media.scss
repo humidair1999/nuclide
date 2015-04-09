@@ -9,7 +9,7 @@
 
 .media__img {
     @extend .fl-l;
-    @extend .mr-md;
+    @extend .mr-std;
 
     > img {
         @extend .d-b;
@@ -17,7 +17,7 @@
 
     .media--rev & {
         @extend .fl-r;
-        @extend .ml-md;
+        @extend .ml-std;
         @extend .mr-0;
     }
 }

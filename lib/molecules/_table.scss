@@ -6,9 +6,9 @@
 
     tr {
         > th, td {
-            @extend .pt-md;
+            @extend .pt-std;
             @extend .pr-lg;
-            @extend .pb-md;
+            @extend .pb-std;
             @extend .pl-lg;
 
             @extend .ta-l;

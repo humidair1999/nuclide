@@ -7,8 +7,8 @@
 .meter-block {
     @extend .w-1-1;
 
-    @extend .pr-md;
-    @extend .pl-md;
+    @extend .pr-std;
+    @extend .pl-std;
 }
 
 .meter-block__label-container {
@@ -41,8 +41,8 @@
 .stat-blocks {
     @extend .cf;
 
-    @extend .pr-md;
-    @extend .pl-md;
+    @extend .pr-std;
+    @extend .pl-std;
 }
 
 .stat-blocks__block {

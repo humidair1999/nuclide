@@ -5,8 +5,8 @@
 .feedback {
     @extend .pt-lg;
     @extend .pb-lg;
-    @extend .pr-md;
-    @extend .pl-md;
+    @extend .pr-std;
+    @extend .pl-std;
 }
 
 .feedback--success {
@@ -43,7 +43,7 @@
 
 .feedback__header {
     @extend .pl-xl;
-    @extend .mb-md;
+    @extend .mb-std;
 
     .feedback--success & {
         @extend .c-w;
@@ -70,8 +70,8 @@
 /* no-data blocks */
 
 .no-data {
-    @extend .pl-md;
-    @extend .pr-md;
+    @extend .pl-std;
+    @extend .pr-std;
 }
 
 .no-data__content {
@@ -102,7 +102,7 @@
 }
 
 .no-data__header {
-    @extend .mb-md;
+    @extend .mb-std;
 }
 
 .no-data__body {
