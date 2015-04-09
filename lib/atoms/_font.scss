@@ -29,7 +29,7 @@
     .fz-#{$suffix} { font-size: $font-size; }
 }
 
-@each $size-suffix, $size-value in map-get($font-sizes, standard) {
+@each $size-suffix, $size-value in $font-sizes {
     @include atomic-font-size-set-standard($size-suffix, $size-value);
 }
 
@@ -41,14 +41,14 @@
 
 /* mobile */
 
-@each $size-suffix, $size-value in map-get($font-sizes, mobile) {
+@each $size-suffix, $size-value in $font-sizes {
     @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
 }
 
 /* tablet */
 
 @media (min-width: map-get($breakpoints, tablet)) {
-    @each $size-suffix, $size-value in map-get($font-sizes, tablet) {
+    @each $size-suffix, $size-value in $font-sizes {
         @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
     }
 }
@@ -56,7 +56,7 @@
 /* desktop */
 
 @media (min-width: map-get($breakpoints, desktop)) {
-    @each $size-suffix, $size-value in map-get($font-sizes, desktop) {
+    @each $size-suffix, $size-value in $font-sizes {
         @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
     }
 }

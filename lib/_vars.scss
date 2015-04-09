@@ -32,46 +32,21 @@ $breakpoints: (
 /* font sizes, used for text and icon fonts */
 
 $font-sizes: (
-    standard: (
-        xxs: 0.2em,
-        xs: 0.4em,
-        sm: 0.7em,
-        md: 1.0em,
-        lg: 1.3em,
-        xl: 1.8em,
-        xxl: 2.2em,
-        xxxl: 2.6em
-    ),
-    mobile: (
-        xxs: 0.2em,
-        xs: 0.4em,
-        sm: 0.7em,
-        md: 1.0em,
-        lg: 1.3em,
-        xl: 1.8em,
-        xxl: 2.2em,
-        xxxl: 2.6em
-    ),
-    tablet: (
-        xxs: 0.2em,
-        xs: 0.4em,
-        sm: 0.7em,
-        md: 1.0em,
-        lg: 1.3em,
-        xl: 1.8em,
-        xxl: 2.2em,
-        xxxl: 2.6em
-    ),
-    desktop: (
-        xxs: 0.2em,
-        xs: 0.4em,
-        sm: 0.7em,
-        md: 1.0em,
-        lg: 1.3em,
-        xl: 1.8em,
-        xxl: 2.2em,
-        xxxl: 2.6em
-    )
+    xxxs: 0.75em,  /* 12px */
+    xxs:  0.813em, /* 13px */
+    xs:   0.875em, /* 14px */
+    sm:   0.938em, /* 15px */
+    std:  1.0em,   /* 16px */
+    lg:   1.125em, /* 18px */
+    xl:   1.25em,  /* 20px */
+    xxl:  1.375em, /* 22px */
+    xxxl: 1.5em,   /* 24px */
+    4xl:  1.625em, /* 26px */
+    5xl:  1.875em, /* 30px */
+    6xl:  2.25em,  /* 36px */
+    7xl:  2.5em,   /* 40px */
+    8xl:  3.0em,   /* 48px */
+    9xl:  4.375em  /* 70px */
 );
 
 /* spacing units, used for margin and padding */
