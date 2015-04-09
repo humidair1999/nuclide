@@ -15,7 +15,7 @@
     > dd {
         @extend .mb-md;
         @extend .ml-0;
-        @extend .c-tclt;
+        @extend .c-tundora-lt;
     }
 }
 
@@ -85,23 +85,23 @@
 
     @extend .c-w;
 
-    @extend .bgc-prxdk;
+    @extend .bgc-tundora-dk;
 
     @extend .bdrs-md;
 
     &:hover {
         @extend .c-w;
-        @extend .bgc-prlt;
+        @extend .bgc-tundora-lt;
     }
 
     &:active {
         @extend .c-w;
-        @extend .bgc-prdk;
+        @extend .bgc-tundora-dk;
     }
 
     &:focus {
         @extend .c-w;
-        @extend .bgc-prdk;
+        @extend .bgc-tundora-dk;
     }
 }
 
@@ -120,23 +120,23 @@
 
     &:hover {
         @extend .c-w;
-        @extend .bgc-prlt;
+        @extend .bgc-tundora-lt;
 
         @extend .bdrs-md;
     }
 
     &:active {
         @extend .c-w;
-        @extend .bgc-prdk;
+        @extend .bgc-tundora-dk;
     }
 
     &:focus {
         @extend .c-w;
-        @extend .bgc-prdk;
+        @extend .bgc-tundora-dk;
     }
 }
 
 .vertical-tags__subtext {
     @extend .fl-r;
-    @extend .c-tclt;
+    @extend .c-tundora-lt;
 }

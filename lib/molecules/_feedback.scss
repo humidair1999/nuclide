@@ -10,19 +10,19 @@
 }
 
 .feedback--success {
-    @extend .bgc-pr;
+    @extend .bgc-tundora;
 }
 
 .feedback--alert {
-    @extend .bgc-qa;
+    @extend .bgc-tundora;
 }
 
 .feedback--error {
-    @extend .bgc-se;
+    @extend .bgc-tundora;
 }
 
 .feedback--info {
-    @extend .bgc-qi;
+    @extend .bgc-tundora;
 }
 
 .feedback__container {
@@ -56,10 +56,10 @@
 
 .feedback__body {
     @extend .pl-xl;
-    @extend .c-tclt;
+    @extend .c-tundora-lt;
 
     .feedback--success & {
-        @extend .c-tcxlt;
+        @extend .c-tundora-xlt;
     }
 
     .feedback--error & {
@@ -106,5 +106,5 @@
 }
 
 .no-data__body {
-    @extend .c-tclt;
+    @extend .c-tundora-lt;
 }

@@ -13,7 +13,7 @@
     @extend .ff-i;
     @extend .fz-i;
     @extend .td-n;
-    @extend .c-tc;
+    @extend .c-tundora;
     @extend .bdrs-md;
     @extend .user-select-none;
 }
@@ -26,28 +26,26 @@ $size-list: "xs" "sm" "md" "lg" "xl";
     }
 }
 
-$color-list: "pr" "se" "te" "qa" "qi" "ac";
-
-@each $current-color in $color-list {
-    .button--#{$current-color} {
-        @extend .bgc-#{$current-color};
+@each $color-name, $color-hex in $colors {
+    .button--#{$color-name} {
+        @extend .bgc-#{$color-name};
 
         /* NOTE: link pseudo-classes are attached to individual atomic color classes,
             so their order in the .css file may affect their functionality! */
 
         &:hover {
-            @extend .c-tclt;
-            @extend .bgc-#{$current-color}lt;
+            @extend .c-tundora-lt;
+            @extend .bgc-#{$color-name}-lt;
         }
 
         &:active {
-            @extend .c-tclt;
-            @extend .bgc-#{$current-color}dk;
+            @extend .c-tundora-lt;
+            @extend .bgc-#{$color-name}-dk;
         }
 
         &:focus {
-            @extend .c-tclt;
-            @extend .bgc-#{$current-color}dk;
+            @extend .c-tundora-lt;
+            @extend .bgc-#{$color-name}-dk;
         }
     }
 }

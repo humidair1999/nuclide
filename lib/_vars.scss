@@ -1,17 +1,19 @@
+/* SASS VARIABLES */
+
+/* colors */
+
 /* TODO: add all color variants as variables here, so the variables can be
     used across all stylesheets */
 
-/* SASS VARIABLES */
+/* http://chir.ag/projects/name-that-color/ */
 
-$text-color: #333;
-
-$color-primary: #468966;
-$color-secondary: #8E2800;
-$color-tertiary: #B64926;
-$color-quaternary: #FFB03B;
-$color-quinary: #FFF0A5;
-
-$color-accent: #FFB03B;
+$colors: (
+    tundora:        #444444, /* off-black */
+    robinsegg:      #00bfc6, /* light blue */
+    gallery:        #eeeeee, /* light gray */
+    capecod:        #3a4446, /* greenish-blue */
+    outerspace:     #293133  /* dark blue-black */
+);
 
 /* responsive breakpoints */
 

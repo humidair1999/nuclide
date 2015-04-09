@@ -25,7 +25,7 @@
 }
 
 .meter-block__bar-background {
-    @extend .bgc-prxlt;
+    @extend .bgc-tundora-xlt;
 }
 
 .meter-block__bar-foreground {
@@ -33,7 +33,7 @@
     @extend .p-sm;
     @extend .mt-sm;
 
-    @extend .bgc-pr;
+    @extend .bgc-tundora;
 }
 
 /* stat blocks */
@@ -75,10 +75,10 @@
 .stat-blocks__header {
     @extend .mb-sm;
     @extend .fz-lg;
-    @extend .c-tcdk;
+    @extend .c-tundora-dk;
 }
 
 .stat-blocks__subtext {
     @extend .fz-sm;
-    @extend .c-tclt;
+    @extend .c-tundora-lt;
 }

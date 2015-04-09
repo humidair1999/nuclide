@@ -7,7 +7,7 @@
     @extend .lis-n;
     @extend .cf;
 
-    @extend .bgc-pr;
+    @extend .bgc-tundora;
 
     > li {
         /* TODO: hopefully sass will let us use @extend in media queries soon:
@@ -22,17 +22,17 @@
 
             &:hover {
                 @extend .c-w;
-                @extend .bgc-prlt;
+                @extend .bgc-tundora-lt;
             }
 
             &:active {
                 @extend .c-w;
-                @extend .bgc-prdk;
+                @extend .bgc-tundora-dk;
             }
 
             &:focus {
                 @extend .c-w;
-                @extend .bgc-prdk;
+                @extend .bgc-tundora-dk;
             }
         }
     }

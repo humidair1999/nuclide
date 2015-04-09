@@ -1,26 +1,16 @@
 /* COLOR */
 
-.c-w {  color: white; }
-.c-b {  color: black; }
-
-.c-tcxlt { color: lighten($text-color, 75%); }
-.c-tclt {  color: lighten($text-color, 25%); }
-.c-tc {    color: $text-color; }
-.c-tcdk {  color: darken($text-color, 25%); }
-.c-tcxdk { color: darken($text-color, 75%); }
-
-@mixin atomic-color-set($suffix, $color) {
-    .c-#{$suffix}xlt { color: lighten($color, 10%); }
-    .c-#{$suffix}lt {  color: lighten($color, 5%); }
-    .c-#{$suffix} {    color: $color; }
-    .c-#{$suffix}dk {  color: darken($color, 5%); }
-    .c-#{$suffix}xdk { color: darken($color, 10%); }
+@mixin atomic-color-set($color-name, $color-hex) {
+    .c-#{$color-name}-xlt { color: lighten($color-hex, 10%); }
+    .c-#{$color-name}-lt {  color: lighten($color-hex, 5%); }
+    .c-#{$color-name} {     color: $color-hex; }
+    .c-#{$color-name}-dk {  color: darken($color-hex, 5%); }
+    .c-#{$color-name}-xdk { color: darken($color-hex, 10%); }
 }
 
-@include atomic-color-set("pr", $color-primary);
-@include atomic-color-set("se", $color-secondary);
-@include atomic-color-set("te", $color-tertiary);
-@include atomic-color-set("qa", $color-quaternary);
-@include atomic-color-set("qi", $color-quinary);
+@each $color-name, $color-hex in $colors {
+    @include atomic-color-set($color-name, $color-hex);
+}
 
-@include atomic-color-set("ac", $color-accent);
+@include atomic-color-set("w", #ffffff);
+@include atomic-color-set("b", #000000);

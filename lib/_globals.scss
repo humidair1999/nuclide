@@ -23,23 +23,38 @@ body {
     @extend .ff-sourcesanspro;
     @extend .fw-3;
     @extend .fs-n;
+    @extend .c-tundora;
 
     font-size: 100%;
 }
 
+/* http://adaptivethemes.com/why-we-must-reset-ol-and-ul-elements */
+
+ul, ol {
+    padding: 0;
+    margin: 0;
+}
+
 a {
     @extend .td-n;
-    @extend .c-tc;
+    @extend .c-robinsegg;
 }
 
 a:hover {
-    @extend .c-tclt;
+    @extend .c-robinsegg-dk;
 }
 
 a:active {
-    @extend .c-tclt;
+    @extend .c-robinsegg-xdk;
 }
 
 a:focus {
-    @extend .c-tclt;
+    @extend .c-robinsegg-xdk;
+}
+
+hr {
+    width: 100%;
+    height: 1px;
+    border: 0;
+    background: #cccccc;
 }
