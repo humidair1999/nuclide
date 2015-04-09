@@ -38,7 +38,7 @@
 
 /* tablet */
 
-@media (min-width: $tablet-min-breakpoint) {
+@media (min-width: map-get($breakpoints, tablet)) {
     @include atomic-padding-set-device("0", "tablet", 0);
     @include atomic-padding-set-device("a", "tablet", auto);
 
@@ -49,7 +49,7 @@
 
 /* desktop */
 
-@media (min-width: $desktop-min-breakpoint) {
+@media (min-width: map-get($breakpoints, desktop)) {
     @include atomic-padding-set-device("0", "desktop", 0);
     @include atomic-padding-set-device("a", "desktop", auto);
 

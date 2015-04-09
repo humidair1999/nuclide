@@ -47,7 +47,7 @@
 
 /* tablet */
 
-@media (min-width: $tablet-min-breakpoint) {
+@media (min-width: map-get($breakpoints, tablet)) {
     @each $size-suffix, $size-value in map-get($font-sizes, tablet) {
         @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
     }
@@ -55,7 +55,7 @@
 
 /* desktop */
 
-@media (min-width: $desktop-min-breakpoint) {
+@media (min-width: map-get($breakpoints, desktop)) {
     @each $size-suffix, $size-value in map-get($font-sizes, desktop) {
         @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
     }

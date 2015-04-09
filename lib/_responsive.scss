@@ -35,7 +35,7 @@
     display: none;
 }
 
-@media (min-width: $tablet-min-breakpoint) {
+@media (min-width: map-get($breakpoints, tablet)) {
     /* mobile */
     .float-left-on-mobile {
         float: none;
@@ -85,7 +85,7 @@
     }
 }
 
-@media (min-width: $desktop-min-breakpoint) {
+@media (min-width: map-get($breakpoints, desktop)) {
     /* mobile */
     .float-left-on-mobile {
         float: none;

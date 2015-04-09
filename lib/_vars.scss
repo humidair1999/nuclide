@@ -15,10 +15,19 @@ $colors: (
     outerspace:     #293133  /* dark blue-black */
 );
 
-/* responsive breakpoints */
+/* use ems for everything:
+    http://v1.jontangerine.com/log/2007/09/the-incredible-em-and-elastic-layouts-with-css
+    1em = 16px
+    Therefore, 1px = 1 / 16 = 0.0625em
+    0.0625em × 740px = 46.25em
+*/
 
-$tablet-min-breakpoint: 720px;
-$desktop-min-breakpoint: 1024px;
+/* responsive breakpoints; add or remove as needed */
+
+$breakpoints: (
+    tablet:  50em,    /* 800px */
+    desktop: 96.875em /* 1550px */
+);
 
 /* font sizes, used for text and icon fonts */
 

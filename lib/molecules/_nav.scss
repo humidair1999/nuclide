@@ -12,7 +12,7 @@
     > li {
         /* TODO: hopefully sass will let us use @extend in media queries soon:
             http://www.sitepoint.com/cross-media-query-extend-sass/ */
-        @media (min-width: $desktop-min-breakpoint) {
+        @media (min-width: map-get($breakpoints, desktop)) {
             float: left;
         }
 

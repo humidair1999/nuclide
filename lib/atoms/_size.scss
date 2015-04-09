@@ -57,7 +57,7 @@ $size-fractions: (
 
 /* tablet */
 
-@media (min-width: $tablet-min-breakpoint) {
+@media (min-width: map-get($breakpoints, tablet)) {
     .w-a-tablet { width: auto; }
     .h-a-tablet { height: auto; }
 
@@ -71,7 +71,7 @@ $size-fractions: (
 
 /* desktop */
 
-@media (min-width: $desktop-min-breakpoint) {
+@media (min-width: map-get($breakpoints, desktop)) {
     .w-a-desktop { width: auto; }
     .h-a-desktop { height: auto; }
 
