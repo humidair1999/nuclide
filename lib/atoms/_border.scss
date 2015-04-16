@@ -1,21 +1,21 @@
 /* BORDER */
 
-.bd-n { border: none; }
-
 .bdcl-c { border-collapse: collapse; }
 .bdcl-s { border-collapse: separate; }
 
-/* TODO: add more border styles and mixins for browser prefixes */
+/* border: none */
 
-.bdc-t { border-color: transparent; }
-.bdc-w { border-color: white; }
-.bdc-b { border-color: black; }
+.bd-n {  border:        none; }
+.bdt-n { border-top:    none; }
+.bdr-n { border-right:  none; }
+.bdb-n { border-bottom: none; }
+.bdl-n { border-left:   none; }
 
-.bds-n {      border-style: none; }
+/* border styles */
+
 .bds-h {      border-style: hidden; }
 .bds-dt {     border-style: dotted; }
 .bds-ds {     border-style: dashed; }
-.bds-s {      border-style: solid; }
 .bds-db {     border-style: double; }
 .bds-dtds {   border-style: dot-dash; }
 .bds-dtdtds { border-style: dot-dot-dash; }
@@ -25,50 +25,106 @@
 .bds-i {      border-style: inset; }
 .bds-o {      border-style: outset; }
 
-.bdw-0 { border-width: 0; }
+/* generated border styles */
 
-/* TODO: generate border colors based on colors var */
-
-@mixin atomic-border-set($edgeAbbr, $edgeFull) {
-    .bd#{$edgeAbbr}-n {     border-#{$edgeFull}:       none; }
-    .bd#{$edgeAbbr}w-1 {    border-#{$edgeFull}-width: 1px; }
-    .bd#{$edgeAbbr}w-2 {    border-#{$edgeFull}-width: 2px; }
-    .bd#{$edgeAbbr}st-n {   border-#{$edgeFull}-style: none; }
-    .bd#{$edgeAbbr}st-s {   border-#{$edgeFull}-style: solid; }
-    .bd#{$edgeAbbr}c-t {    border-#{$edgeFull}-color: transparent; }
-    .bd#{$edgeAbbr}c-tclt { border-#{$edgeFull}-color: lighten(map-get($colors, tundora), 25%); }
+@mixin atomic-border-style-set($border-style) {
+    .bds-#{$border-style} {  border-style:        $border-style; }
+    .bdts-#{$border-style} { border-top-style:    $border-style; }
+    .bdrs-#{$border-style} { border-right-style:  $border-style; }
+    .bdbs-#{$border-style} { border-bottom-style: $border-style; }
+    .bdls-#{$border-style} { border-left-style:   $border-style; }
 }
 
-@include atomic-border-set("t", "top");
-@include atomic-border-set("r", "right");
-@include atomic-border-set("b", "bottom");
-@include atomic-border-set("l", "left");
+$border-styles: none, solid;
 
-@mixin atomic-border-radius-set($suffix, $pixels) {
-    .bdrs-#{$suffix} {
-        border-radius: #{$pixels}px;
-        background-clip: padding-box;
-    }
+@each $border-style in $border-styles {
+    @include atomic-border-style-set($border-style);
+}
 
-    .bdtrrs-#{$suffix} {
-        border-top-right-radius: #{$pixels}px;
-        background-clip: padding-box;
-    }
-    .bdtlrs-#{$suffix} {
-        border-top-left-radius: #{$pixels}px;
-        background-clip: padding-box;
-    }
-    .bdbrrs-#{$suffix} {
-        border-bottom-right-radius: #{$pixels}px;
-        background-clip: padding-box;
-    }
-    .bdblrs-#{$suffix} {
-        border-bottom-left-radius: #{$pixels}px;
-        background-clip: padding-box;
+/* generated border widths */
+
+@mixin atomic-border-width-set($edge-width) {
+    @if $edge-width == 0 {
+        .bdw-#{$edge-width} {  border-width:        #{$edge-width}; }
+        .bdtw-#{$edge-width} { border-top-width:    #{$edge-width}; }
+        .bdrw-#{$edge-width} { border-right-width:  #{$edge-width}; }
+        .bdbw-#{$edge-width} { border-bottom-width: #{$edge-width}; }
+        .bdlw-#{$edge-width} { border-left-width:   #{$edge-width}; }
+    } @else {
+        .bdw-#{$edge-width} {  border-width:        #{$edge-width}px; }
+        .bdtw-#{$edge-width} { border-top-width:    #{$edge-width}px; }
+        .bdrw-#{$edge-width} { border-right-width:  #{$edge-width}px; }
+        .bdbw-#{$edge-width} { border-bottom-width: #{$edge-width}px; }
+        .bdlw-#{$edge-width} { border-left-width:   #{$edge-width}px; }
     }
 }
 
-@include atomic-border-radius-set("0", 0);
-@include atomic-border-radius-set("sm", 2);
-@include atomic-border-radius-set("md", 4);
-@include atomic-border-radius-set("lg", 6);
+@for $edge-width from 0 through 4 {
+    @include atomic-border-width-set($edge-width);
+}
+
+/* border colors based on global colors map */
+
+@mixin atomic-border-color-set($color-name, $color-hex) {
+    @if map-get($config, generate-border-color-shades) and map-has-key($colors, $color-name) {
+        .bdc-#{$color-name}-lt {  border-color:        lighten($color-hex, 5%); }
+        .bdtc-#{$color-name}-lt { border-top-color:    lighten($color-hex, 5%); }
+        .bdrc-#{$color-name}-lt { border-right-color:  lighten($color-hex, 5%); }
+        .bdbc-#{$color-name}-lt { border-bottom-color: lighten($color-hex, 5%); }
+        .bdlc-#{$color-name}-lt { border-left-color:   lighten($color-hex, 5%); }
+    }
+
+    .bdc-#{$color-name} {  border-color:        $color-hex; }
+    .bdtc-#{$color-name} { border-top-color:    $color-hex; }
+    .bdrc-#{$color-name} { border-right-color:  $color-hex; }
+    .bdbc-#{$color-name} { border-bottom-color: $color-hex; }
+    .bdlc-#{$color-name} { border-left-color:   $color-hex; }
+
+    @if map-get($config, generate-border-color-shades) and map-has-key($colors, $color-name) {
+        .bdc-#{$color-name}-dk {  border-color:        darken($color-hex, 5%); }
+        .bdtc-#{$color-name}-dk { border-top-color:    darken($color-hex, 5%); }
+        .bdrc-#{$color-name}-dk { border-right-color:  darken($color-hex, 5%); }
+        .bdbc-#{$color-name}-dk { border-bottom-color: darken($color-hex, 5%); }
+        .bdlc-#{$color-name}-dk { border-left-color:   darken($color-hex, 5%); }
+    }
+}
+
+@if map-get($config, generate-border-colors) {
+    @each $color-name, $color-hex in $colors {
+        @include atomic-border-color-set($color-name, $color-hex);
+    }
+}
+
+@include atomic-border-color-set("t", transparent);
+@include atomic-border-color-set("w", white);
+@include atomic-border-color-set("b", black);
+
+/* border-radius generation */
+
+@mixin atomic-border-radius-set($radius-value) {
+    .bdrds-#{$radius-value} {
+        border-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+
+    .bdtrrds-#{$radius-value} {
+        border-top-right-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdtlrds-#{$radius-value} {
+        border-top-left-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdbrrds-#{$radius-value} {
+        border-bottom-right-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdblrds-#{$radius-value} {
+        border-bottom-left-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+}
+
+@for $radius-value from 2 through 6 {
+    @include atomic-border-radius-set($radius-value);
+}

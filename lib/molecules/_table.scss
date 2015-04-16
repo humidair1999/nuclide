@@ -16,14 +16,14 @@
 
         > th {
             @extend .bdbw-1;
-            @extend .bdbst-s;
-            @extend .bdbc-tclt;
+            @extend .bdbs-solid;
+            @extend .bdbc-tundora-lt;
         }
 
         > td {
             @extend .bdtw-1;
-            @extend .bdtst-s;
-            @extend .bdtc-tclt;
+            @extend .bdts-solid;
+            @extend .bdtc-tundora-lt;
         }
 
         &:nth-child(even) {

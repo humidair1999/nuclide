@@ -32,8 +32,8 @@
         @extend .pl-std;
 
         @extend .bdlw-1;
-        @extend .bdlst-s;
-        @extend .bdlc-tclt;
+        @extend .bdls-solid;
+        @extend .bdlc-tundora-lt;
 
         &:first-child {
             @extend .m-0;
@@ -87,7 +87,7 @@
 
     @extend .bgc-tundora-dk;
 
-    @extend .bdrs-md;
+    @extend .bdrds-2;
 
     &:hover {
         @extend .c-w;
@@ -122,7 +122,7 @@
         @extend .c-w;
         @extend .bgc-tundora-lt;
 
-        @extend .bdrs-md;
+        @extend .bdrds-2;
     }
 
     &:active {

@@ -18,14 +18,14 @@
         @extend .pb-std;
 
         @extend .bdbw-1;
-        @extend .bdbst-s;
-        @extend .bdbc-tclt;
+        @extend .bdbs-solid;
+        @extend .bdbc-tundora-lt;
     }
 
     > li:first-child {
         @extend .bdtw-1;
-        @extend .bdtst-s;
-        @extend .bdtc-tclt;
+        @extend .bdts-solid;
+        @extend .bdtc-tundora-lt;
     }
 }
 
