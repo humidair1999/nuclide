@@ -31,8 +31,8 @@ body {
 /* http://adaptivethemes.com/why-we-must-reset-ol-and-ul-elements */
 
 ul, ol {
-    padding: 0;
-    margin: 0;
+    @extend .p-0;
+    @extend .m-0;
 }
 
 a {
@@ -41,20 +41,29 @@ a {
 }
 
 a:hover {
-    @extend .c-robinsegg-dk;
+    @extend .c-robinsegg-lt;
 }
 
 a:active {
-    @extend .c-robinsegg-xdk;
+    @extend .c-robinsegg-dk;
 }
 
 a:focus {
-    @extend .c-robinsegg-xdk;
+    @extend .c-robinsegg-dk;
 }
 
 hr {
-    width: 100%;
+    @extend .w-1-1;
+    @extend .bd-n;
+    @extend .bgc-gallery;
+
     height: 1px;
-    border: 0;
-    background: #cccccc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    @extend .m-0;
+}
+
+p {
+    @extend .m-0;
 }
