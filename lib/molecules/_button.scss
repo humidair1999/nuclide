@@ -13,37 +13,46 @@
     @extend .ff-i;
     @extend .fz-i;
     @extend .td-n;
-    @extend .c-tundora;
+    @extend .tt-u;
     @extend .bdrds-2;
     @extend .user-select-none;
 }
 
-@each $size-suffix, $size-value in $spacing-units {
-    .button--#{$size-suffix} {
-        @extend .p-#{$size-suffix};
+/* if config option is true, generate range of button sizes */
+
+@if map-get($config, generate-button-sizes) {
+    @each $size-suffix, $size-value in $spacing-units {
+        .button--#{$size-suffix} {
+            @extend .p-#{$size-suffix};
+        }
     }
 }
 
-@each $color-name, $color-hex in $colors {
-    .button--#{$color-name} {
-        @extend .bgc-#{$color-name};
+/* if config option is true, generate buttons of each color in color palette */
 
-        /* NOTE: link pseudo-classes are attached to individual atomic color classes,
-            so their order in the .css file may affect their functionality! */
+@if map-get($config, generate-button-colors) {
+    @each $color-name, $color-hex in $colors {
+        .button--#{$color-name} {
+            @extend .c-tundora;
+            @extend .bgc-#{$color-name};
 
-        &:hover {
-            @extend .c-tundora-lt;
-            @extend .bgc-#{$color-name}-lt;
-        }
+            /* NOTE: link pseudo-classes are attached to individual atomic color classes,
+                so their order in the .css file may affect their functionality! */
 
-        &:active {
-            @extend .c-tundora-lt;
-            @extend .bgc-#{$color-name}-dk;
-        }
+            &:hover {
+                @extend .c-tundora-lt;
+                @extend .bgc-#{$color-name}-lt;
+            }
 
-        &:focus {
-            @extend .c-tundora-lt;
-            @extend .bgc-#{$color-name}-dk;
+            &:active {
+                @extend .c-tundora-lt;
+                @extend .bgc-#{$color-name}-dk;
+            }
+
+            &:focus {
+                @extend .c-tundora-lt;
+                @extend .bgc-#{$color-name}-dk;
+            }
         }
     }
 }
