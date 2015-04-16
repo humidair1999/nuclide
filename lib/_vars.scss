@@ -1,4 +1,16 @@
+/* TODO: ability to config generation of specific color-based rules */
+
 /* SASS VARIABLES */
+
+/* configuration and options */
+
+$config: (
+    generate-utility-margins:       false,
+    generate-border-colors:         true,
+    generate-border-color-shades:   true,
+    generate-button-sizes:          false,
+    generate-button-colors:         false
+);
 
 /* colors */
 
@@ -8,11 +20,13 @@
 /* http://chir.ag/projects/name-that-color/ */
 
 $colors: (
-    tundora:        #444444, /* off-black */
-    robinsegg:      #00bfc6, /* light blue */
-    gallery:        #eeeeee, /* light gray */
-    capecod:        #3a4446, /* greenish-blue */
-    outerspace:     #293133  /* dark blue-black */
+    tundora:          #444444, /* off-black */
+    gallery:          #eeeeee, /* light gray */
+    capecod:          #3a4446, /* greenish-blue */
+    outerspace:       #293133, /* dark blue-black */
+    robinsegg:        #00bfc6, /* light blue */
+    corn:             #eac100, /* yellow-gold */
+    nutmegwoodfinish: #624e00  /* brown-gold */
 );
 
 /* use ems for everything:

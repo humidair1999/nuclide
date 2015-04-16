@@ -10,11 +10,35 @@
     .ml-#{$suffix} { margin-left:   $margin; }
 }
 
+/* UTILITY MARGINS
+    use these if you're determined to use ems for your entire layout but aren't sure
+    exactly what your preset spacing units need to be */
+
+@mixin atomic-utility-margin-set-standard($integer, $fraction) {
+    .m-#{$integer}-#{$fraction} {  margin:        ((($integer * 10) + $fraction) / 10) + em; }
+    .mt-#{$integer}-#{$fraction} { margin-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .mr-#{$integer}-#{$fraction} { margin-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .mb-#{$integer}-#{$fraction} { margin-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .ml-#{$integer}-#{$fraction} { margin-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
 @include atomic-margin-set-standard("0", 0);
 @include atomic-margin-set-standard("a", auto);
 
 @each $size-suffix, $size-value in $spacing-units {
     @include atomic-margin-set-standard($size-suffix, $size-value);
+}
+
+/* if config option is true, generate range of decimal utility margins */
+
+@if map-get($config, generate-utility-margins) {
+    @for $integer from 0 through 3 {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-margin-set-standard($integer, $fraction);
+            }
+        }
+    }
 }
 
 /* device-specific margins */
@@ -27,6 +51,14 @@
     .ml-#{$suffix}-#{$device} { margin-left:   $margin; }
 }
 
+@mixin atomic-utility-margin-set-device($integer, $fraction, $device) {
+    .m-#{$integer}-#{$fraction}-#{$device} {  margin:        ((($integer * 10) + $fraction) / 10) + em; }
+    .mt-#{$integer}-#{$fraction}-#{$device} { margin-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .mr-#{$integer}-#{$fraction}-#{$device} { margin-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .mb-#{$integer}-#{$fraction}-#{$device} { margin-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .ml-#{$integer}-#{$fraction}-#{$device} { margin-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
 /* mobile */
 
 @include atomic-margin-set-device("0", "mobile", 0);
@@ -34,6 +66,18 @@
 
 @each $size-suffix, $size-value in $spacing-units {
     @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
+}
+
+/* if config option is true, generate range of decimal utility margins */
+
+@if map-get($config, generate-utility-margins) {
+    @for $integer from 0 through 3 {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-margin-set-device($integer, $fraction, "mobile");
+            }
+        }
+    }
 }
 
 /* tablet */
@@ -45,6 +89,18 @@
     @each $size-suffix, $size-value in $spacing-units {
         @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
     }
+
+    /* if config option is true, generate range of decimal utility margins */
+
+    @if map-get($config, generate-utility-margins) {
+        @for $integer from 0 through 3 {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-margin-set-device($integer, $fraction, "tablet");
+                }
+            }
+        }
+    }
 }
 
 /* desktop */
@@ -55,5 +111,17 @@
 
     @each $size-suffix, $size-value in $spacing-units {
         @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
+    }
+
+    /* if config option is true, generate range of decimal utility margins */
+
+    @if map-get($config, generate-utility-margins) {
+        @for $integer from 0 through 3 {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-margin-set-device($integer, $fraction, "desktop");
+                }
+            }
+        }
     }
 }
