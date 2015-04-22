@@ -10,33 +10,33 @@ $breakpoint-config: map-get($config, breakpoints);
 
 /* mobile */
 .float-left-on-mobile {
-    float: left;
+    @extend .fl-l;
 }
 
 .float-right-on-mobile {
-    float: right;
+    @extend .fl-r;
 }
 
 /* .float-none-on-mobile: none is implied */
 
 .clear-both-on-mobile {
-    clear: both;
+    @extend .cl-b;
 }
 
 .text-align-center-on-mobile {
-    text-align: center;
+    @extend .ta-c;
 }
 
 /* .show-on-mobile: block is implied */
 
 /* tablet */
 .show-on-tablet {
-    display: none;
+    @extend .d-n;
 }
 
 /* desktop */
 .show-on-desktop {
-    display: none;
+    @extend .d-n;
 }
 
 @media (min-width: map-get($breakpoint-config, tablet)) {

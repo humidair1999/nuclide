@@ -25,7 +25,8 @@ $text-config: map-get($config, text);
 .fv-n {  font-variant: normal; }
 .fv-sc { font-variant: small-caps; }
 
-.fz-i { font-size: inherit; }
+.fz-i {   font-size: inherit; }
+.fz-100 { font-size: 100%; }
 
 /* standard font sizes, independent of device */
 

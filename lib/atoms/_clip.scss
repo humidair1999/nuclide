@@ -1,6 +1,7 @@
 /* CLIP */
 
 .cp-a { clip: auto; }
+.cp-0 { clip: rect(0 0 0 0); }
 
 /* TODO: are we able to supply some default clipping rectangles?
     .cp-r { clip: rect(0 0 0 0); }

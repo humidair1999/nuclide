@@ -1,10 +1,11 @@
 /* CONTENT */
 
-.cnt-n {   content: normal; }
-.cnt-oq {  content: open-quote; }
-.cnt-noq { content: no-open-quote; }
-.cnt-cq {  content: close-quote; }
-.cnt-ncq { content: no-close-quote; }
+.cnt-n {     content: normal; }
+.cnt-oq {    content: open-quote; }
+.cnt-noq {   content: no-open-quote; }
+.cnt-cq {    content: close-quote; }
+.cnt-ncq {   content: no-close-quote; }
+.cnt-empty { content: ""; }
 
 .q-n {  quotes: none; }
 .q-ru { quotes: '\00AB' '\00BB' '\201E' '\201C'; }

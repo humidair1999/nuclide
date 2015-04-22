@@ -29,8 +29,7 @@ body {
     @extend .fw-3;
     @extend .fs-n;
     @extend .c-tundora;
-
-    font-size: 100%;
+    @extend .fz-100;
 }
 
 /* http://adaptivethemes.com/why-we-must-reset-ol-and-ul-elements */
