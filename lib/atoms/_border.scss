@@ -1,5 +1,8 @@
 /* BORDER */
 
+/* grab portions of global config necessary for this file */
+$color-config: map-get($config, colors);
+
 .bdcl-c { border-collapse: collapse; }
 .bdcl-s { border-collapse: separate; }
 
@@ -65,33 +68,29 @@ $border-styles: none, solid;
 
 /* border colors based on global colors map */
 
-@mixin atomic-border-color-set($color-name, $color-hex) {
-    @if map-get($config, generate-border-color-shades) and map-has-key($colors, $color-name) {
-        .bdc-#{$color-name}-lt {  border-color:        lighten($color-hex, 5%); }
-        .bdtc-#{$color-name}-lt { border-top-color:    lighten($color-hex, 5%); }
-        .bdrc-#{$color-name}-lt { border-right-color:  lighten($color-hex, 5%); }
-        .bdbc-#{$color-name}-lt { border-bottom-color: lighten($color-hex, 5%); }
-        .bdlc-#{$color-name}-lt { border-left-color:   lighten($color-hex, 5%); }
-    }
+@mixin atomic-border-color-set($color-name, $color-value) {
+    .bdc-#{$color-name}-lt {  border-color:        lighten($color-value, 5%); }
+    .bdtc-#{$color-name}-lt { border-top-color:    lighten($color-value, 5%); }
+    .bdrc-#{$color-name}-lt { border-right-color:  lighten($color-value, 5%); }
+    .bdbc-#{$color-name}-lt { border-bottom-color: lighten($color-value, 5%); }
+    .bdlc-#{$color-name}-lt { border-left-color:   lighten($color-value, 5%); }
 
-    .bdc-#{$color-name} {  border-color:        $color-hex; }
-    .bdtc-#{$color-name} { border-top-color:    $color-hex; }
-    .bdrc-#{$color-name} { border-right-color:  $color-hex; }
-    .bdbc-#{$color-name} { border-bottom-color: $color-hex; }
-    .bdlc-#{$color-name} { border-left-color:   $color-hex; }
+    .bdc-#{$color-name} {  border-color:        $color-value; }
+    .bdtc-#{$color-name} { border-top-color:    $color-value; }
+    .bdrc-#{$color-name} { border-right-color:  $color-value; }
+    .bdbc-#{$color-name} { border-bottom-color: $color-value; }
+    .bdlc-#{$color-name} { border-left-color:   $color-value; }
 
-    @if map-get($config, generate-border-color-shades) and map-has-key($colors, $color-name) {
-        .bdc-#{$color-name}-dk {  border-color:        darken($color-hex, 5%); }
-        .bdtc-#{$color-name}-dk { border-top-color:    darken($color-hex, 5%); }
-        .bdrc-#{$color-name}-dk { border-right-color:  darken($color-hex, 5%); }
-        .bdbc-#{$color-name}-dk { border-bottom-color: darken($color-hex, 5%); }
-        .bdlc-#{$color-name}-dk { border-left-color:   darken($color-hex, 5%); }
-    }
+    .bdc-#{$color-name}-dk {  border-color:        darken($color-value, 5%); }
+    .bdtc-#{$color-name}-dk { border-top-color:    darken($color-value, 5%); }
+    .bdrc-#{$color-name}-dk { border-right-color:  darken($color-value, 5%); }
+    .bdbc-#{$color-name}-dk { border-bottom-color: darken($color-value, 5%); }
+    .bdlc-#{$color-name}-dk { border-left-color:   darken($color-value, 5%); }
 }
 
-@if map-get($config, generate-border-colors) {
-    @each $color-name, $color-hex in $colors {
-        @include atomic-border-color-set($color-name, $color-hex);
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-borders) == true {
+        @include atomic-border-color-set($color-name, map-get($color-settings, value));
     }
 }
 

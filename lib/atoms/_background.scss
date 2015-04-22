@@ -1,5 +1,8 @@
 /* BACKGROUND */
 
+/* grab portions of global config necessary for this file */
+$color-config: map-get($config, colors);
+
 .bg-n { background: none; }
 
 .bgc-w { background-color: white; }
@@ -14,8 +17,10 @@
     .bgc-#{$color-name}-xdk { background-color: darken($color-hex, 10%); }
 }
 
-@each $color-name, $color-hex in $colors {
-    @include atomic-background-color-set($color-name, $color-hex);
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-backgrounds) == true {
+        @include atomic-background-color-set($color-name, map-get($color-settings, value));
+    }
 }
 
 .bgi-n { background-image: none; }

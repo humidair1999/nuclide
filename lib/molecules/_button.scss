@@ -1,7 +1,9 @@
 /* TODO: add more thorough/prettier hover/active/focus effects (animations?) */
-/* TODO: border radius? */
 
 /* BUTTONS */
+
+/* grab portions of global config necessary for this file */
+$color-config: map-get($config, colors);
 
 .button {
     @extend .d-b;
@@ -30,14 +32,14 @@
 
 /* if config option is true, generate buttons of each color in color palette */
 
-@if map-get($config, generate-button-colors) {
-    @each $color-name, $color-hex in $colors {
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-buttons) == true {
         .button--#{$color-name} {
             @extend .c-tundora;
             @extend .bgc-#{$color-name};
 
-            /* NOTE: link pseudo-classes are attached to individual atomic color classes,
-                so their order in the .css file may affect their functionality! */
+            // NOTE: link pseudo-classes are attached to individual atomic color classes,
+            //  so their order in the .css file may affect their functionality!
 
             &:hover {
                 @extend .c-tundora-lt;

@@ -1,5 +1,8 @@
 /* COLOR */
 
+/* grab portions of global config necessary for this file */
+$color-config: map-get($config, colors);
+
 @mixin atomic-color-set($color-name, $color-hex) {
     .c-#{$color-name}-xlt { color: lighten($color-hex, 10%); }
     .c-#{$color-name}-lt {  color: lighten($color-hex, 5%); }
@@ -8,8 +11,10 @@
     .c-#{$color-name}-xdk { color: darken($color-hex, 10%); }
 }
 
-@each $color-name, $color-hex in $colors {
-    @include atomic-color-set($color-name, $color-hex);
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-colors) == true {
+        @include atomic-color-set($color-name, map-get($color-settings, value));
+    }
 }
 
 @include atomic-color-set("w", #ffffff);
