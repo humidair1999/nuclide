@@ -10,11 +10,9 @@
     @extend .bgc-tundora;
 
     > li {
-        /* TODO: hopefully sass will let us use @extend in media queries soon:
-            http://www.sitepoint.com/cross-media-query-extend-sass/ */
-        @media (min-width: map-get($breakpoints, desktop)) {
-            float: left;
-        }
+        /* desktop styles */
+
+        @extend .float-left-on-desktop;
 
         > a {
             @extend .d-b;

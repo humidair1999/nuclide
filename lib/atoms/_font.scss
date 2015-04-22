@@ -1,5 +1,8 @@
 /* FONT */
 
+/* grab portions of global config necessary for this file */
+$breakpoint-config: map-get($config, breakpoints);
+
 .fw-n {  font-weight: normal; }
 .fw-b {  font-weight: bold; }
 .fw-br { font-weight: bolder; }
@@ -47,7 +50,7 @@
 
 /* tablet */
 
-@media (min-width: map-get($breakpoints, tablet)) {
+@media (min-width: map-get($breakpoint-config, tablet)) {
     @each $size-suffix, $size-value in $font-sizes {
         @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
     }
@@ -55,7 +58,7 @@
 
 /* desktop */
 
-@media (min-width: map-get($breakpoints, desktop)) {
+@media (min-width: map-get($breakpoint-config, desktop)) {
     @each $size-suffix, $size-value in $font-sizes {
         @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
     }

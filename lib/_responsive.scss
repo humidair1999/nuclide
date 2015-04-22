@@ -2,6 +2,10 @@
 /* TODO: could use @extends if extend worked within media queries...*sigh* */
 
 /* RESPONSIVE CLASSES */
+
+/* grab portions of global config necessary for this file */
+$breakpoint-config: map-get($config, breakpoints);
+
 /* http://www.zell-weekeat.com/how-to-write-mobile-first-css/ */
 
 /* mobile */
@@ -35,7 +39,7 @@
     display: none;
 }
 
-@media (min-width: map-get($breakpoints, tablet)) {
+@media (min-width: map-get($breakpoint-config, tablet)) {
     /* mobile */
     .float-left-on-mobile {
         float: none;
@@ -85,7 +89,7 @@
     }
 }
 
-@media (min-width: map-get($breakpoints, desktop)) {
+@media (min-width: map-get($breakpoint-config, desktop)) {
     /* mobile */
     .float-left-on-mobile {
         float: none;

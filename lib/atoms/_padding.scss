@@ -1,5 +1,8 @@
 /* PADDING */
 
+/* grab portions of global config necessary for this file */
+$breakpoint-config: map-get($config, breakpoints);
+
 /* standard paddings, independent of device */
 
 @mixin atomic-padding-set-standard($suffix, $padding) {
@@ -38,7 +41,7 @@
 
 /* tablet */
 
-@media (min-width: map-get($breakpoints, tablet)) {
+@media (min-width: map-get($breakpoint-config, tablet)) {
     @include atomic-padding-set-device("0", "tablet", 0);
     @include atomic-padding-set-device("a", "tablet", auto);
 
@@ -49,7 +52,7 @@
 
 /* desktop */
 
-@media (min-width: map-get($breakpoints, desktop)) {
+@media (min-width: map-get($breakpoint-config, desktop)) {
     @include atomic-padding-set-device("0", "desktop", 0);
     @include atomic-padding-set-device("a", "desktop", auto);
 

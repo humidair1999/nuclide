@@ -2,10 +2,23 @@
 
 /* SASS VARIABLES */
 
+/* use ems for everything:
+    http://v1.jontangerine.com/log/2007/09/the-incredible-em-and-elastic-layouts-with-css
+    1em = 16px
+    Therefore, 1px = 1 / 16 = 0.0625em
+    0.0625em × 740px = 46.25em
+*/
+
 /* configuration and options */
 
 $config: (
-    /* http://chir.ag/projects/name-that-color/ */
+    /* responsive breakpoints; add or remove as needed */
+    breakpoints: (
+        tablet:  50em,    /* 800px */
+        desktop: 96.875em /* 1550px */
+    ),
+    /* colors used throughout app, including text */
+    /*  http://chir.ag/projects/name-that-color/ */
     colors: (
         /* off-black */
         tundora: (
@@ -67,20 +80,6 @@ $config: (
     generate-utility-margins:       false,
     generate-button-sizes:          true,
     generate-button-colors:         true
-);
-
-/* use ems for everything:
-    http://v1.jontangerine.com/log/2007/09/the-incredible-em-and-elastic-layouts-with-css
-    1em = 16px
-    Therefore, 1px = 1 / 16 = 0.0625em
-    0.0625em × 740px = 46.25em
-*/
-
-/* responsive breakpoints; add or remove as needed */
-
-$breakpoints: (
-    tablet:  50em,    /* 800px */
-    desktop: 96.875em /* 1550px */
 );
 
 /* font sizes, used for text and icon fonts */

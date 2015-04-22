@@ -1,5 +1,8 @@
 /* MARGIN */
 
+/* grab portions of global config necessary for this file */
+$breakpoint-config: map-get($config, breakpoints);
+
 /* standard margins, independent of device */
 
 @mixin atomic-margin-set-standard($suffix, $margin) {
@@ -82,7 +85,7 @@
 
 /* tablet */
 
-@media (min-width: map-get($breakpoints, tablet)) {
+@media (min-width: map-get($breakpoint-config, tablet)) {
     @include atomic-margin-set-device("0", "tablet", 0);
     @include atomic-margin-set-device("a", "tablet", auto);
 
@@ -105,7 +108,7 @@
 
 /* desktop */
 
-@media (min-width: map-get($breakpoints, desktop)) {
+@media (min-width: map-get($breakpoint-config, desktop)) {
     @include atomic-margin-set-device("0", "desktop", 0);
     @include atomic-margin-set-device("a", "desktop", auto);
 
