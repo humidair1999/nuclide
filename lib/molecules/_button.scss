@@ -1,9 +1,11 @@
 /* TODO: add more thorough/prettier hover/active/focus effects (animations?) */
+/* TODO: auto-generating button sizes probably doesn't make much sense? */
 
 /* BUTTONS */
 
 /* grab portions of global config necessary for this file */
 $color-config: map-get($config, colors);
+$spacing-units-config: map-get($config, spacing-units);
 
 .button {
     @extend .d-b;
@@ -23,7 +25,7 @@ $color-config: map-get($config, colors);
 /* if config option is true, generate range of button sizes */
 
 @if map-get($config, generate-button-sizes) {
-    @each $size-suffix, $size-value in $spacing-units {
+    @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
         .button--#{$size-suffix} {
             @extend .p-#{$size-suffix};
         }

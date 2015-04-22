@@ -75,6 +75,26 @@ $config: (
             should-generate-buttons: true
         )
     ),
+    /* spacing units, used for margin and padding */
+    spacing-units: (
+        sizes: (
+            xxxs: 0.188em, /* 3px */
+            xxs:  0.375em, /* 6px */
+            xs:   0.625em, /* 10px */
+            sm:   0.75em,  /* 12px */
+            std:  1.0em,   /* 16px */
+            lg:   1.25em,  /* 20px */
+            xl:   1.875em, /* 30px */
+            xxl:  2.5em,   /* 40px */
+            xxxl: 2.813em, /* 45px */
+            4xl:  3.75em,  /* 60px */
+            5xl:  4.688em, /* 75px */
+            6xl:  5.0em,   /* 80px */
+            7xl:  5.313em, /* 85px */
+            8xl:  6.25em,  /* 100px */
+            9xl:  7.813em  /* 125px */
+        )
+    ),
     /* text settings, used for text and icon fonts */
     text: (
         sizes: (
@@ -98,24 +118,4 @@ $config: (
     generate-utility-margins:       false,
     generate-button-sizes:          true,
     generate-button-colors:         true
-);
-
-/* spacing units, used for margin and padding */
-
-$spacing-units: (
-    xxxs: 0.188em, /* 3px */
-    xxs:  0.375em, /* 6px */
-    xs:   0.625em, /* 10px */
-    sm:   0.75em,  /* 12px */
-    std:  1.0em,   /* 16px */
-    lg:   1.25em,  /* 20px */
-    xl:   1.875em, /* 30px */
-    xxl:  2.5em,   /* 40px */
-    xxxl: 2.813em, /* 45px */
-    4xl:  3.75em,  /* 60px */
-    5xl:  4.688em, /* 75px */
-    6xl:  5.0em,   /* 80px */
-    7xl:  5.313em, /* 85px */
-    8xl:  6.25em,  /* 100px */
-    9xl:  7.813em  /* 125px */
 );
