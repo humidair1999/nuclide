@@ -4,6 +4,8 @@
 $breakpoint-config: map-get($config, breakpoints);
 $spacing-units-config: map-get($config, spacing-units);
 
+$margin-config: map-get($spacing-units-config, margin);
+
 /* standard margins, independent of device */
 
 @mixin atomic-margin-set-standard($suffix, $margin) {
@@ -35,8 +37,8 @@ $spacing-units-config: map-get($config, spacing-units);
 
 /* if config option is true, generate range of decimal utility margins */
 
-@if map-get($config, generate-utility-margins) {
-    @for $integer from 0 through 3 {
+@if map-get($margin-config, generate-utility-units) {
+    @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
                 @include atomic-utility-margin-set-standard($integer, $fraction);
@@ -74,8 +76,8 @@ $spacing-units-config: map-get($config, spacing-units);
 
 /* if config option is true, generate range of decimal utility margins */
 
-@if map-get($config, generate-utility-margins) {
-    @for $integer from 0 through 3 {
+@if map-get($margin-config, generate-utility-units) {
+    @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
                 @include atomic-utility-margin-set-device($integer, $fraction, "mobile");
@@ -96,8 +98,8 @@ $spacing-units-config: map-get($config, spacing-units);
 
     /* if config option is true, generate range of decimal utility margins */
 
-    @if map-get($config, generate-utility-margins) {
-        @for $integer from 0 through 3 {
+    @if map-get($margin-config, generate-utility-units) {
+        @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {
                     @include atomic-utility-margin-set-device($integer, $fraction, "tablet");
@@ -119,8 +121,8 @@ $spacing-units-config: map-get($config, spacing-units);
 
     /* if config option is true, generate range of decimal utility margins */
 
-    @if map-get($config, generate-utility-margins) {
-        @for $integer from 0 through 3 {
+    @if map-get($margin-config, generate-utility-units) {
+        @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {
                     @include atomic-utility-margin-set-device($integer, $fraction, "desktop");

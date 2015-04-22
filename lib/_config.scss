@@ -93,6 +93,11 @@ $config: (
             7xl:  5.313em, /* 85px */
             8xl:  6.25em,  /* 100px */
             9xl:  7.813em  /* 125px */
+        ),
+        margin: (
+            generate-utility-units: true,
+            utility-unit-start: 0,
+            utility-unit-end: 3
         )
     ),
     /* text settings, used for text and icon fonts */
@@ -115,7 +120,6 @@ $config: (
             9xl:  4.375em  /* 70px */
         )
     ),
-    generate-utility-margins:       false,
     generate-button-sizes:          true,
     generate-button-colors:         true
 );
