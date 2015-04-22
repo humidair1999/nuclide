@@ -2,12 +2,17 @@
 
 /* GLOBAL STYLES AND CLASSES */
 
-/* SET ALL ELEMENTS TO BOX-SIZING: BORDER-BOX */
-*, *:before, *:after {
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
+/* apply a natural box layout model to all elements, but allowing components to change */
+
+html {
+    @extend .bxz-bb;
 }
+
+*, *:before, *:after {
+    @extend .bxz-i;
+}
+
+/* unset irritating webkit margin and padding defaults */
 
 * {
     -webkit-margin-before: 0;
