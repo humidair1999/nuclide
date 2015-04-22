@@ -1,5 +1,3 @@
-/* TODO: ability to config generation of specific color-based rules */
-
 /* SASS VARIABLES */
 
 /* use ems for everything:
@@ -77,29 +75,29 @@ $config: (
             should-generate-buttons: true
         )
     ),
+    /* text settings, used for text and icon fonts */
+    text: (
+        sizes: (
+            xxxs: 0.75em,  /* 12px */
+            xxs:  0.813em, /* 13px */
+            xs:   0.875em, /* 14px */
+            sm:   0.938em, /* 15px */
+            std:  1.0em,   /* 16px */
+            lg:   1.125em, /* 18px */
+            xl:   1.25em,  /* 20px */
+            xxl:  1.375em, /* 22px */
+            xxxl: 1.5em,   /* 24px */
+            4xl:  1.625em, /* 26px */
+            5xl:  1.875em, /* 30px */
+            6xl:  2.25em,  /* 36px */
+            7xl:  2.5em,   /* 40px */
+            8xl:  3.0em,   /* 48px */
+            9xl:  4.375em  /* 70px */
+        )
+    ),
     generate-utility-margins:       false,
     generate-button-sizes:          true,
     generate-button-colors:         true
-);
-
-/* font sizes, used for text and icon fonts */
-
-$font-sizes: (
-    xxxs: 0.75em,  /* 12px */
-    xxs:  0.813em, /* 13px */
-    xs:   0.875em, /* 14px */
-    sm:   0.938em, /* 15px */
-    std:  1.0em,   /* 16px */
-    lg:   1.125em, /* 18px */
-    xl:   1.25em,  /* 20px */
-    xxl:  1.375em, /* 22px */
-    xxxl: 1.5em,   /* 24px */
-    4xl:  1.625em, /* 26px */
-    5xl:  1.875em, /* 30px */
-    6xl:  2.25em,  /* 36px */
-    7xl:  2.5em,   /* 40px */
-    8xl:  3.0em,   /* 48px */
-    9xl:  4.375em  /* 70px */
 );
 
 /* spacing units, used for margin and padding */
