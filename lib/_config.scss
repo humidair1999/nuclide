@@ -134,6 +134,8 @@ $config: (
     borders: (
         styles: (none, solid),
         border-width-start: 0,
-        border-width-end: 4
+        border-width-end: 4,
+        border-radius-start: 2,
+        border-radius-end: 6
     )
 );

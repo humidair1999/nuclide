@@ -123,6 +123,6 @@ $border-config: map-get($config, borders);
     }
 }
 
-@for $radius-value from 2 through 6 {
-    @include atomic-border-radius-set($radius-value);
+@for $integer from map-get($border-config, border-radius-start) through map-get($border-config, border-radius-end) {
+    @include atomic-border-radius-set($integer);
 }
