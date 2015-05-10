@@ -30,7 +30,7 @@ $margin-config: map-get($spacing-units-config, margin);
     @include atomic-margin-set-standard($size-suffix, $size-value);
 }
 
-@if map-get($margin-config, generate-utility-units) {
+@if map-get($margin-config, should-generate-utility-units) {
     @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
@@ -67,7 +67,7 @@ $margin-config: map-get($spacing-units-config, margin);
     @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
 }
 
-@if map-get($margin-config, generate-utility-units) {
+@if map-get($margin-config, should-generate-utility-units) {
     @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
@@ -87,7 +87,7 @@ $margin-config: map-get($spacing-units-config, margin);
         @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
     }
 
-    @if map-get($margin-config, generate-utility-units) {
+    @if map-get($margin-config, should-generate-utility-units) {
         @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {
@@ -108,7 +108,7 @@ $margin-config: map-get($spacing-units-config, margin);
         @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
     }
 
-    @if map-get($margin-config, generate-utility-units) {
+    @if map-get($margin-config, should-generate-utility-units) {
         @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {

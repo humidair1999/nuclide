@@ -30,7 +30,7 @@ $padding-config: map-get($spacing-units-config, padding);
     @include atomic-padding-set-standard($size-suffix, $size-value);
 }
 
-@if map-get($padding-config, generate-utility-units) {
+@if map-get($padding-config, should-generate-utility-units) {
     @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
@@ -67,7 +67,7 @@ $padding-config: map-get($spacing-units-config, padding);
     @include atomic-padding-set-device($size-suffix, "mobile", $size-value);
 }
 
-@if map-get($padding-config, generate-utility-units) {
+@if map-get($padding-config, should-generate-utility-units) {
     @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
             @if $integer > 0 or $fraction > 0 {
@@ -87,7 +87,7 @@ $padding-config: map-get($spacing-units-config, padding);
         @include atomic-padding-set-device($size-suffix, "tablet", $size-value);
     }
 
-    @if map-get($padding-config, generate-utility-units) {
+    @if map-get($padding-config, should-generate-utility-units) {
         @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {
@@ -108,7 +108,7 @@ $padding-config: map-get($spacing-units-config, padding);
         @include atomic-padding-set-device($size-suffix, "desktop", $size-value);
     }
 
-    @if map-get($padding-config, generate-utility-units) {
+    @if map-get($padding-config, should-generate-utility-units) {
         @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
             @for $fraction from 0 through 9 {
                 @if $integer > 0 or $fraction > 0 {

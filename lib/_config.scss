@@ -95,12 +95,12 @@ $config: (
             9xl:  7.813em  /* 125px */
         ),
         margin: (
-            generate-utility-units: false,
+            should-generate-utility-units: true,
             utility-unit-start: 0,
             utility-unit-end: 3
         ),
         padding: (
-            generate-utility-units: false,
+            should-generate-utility-units: true,
             utility-unit-start: 0,
             utility-unit-end: 3
         )
