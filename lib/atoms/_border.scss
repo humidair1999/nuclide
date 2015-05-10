@@ -61,8 +61,8 @@ $border-config: map-get($config, borders);
     }
 }
 
-@for $edge-width from 0 through 4 {
-    @include atomic-border-width-set($edge-width);
+@for $integer from map-get($border-config, border-width-start) through map-get($border-config, border-width-end) {
+    @include atomic-border-width-set($integer);
 }
 
 /* border colors based on global colors map */
