@@ -95,12 +95,12 @@ $config: (
             9xl:  7.813em  /* 125px */
         ),
         margin: (
-            generate-utility-units: true,
+            generate-utility-units: false,
             utility-unit-start: 0,
             utility-unit-end: 3
         ),
         padding: (
-            generate-utility-units: true,
+            generate-utility-units: false,
             utility-unit-start: 0,
             utility-unit-end: 3
         )
@@ -123,6 +123,11 @@ $config: (
             7xl:  2.5em,   /* 40px */
             8xl:  3.0em,   /* 48px */
             9xl:  4.375em  /* 70px */
+        ),
+        families: (
+            sourcesanspro: (
+                stack: "'sourcesanspro', 'Helvetica Neue', Helvetica, sans-serif"
+            )
         )
     )
 );

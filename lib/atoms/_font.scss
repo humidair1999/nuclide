@@ -3,6 +3,7 @@
 /* grab portions of global config necessary for this file */
 $breakpoint-config: map-get($config, breakpoints);
 $fonts-config: map-get($config, fonts);
+$font-families-config: map-get($fonts-config, families);
 
 .fw-n {  font-weight: normal; }
 .fw-b {  font-weight: bold; }
@@ -74,6 +75,6 @@ $fonts-config: map-get($config, fonts);
 .ff-a {  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
 .ff-i {  font-family: inherit; }
 
-/* TODO: add classes for user's custom fonts */
-
-.ff-sourcesanspro { font-family: 'sourcesanspro', 'Helvetica Neue', Helvetica, sans-serif; }
+@each $font-name, $font-settings in $font-families-config {
+    .ff-#{$font-name} { font-family: unquote(map-get($font-settings, stack)); }
+}
