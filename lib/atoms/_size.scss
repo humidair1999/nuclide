@@ -2,17 +2,7 @@
 
 /* grab portions of global config necessary for this file */
 $breakpoint-config: map-get($config, breakpoints);
-
-$size-fractions: (
-    (1, 6),
-    (1, 4),
-    (1, 3),
-    (1, 2),
-    (2, 3),
-    (3, 4),
-    (5, 6),
-    (1, 1),
-);
+$dimension-fractions-config: map-get($config, dimension-fractions);
 
 /* standard sizes, independent of device */
 
@@ -31,7 +21,7 @@ $size-fractions: (
 .maw-n { max-width: none; }
 .mah-n { max-height: none; }
 
-@each $fraction in $size-fractions {
+@each $fraction in $dimension-fractions-config {
     @include atomic-size-set-standard(nth($fraction, 1), nth($fraction, 2));
 }
 
@@ -54,7 +44,7 @@ $size-fractions: (
 .maw-n-mobile { max-width: none; }
 .mah-n-mobile { max-height: none; }
 
-@each $fraction in $size-fractions {
+@each $fraction in $dimension-fractions-config {
     @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "mobile");
 }
 
@@ -67,7 +57,7 @@ $size-fractions: (
     .maw-n-tablet { max-width: none; }
     .mah-n-tablet { max-height: none; }
 
-    @each $fraction in $size-fractions {
+    @each $fraction in $dimension-fractions-config {
         @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "tablet");
     }
 }
@@ -81,7 +71,7 @@ $size-fractions: (
     .maw-n-desktop { max-width: none; }
     .mah-n-desktop { max-height: none; }
 
-    @each $fraction in $size-fractions {
+    @each $fraction in $dimension-fractions-config {
         @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "desktop");
     }
 }
