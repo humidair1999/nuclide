@@ -10,12 +10,12 @@
 /* configuration and options */
 
 $config: (
-    /* responsive breakpoints; add or remove as needed */
+    /* responsive breakpoints */
     breakpoints: (
         tablet:  50em,    /* 800px */
         desktop: 96.875em /* 1550px */
     ),
-    /* colors used throughout app, including text */
+    /* colors used throughout project, including text */
     /*  http://chir.ag/projects/name-that-color/ */
     colors: (
         /* off-black */
@@ -129,5 +129,9 @@ $config: (
                 stack: "'sourcesanspro', 'Helvetica Neue', Helvetica, sans-serif"
             )
         )
+    ),
+    /* settings for borders and border radii */
+    borders: (
+        styles: (none, solid)
     )
 );

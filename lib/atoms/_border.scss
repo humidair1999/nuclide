@@ -2,6 +2,7 @@
 
 /* grab portions of global config necessary for this file */
 $color-config: map-get($config, colors);
+$border-config: map-get($config, borders);
 
 .bdcl-c { border-collapse: collapse; }
 .bdcl-s { border-collapse: separate; }
@@ -38,9 +39,7 @@ $color-config: map-get($config, colors);
     .bdls-#{$border-style} { border-left-style:   $border-style; }
 }
 
-$border-styles: none, solid;
-
-@each $border-style in $border-styles {
+@each $border-style in map-get($border-config, styles) {
     @include atomic-border-style-set($border-style);
 }
 
