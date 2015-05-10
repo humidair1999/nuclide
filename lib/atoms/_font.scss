@@ -2,7 +2,7 @@
 
 /* grab portions of global config necessary for this file */
 $breakpoint-config: map-get($config, breakpoints);
-$text-config: map-get($config, text);
+$fonts-config: map-get($config, fonts);
 
 .fw-n {  font-weight: normal; }
 .fw-b {  font-weight: bold; }
@@ -34,7 +34,7 @@ $text-config: map-get($config, text);
     .fz-#{$suffix} { font-size: $font-size; }
 }
 
-@each $size-suffix, $size-value in map-get($text-config, sizes) {
+@each $size-suffix, $size-value in map-get($fonts-config, sizes) {
     @include atomic-font-size-set-standard($size-suffix, $size-value);
 }
 
@@ -46,14 +46,14 @@ $text-config: map-get($config, text);
 
 /* mobile */
 
-@each $size-suffix, $size-value in map-get($text-config, sizes) {
+@each $size-suffix, $size-value in map-get($fonts-config, sizes) {
     @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
 }
 
 /* tablet */
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
-    @each $size-suffix, $size-value in map-get($text-config, sizes) {
+    @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
         @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
     }
 }
@@ -61,7 +61,7 @@ $text-config: map-get($config, text);
 /* desktop */
 
 @media (min-width: map-get($breakpoint-config, desktop)) {
-    @each $size-suffix, $size-value in map-get($text-config, sizes) {
+    @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
         @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
     }
 }
