@@ -3,10 +3,9 @@
 /* grab portions of global config necessary for this file */
 $breakpoint-config: map-get($config, breakpoints);
 $spacing-units-config: map-get($config, spacing-units);
-
 $margin-config: map-get($spacing-units-config, margin);
 
-/* standard margins, independent of device */
+/* standard margin mixins and includes, independent of device */
 
 @mixin atomic-margin-set-standard($suffix, $margin) {
     .m-#{$suffix} {  margin:        $margin; }
@@ -15,10 +14,6 @@ $margin-config: map-get($spacing-units-config, margin);
     .mb-#{$suffix} { margin-bottom: $margin; }
     .ml-#{$suffix} { margin-left:   $margin; }
 }
-
-/* UTILITY MARGINS
-    use these if you're determined to use ems for your entire layout but aren't sure
-    exactly what your preset spacing units need to be */
 
 @mixin atomic-utility-margin-set-standard($integer, $fraction) {
     .m-#{$integer}-#{$fraction} {  margin:        ((($integer * 10) + $fraction) / 10) + em; }
@@ -35,8 +30,6 @@ $margin-config: map-get($spacing-units-config, margin);
     @include atomic-margin-set-standard($size-suffix, $size-value);
 }
 
-/* if config option is true, generate range of decimal utility margins */
-
 @if map-get($margin-config, generate-utility-units) {
     @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
@@ -47,7 +40,7 @@ $margin-config: map-get($spacing-units-config, margin);
     }
 }
 
-/* device-specific margins */
+/* device-specific margin mixins and includes */
 
 @mixin atomic-margin-set-device($suffix, $device, $margin) {
     .m-#{$suffix}-#{$device} {  margin:        $margin; }
@@ -74,8 +67,6 @@ $margin-config: map-get($spacing-units-config, margin);
     @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
 }
 
-/* if config option is true, generate range of decimal utility margins */
-
 @if map-get($margin-config, generate-utility-units) {
     @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
         @for $fraction from 0 through 9 {
@@ -95,8 +86,6 @@ $margin-config: map-get($spacing-units-config, margin);
     @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
         @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
     }
-
-    /* if config option is true, generate range of decimal utility margins */
 
     @if map-get($margin-config, generate-utility-units) {
         @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
@@ -118,8 +107,6 @@ $margin-config: map-get($spacing-units-config, margin);
     @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
         @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
     }
-
-    /* if config option is true, generate range of decimal utility margins */
 
     @if map-get($margin-config, generate-utility-units) {
         @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
