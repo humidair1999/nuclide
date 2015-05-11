@@ -1,16 +1,47 @@
 > NOTE: If you're looking for [Facebook's IDE for React Native](http://nuclide.io/),
 you're in the wrong place! Different project!
 
-> NOTE: nuclide is a work in progress! It's not yet considered a stable release,
-and should be treated as a **beta project**!
-
 # nuclide
 
-A CSS framework for utilizing the Atomic design pattern
+a CSS framework for utilizing the Atomic design pattern
 
 ### Summary
 
-nuclide is a Sass-based CSS framework that follows Atomic CSS design conventions.
+nuclide is a responsive, mobile-first, [Sass-based](http://sass-lang.com/) CSS framework
+that follows Atomic design conventions.
+
+It was designed out of the desire for a CSS framework that's **powerful**, **flexible**,
+**maintainable**, **extensible**, and **easy to trace and comprehend**.
+
+nuclide was developed while working on a slew of large, design-heavy websites and webapps,
+and it's catered towards front-end developers and designers who need to implement designs
+quickly while also producing clean, quality code. It works especially well on projects in
+which designs are created beforehand and must then be implemented in HTML/CSS.
+
+### Why should I use it?
+
+- **It's powerful**: the Atomic design pattern, combined with programmatic generation of styles (colors and color variations, sizing units, fonts and font sizes, etc.) based on your configuration, removes much of the work of classical CSS frameworks
+- **It's simple**: following Atomic conventions makes your HTML descriptive, your styles easily traceable, and cross-referencing specific properties across elements and components a breeze
+- **It's smart**: nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making Molecule creation powerful and intuitive
+
+nuclide can give you the **freedom** and **flexibility** not provided by frameworks like
+[Bootstrap](http://getbootstrap.com/) and [Foundation](http://foundation.zurb.com/).
+
+### How do I use it?
+
+nuclide uses modern Sass features, so make sure you have **Sass 3.3 or greater** installed.
+
+- Download or clone nuclide
+- `cd` into the `nuclide` directory and run `sass`, using the `--watch` option:
+
+```
+sass --watch lib/nuclide.scss:css/nuclide.css
+```
+
+- In the `lib` directory, tweak the `config`, `webfonts`, and other relevant Sass files with your own project's values, fonts, and styles
+
+
+
 
 It has a few emphases:
 
