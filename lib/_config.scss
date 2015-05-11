@@ -1,13 +1,10 @@
 /* NUCLIDE CONFIGURATION */
 
-/* use ems for everything:
-    http://v1.jontangerine.com/log/2007/09/the-incredible-em-and-elastic-layouts-with-css
-    1em = 16px
-    Therefore, 1px = 1 / 16 = 0.0625em
-    0.0625em × 740px = 46.25em
+/* configure your project here! break your design down into its key colors,
+    spacing units, fonts, etc., specify your options, and nuclide will do
+    all the heavy lifting for you, generating relevant classes for an array
+    of useful atomic classes and styles
 */
-
-/* configuration and options */
 
 $config: (
     /* responsive breakpoints */
