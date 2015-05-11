@@ -65,7 +65,25 @@ $border-config: map-get($config, borders);
     @include atomic-border-width-set($integer);
 }
 
-/* border colors based on global colors map */
+/* generated border colors */
+
+.bdc-t {  border-color:        transparent; }
+.bdtc-t { border-top-color:    transparent; }
+.bdrc-t { border-right-color:  transparent; }
+.bdbc-t { border-bottom-color: transparent; }
+.bdlc-t { border-left-color:   transparent; }
+
+.bdc-w {  border-color:        white; }
+.bdtc-w { border-top-color:    white; }
+.bdrc-w { border-right-color:  white; }
+.bdbc-w { border-bottom-color: white; }
+.bdlc-w { border-left-color:   white; }
+
+.bdc-b {  border-color:        black; }
+.bdtc-b { border-top-color:    black; }
+.bdrc-b { border-right-color:  black; }
+.bdbc-b { border-bottom-color: black; }
+.bdlc-b { border-left-color:   black; }
 
 @mixin atomic-border-color-set($color-name, $color-value) {
     .bdc-#{$color-name}-lt {  border-color:        lighten($color-value, 5%); }
@@ -92,10 +110,6 @@ $border-config: map-get($config, borders);
         @include atomic-border-color-set($color-name, map-get($color-settings, value));
     }
 }
-
-@include atomic-border-color-set("t", transparent);
-@include atomic-border-color-set("w", white);
-@include atomic-border-color-set("b", black);
 
 /* border-radius generation */
 

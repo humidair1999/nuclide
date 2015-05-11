@@ -14,12 +14,6 @@
 
 .tsh-n { text-shadow: none; }
 
-/* TODO: are we able to supply some default text shadows?
-    .tsh { text-shadow:     hoff voff blur #000; }
-    .tsh-r { text-shadow:   h v blur rgb(0, 0, 0); }
-    .tsh-ra { text-shadow:  h v blur rgba(0, 0, 0, .5); }
-*/
-
 .lh-n { line-height: normal; }
 
 .lg-1-0 { line-height: 1; }
@@ -28,8 +22,6 @@
 .lh-1-6 { line-height: 1.6; }
 .lh-1-8 { line-height: 1.8; }
 .lh-2-0 { line-height: 2.0; }
-
-/* TODO: custom line heights? */
 
 .lts-n { letter-spacing: normal; }
 
