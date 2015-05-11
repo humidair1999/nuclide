@@ -38,47 +38,45 @@ nuclide uses modern Sass features, so make sure you have **Sass 3.3 or greater**
 sass --watch lib/nuclide.scss:css/nuclide.css
 ```
 
-- In the `lib` directory, tweak the `config`, `webfonts`, and other relevant Sass files with your own project's values, fonts, and styles
+- In the `lib` directory, tweak the `config`, `webfonts`, and other relevant Sass files with your own project's colors, values, fonts, and styles
+- If you're using any Molecules, don't forget to `@import` them within `nuclide.scss`
 
+nuclide will generate a slew of Atomic classes for you, many of them responsive (and
+mobile-first) in nature, allowing you to design from the ground up across devices:
 
-
-
-It has a few emphases:
-
-- **simplicity:** all Atomic classes/rules should be easily traceable and clearly named
-- **power:** Sass should be leveraged to programmatically generate classes, color variations, size variations, and more for us
-- **inheritance/composition:** *molecules*, or elements composed of multiple *atoms*, should inherit from, and be composed by, multiple individual Atomic classes
-
-nuclide was designed while working on various *custom*, *large-scale*, *intensive*
-web applications. It's the perfect solution if you're looking for a powerful framework
-that will give your CSS (and HTML!) **structure** and **convention** without cramping your style or forcing
-you to adhere to (or heavily modify) pre-defined components or widgets.
-
-### How to use
-
-The source for nuclide is implemented in [Sass](http://sass-lang.com/).
-
-Assuming you have Sass installed, either simply compile the source Sass:
-
-```
-sass lib/nuclide.scss css/nuclide.css
+```html
+<div class="m-sm-mobile m-lg-tablet m-xl-desktop ta-c">
+    <span class="fz-sm-mobile fz-lg-tablet fz-xl-desktop c-cornflower fw-5">just a test!</span>
+</div>
 ```
 
-or use the `watch` directive from the command line:
+**Go forth and code!**
 
-```
-sass --watch lib/nuclide.scss:css/nuclide.css
-```
+Oh, nuclide also works great with [trg](https://github.com/jkymarsh/tiny-responsive-grid) and
+[lament configurator](https://github.com/jkymarsh/lament-configurator)!
 
-### Don't forget to add
+### Molecules
 
-- a grid of some sort (may I suggest [trg](https://github.com/jkymarsh/tiny-responsive-grid)?)
-- a utility library for transformative UIs (may I suggest [lament configurator](https://github.com/jkymarsh/lament-configurator)?)
-- a [normalize](http://necolas.github.io/normalize.css/) or [reset](http://meyerweb.com/eric/tools/css/reset/)
+Molecules are combinations of Atomic classes used in conjunction to form more complex
+components, such as navigation, media elements, styled tables, buttons, form elements, and
+so on.
+
+One intent of nuclide is to create a basis of common Atomic classes from which other
+developers and designers will create beautiful, elegant, responsive Molecules and share
+them with the community!
+
+Check out the [nuclide-molecules](https://github.com/jkymarsh/nuclide-molecules) repo for
+sample Molecules.
+
+### Caveats
+
+- nuclide doesn't include a normalize, reset, grid, etc. Don't forget to include your favorites!
+- Unfortunately, Sass doesn't currently support the use of `@extend` within media queries, which hampers nuclide's ability to be 100% inheritance-based, particularly for Molecules. [They're working on it](https://github.com/sass/sass/issues/1050).
 
 ### Inspiration and sources
 
 - Class names and styles from the [Emmet toolkit](http://docs.emmet.io/cheat-sheet/)
+- Structure and convention concepts from [inuit-css](https://github.com/csswizardry/inuit.css/)
 - Basis for other styles from [nemophrost's atomic-css project](https://github.com/nemophrost/atomic-css)
 
 ### Atomic CSS resources
@@ -89,18 +87,3 @@ sass --watch lib/nuclide.scss:css/nuclide.css
 - http://www.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/
 - http://krasimir.github.io/organic-css/
 - http://java.dzone.com/articles/atomic-css-tool-set
-
-### TODO: Upcoming
-
-- Molecules via patterns from: http://pea.rs/
-- Plugins for patterns implemented via: https://ux.mailchimp.com/patterns
-
-### TODO: Philosophy
-
-- All styles should be easily traceable - every root class in the Style panel should be an atomic one (e.g. `.button` traces down to `.d-b`, `.p-lg`, etc.)
-- All styles that appear in the Style panel class lists should be usable; there shouldn't be any molecules
-that are "incomplete" (e.g. an incomplete `.button` class that a complete class `.button--lg` extends)
-- Every molecule should be 100% composed of individual atomic classes
-- Every molecule should be top-level and usable regardless of HTML structure - NO NESTING/DESCENDANTS (exceptions: HTML elements with required structure (`ol`, `ul`, `dl`, etc.))
-- Molecules should provide baseline, pragmatic, "80/20" functionality - no flair or edge cases
-- Molecules should adhere to BEM methodology
