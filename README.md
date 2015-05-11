@@ -22,7 +22,7 @@ which designs are created beforehand and must then be implemented in HTML/CSS.
 
 - **It's powerful**: the Atomic design pattern, combined with programmatic generation of styles (colors and color variations, sizing units, fonts and font sizes, etc.) based on your configuration, removes much of the work of classical CSS frameworks
 - **It's simple**: following Atomic conventions makes your HTML descriptive, your styles easily traceable, and cross-referencing specific properties across elements and components a breeze
-- **It's smart**: nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making Molecule creation powerful and intuitive
+- **It's smart**: nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making [Molecule](#molecules) creation powerful and intuitive
 
 nuclide can give you the **freedom** and **flexibility** not provided by frameworks like
 [Bootstrap](http://getbootstrap.com/) and [Foundation](http://foundation.zurb.com/).
@@ -39,7 +39,7 @@ sass --watch lib/nuclide.scss:css/nuclide.css
 ```
 
 - In the `lib` directory, tweak the `config`, `webfonts`, and other relevant Sass files with your own project's colors, values, fonts, and styles
-- If you're using any Molecules, don't forget to `@import` them within `nuclide.scss`
+- If you're using any [Molecules](#molecules), don't forget to `@import` them within `nuclide.scss`
 
 nuclide will generate a slew of Atomic classes for you, many of them responsive (and
 mobile-first) in nature, allowing you to design from the ground up across devices:
