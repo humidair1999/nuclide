@@ -8,7 +8,7 @@ a CSS framework for utilizing the Atomic design pattern
 ### Summary
 
 nuclide is a responsive, mobile-first, [Sass-based](http://sass-lang.com/) CSS framework
-that follows Atomic design conventions.
+that follows [Atomic](#atomic-css-resources) design conventions.
 
 It was designed out of the desire for a CSS framework that's **powerful**, **flexible**,
 **maintainable**, **extensible**, and **easy to trace and comprehend**.
