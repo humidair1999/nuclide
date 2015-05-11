@@ -1,16 +1,18 @@
-/* IMPORTS: VARIABLES AND UTILITIES */
+/* IMPORTS: CONFIG, GLOBAL STYLES, UTILITIES, ETC. */
 
 @import 'config';
+
 @import 'webfonts';
-@import 'globals';
 @import 'utils';
 @import 'responsive';
+
+@import 'globals';
 @import 'garbage';
 
 /* IMPORTS: ATOMIC */
-/* Abbreviations from Emmet's cheat sheet: http://docs.emmet.io/cheat-sheet/ */
+/*  abbreviations from Emmet's cheat sheet: http://docs.emmet.io/cheat-sheet/ */
 
-/* Visual Formatting */
+/* visual formatting */
 @import 'atoms/position';
 @import 'atoms/z-index';
 @import 'atoms/float';
@@ -22,57 +24,49 @@
 @import 'atoms/clip';
 @import 'atoms/cursor';
 
-/* Margin & Padding */
+/* margin & padding */
 @import 'atoms/margin';
 @import 'atoms/padding';
 
-/* Box Sizing */
+/* box sizing */
 @import 'atoms/box-size';
 @import 'atoms/box-shadow';
 @import 'atoms/size';
 
-/* Font */
+/* font */
 @import 'atoms/font';
 
-/* Text */
+/* text */
 @import 'atoms/alignment';
 @import 'atoms/text';
 
-/* Background */
+/* background */
 @import 'atoms/background';
 
-/* Color */
+/* color */
 @import 'atoms/color';
 @import 'atoms/opacity';
 
-/* Generated Content */
+/* generated content */
 @import 'atoms/content';
 
-/* Outline */
+/* outline */
 @import 'atoms/outline';
 
-/* Tables */
+/* tables */
 @import 'atoms/table';
 
-/* Border */
+/* border */
 @import 'atoms/border';
 
-/* Lists */
+/* lists */
 @import 'atoms/list';
 
-/* Print */
+/* print */
 @import 'atoms/print';
 
-/* TODO: IMPORTS: MOLECULAR */
-
-@import 'molecules/button';
-@import 'molecules/flag';
-@import 'molecules/form';
-@import 'molecules/list';
-@import 'molecules/media';
-@import 'molecules/nav';
-@import 'molecules/slat';
-@import 'molecules/feedback';
-@import 'molecules/stats';
-@import 'molecules/table';
-@import 'molecules/tag';
+/* IMPORTS: MOLECULAR */
+/*  include first- or third-party molecules that utilize nuclide's atoms here; the
+    official nuclide-molecules repo is a good starting place:
+    https://github.com/jkymarsh/nuclide-molecules
+*/
