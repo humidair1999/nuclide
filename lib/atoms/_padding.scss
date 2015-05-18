@@ -1,11 +1,11 @@
 /* PADDING */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $breakpoint-config: map-get($config, breakpoints);
 $spacing-units-config: map-get($config, spacing-units);
 $padding-config: map-get($spacing-units-config, padding);
 
-/* standard padding mixins and includes, independent of device */
+// standard padding mixins and includes, independent of device
 
 @mixin atomic-padding-set-standard($suffix, $padding) {
     .p-#{$suffix} {  padding:        $padding; }
@@ -40,7 +40,7 @@ $padding-config: map-get($spacing-units-config, padding);
     }
 }
 
-/* device-specific padding mixins and includes */
+// device-specific padding mixins and includes
 
 @mixin atomic-padding-set-device($suffix, $device, $padding) {
     .p-#{$suffix}-#{$device} {  padding:        $padding; }
@@ -58,7 +58,7 @@ $padding-config: map-get($spacing-units-config, padding);
     .pl-#{$integer}-#{$fraction}-#{$device} { padding-left:   ((($integer * 10) + $fraction) / 10) + em; }
 }
 
-/* mobile */
+// mobile
 
 @include atomic-padding-set-device("0", "mobile", 0);
 @include atomic-padding-set-device("a", "mobile", auto);
@@ -77,7 +77,7 @@ $padding-config: map-get($spacing-units-config, padding);
     }
 }
 
-/* tablet */
+// tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
     @include atomic-padding-set-device("0", "tablet", 0);
@@ -98,7 +98,7 @@ $padding-config: map-get($spacing-units-config, padding);
     }
 }
 
-/* desktop */
+// desktop
 
 @media (min-width: map-get($breakpoint-config, desktop)) {
     @include atomic-padding-set-device("0", "desktop", 0);

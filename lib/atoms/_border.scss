@@ -1,13 +1,13 @@
 /* BORDER */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $color-config: map-get($config, colors);
 $border-config: map-get($config, borders);
 
 .bdcl-c { border-collapse: collapse; }
 .bdcl-s { border-collapse: separate; }
 
-/* border: none */
+// border: none
 
 .bd-n {  border:        none; }
 .bdt-n { border-top:    none; }
@@ -15,7 +15,7 @@ $border-config: map-get($config, borders);
 .bdb-n { border-bottom: none; }
 .bdl-n { border-left:   none; }
 
-/* border styles */
+// border styles
 
 .bds-h {      border-style: hidden; }
 .bds-dt {     border-style: dotted; }
@@ -29,7 +29,7 @@ $border-config: map-get($config, borders);
 .bds-i {      border-style: inset; }
 .bds-o {      border-style: outset; }
 
-/* generated border styles */
+// generated border styles
 
 @mixin atomic-border-style-set($border-style) {
     .bds-#{$border-style} {  border-style:        $border-style; }
@@ -43,7 +43,7 @@ $border-config: map-get($config, borders);
     @include atomic-border-style-set($border-style);
 }
 
-/* generated border widths */
+// generated border widths
 
 @mixin atomic-border-width-set($edge-width) {
     @if $edge-width == 0 {
@@ -65,7 +65,7 @@ $border-config: map-get($config, borders);
     @include atomic-border-width-set($integer);
 }
 
-/* generated border colors */
+// generated border colors
 
 .bdc-t {  border-color:        transparent; }
 .bdtc-t { border-top-color:    transparent; }
@@ -111,7 +111,7 @@ $border-config: map-get($config, borders);
     }
 }
 
-/* border-radius generation */
+// border-radius generation
 
 @mixin atomic-border-radius-set($radius-value) {
     .bdrds-#{$radius-value} {

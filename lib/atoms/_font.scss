@@ -1,6 +1,6 @@
 /* FONT */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $breakpoint-config: map-get($config, breakpoints);
 $fonts-config: map-get($config, fonts);
 $font-families-config: map-get($fonts-config, families);
@@ -29,7 +29,7 @@ $font-families-config: map-get($fonts-config, families);
 .fz-i {   font-size: inherit; }
 .fz-100 { font-size: 100%; }
 
-/* standard font sizes, independent of device */
+// standard font sizes, independent of device
 
 @mixin atomic-font-size-set-standard($suffix, $font-size) {
     .fz-#{$suffix} { font-size: $font-size; }
@@ -39,19 +39,19 @@ $font-families-config: map-get($fonts-config, families);
     @include atomic-font-size-set-standard($size-suffix, $size-value);
 }
 
-/* device-specific font sizes */
+// device-specific font sizes
 
 @mixin atomic-font-size-set-device($suffix, $device, $font-size) {
     .fz-#{$suffix}-#{$device} { font-size: $font-size; }
 }
 
-/* mobile */
+// mobile
 
 @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
     @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
 }
 
-/* tablet */
+// tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
     @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
@@ -59,7 +59,7 @@ $font-families-config: map-get($fonts-config, families);
     }
 }
 
-/* desktop */
+// desktop
 
 @media (min-width: map-get($breakpoint-config, desktop)) {
     @each $size-suffix, $size-value in map-get($fonts-config, sizes) {

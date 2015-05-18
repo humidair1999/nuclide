@@ -1,6 +1,6 @@
 /* BACKGROUND */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $color-config: map-get($config, colors);
 
 .bg-n { background: none; }

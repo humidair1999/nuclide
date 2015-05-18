@@ -1,6 +1,6 @@
 /* COLOR */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $color-config: map-get($config, colors);
 
 .c-w { color: white; }

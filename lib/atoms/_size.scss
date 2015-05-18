@@ -1,10 +1,10 @@
 /* SIZE */
 
-/* grab portions of global config necessary for this file */
+// grab portions of global config necessary for this file
 $breakpoint-config: map-get($config, breakpoints);
 $dimension-fractions-config: map-get($config, dimension-fractions);
 
-/* standard sizes, independent of device */
+// standard sizes, independent of device
 
 @mixin atomic-size-set-standard($numerator, $denominator) {
     .w-#{$numerator}-#{$denominator} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
@@ -25,7 +25,7 @@ $dimension-fractions-config: map-get($config, dimension-fractions);
     @include atomic-size-set-standard(nth($fraction, 1), nth($fraction, 2));
 }
 
-/* device-specific sizes */
+// device-specific sizes
 
 @mixin atomic-size-set-device($numerator, $denominator, $device) {
     .w-#{$numerator}-#{$denominator}-#{$device} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
@@ -36,7 +36,7 @@ $dimension-fractions-config: map-get($config, dimension-fractions);
     .mah-#{$numerator}-#{$denominator}-#{$device} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
 }
 
-/* mobile */
+// mobile
 
 .w-a-mobile { width: auto; }
 .h-a-mobile { height: auto; }
@@ -48,7 +48,7 @@ $dimension-fractions-config: map-get($config, dimension-fractions);
     @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "mobile");
 }
 
-/* tablet */
+// tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
     .w-a-tablet { width: auto; }
@@ -62,7 +62,7 @@ $dimension-fractions-config: map-get($config, dimension-fractions);
     }
 }
 
-/* desktop */
+// desktop
 
 @media (min-width: map-get($breakpoint-config, desktop)) {
     .w-a-desktop { width: auto; }
