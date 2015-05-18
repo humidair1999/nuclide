@@ -1,6 +1,6 @@
 /* GENERAL UTILITY STYLES AND CLASSES */
 
-/* http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting */
+// http://stackoverflow.com/questions/826782/css-rule-to-disable-text-selection-highlighting
 .user-select-none {
     -webkit-touch-callout: none;
     -webkit-user-select: none;
@@ -10,7 +10,7 @@
     user-select: none;
 }
 
-/* http://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+// http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
 .visuallyhidden {
     border: 0;
     clip: rect(0 0 0 0);
@@ -22,12 +22,12 @@
     width: 1px;
 }
 
-/* used for debugging layout issues */
+// used for debugging layout issues
 .debug {
     border: 1px solid red;
 }
 
-/* https://css-tricks.com/snippets/css/clear-fix/ */
+// https://css-tricks.com/snippets/css/clear-fix/
 .cf:after {
     content: "";
     display: table;
