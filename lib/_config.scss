@@ -1,21 +1,20 @@
 /* NUCLIDE CONFIGURATION */
 
-/* configure your project here! break your design down into its key colors,
-    spacing units, fonts, etc., specify your options, and nuclide will do
-    all the heavy lifting for you, generating relevant classes for an array
-    of useful atomic classes and styles
-*/
+// configure your project here! break your design down into its key colors,
+//  spacing units, fonts, etc., specify your options, and nuclide will do
+//  all the heavy lifting for you, generating relevant classes for an array
+//  of useful atomic classes and styles
 
 $config: (
-    /* responsive breakpoints */
+    // responsive breakpoints
     breakpoints: (
-        tablet:  50em,    /* 800px */
-        desktop: 96.875em /* 1550px */
+        tablet:  50em,    // 800px
+        desktop: 96.875em // 1550px
     ),
-    /* colors used throughout project, including text */
-    /*  http://chir.ag/projects/name-that-color/ */
+    // colors used throughout project, including text
+    //  http://chir.ag/projects/name-that-color/
     colors: (
-        /* off-black */
+        // off-black
         tundora: (
             value: #444444,
             should-generate-backgrounds: true,
@@ -23,7 +22,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* light gray */
+        // light gray
         gallery: (
             value: #eeeeee,
             should-generate-backgrounds: true,
@@ -31,7 +30,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* greenish-blue */
+        // greenish-blue
         capecod: (
             value: #3a4446,
             should-generate-backgrounds: true,
@@ -39,7 +38,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* dark blue-black */
+        // dark blue-black
         outerspace: (
             value: #293133,
             should-generate-backgrounds: true,
@@ -47,7 +46,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* light blue */
+        // light blue
         robinsegg: (
             value: #00bfc6,
             should-generate-backgrounds: true,
@@ -55,7 +54,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* yellow-gold */
+        // yellow-gold
         corn: (
             value: #eac100,
             should-generate-backgrounds: true,
@@ -63,7 +62,7 @@ $config: (
             should-generate-borders: true,
             should-generate-buttons: true
         ),
-        /* brown-gold */
+        // brown-gold
         nutmegwoodfinish: (
             value: #624e00,
             should-generate-backgrounds: true,
@@ -72,24 +71,24 @@ $config: (
             should-generate-buttons: true
         )
     ),
-    /* spacing units, used for margin and padding */
+    // spacing units, used for margin and padding
     spacing-units: (
         sizes: (
-            xxxs: 0.188em, /* 3px */
-            xxs:  0.375em, /* 6px */
-            xs:   0.625em, /* 10px */
-            sm:   0.75em,  /* 12px */
-            std:  1.0em,   /* 16px */
-            lg:   1.25em,  /* 20px */
-            xl:   1.875em, /* 30px */
-            xxl:  2.5em,   /* 40px */
-            xxxl: 2.813em, /* 45px */
-            4xl:  3.75em,  /* 60px */
-            5xl:  4.688em, /* 75px */
-            6xl:  5.0em,   /* 80px */
-            7xl:  5.313em, /* 85px */
-            8xl:  6.25em,  /* 100px */
-            9xl:  7.813em  /* 125px */
+            xxxs: 0.188em, // 3px
+            xxs:  0.375em, // 6px
+            xs:   0.625em, // 10px
+            sm:   0.75em,  // 12px
+            std:  1.0em,   // 16px
+            lg:   1.25em,  // 20px
+            xl:   1.875em, // 30px
+            xxl:  2.5em,   // 40px
+            xxxl: 2.813em, // 45px
+            4xl:  3.75em,  // 60px
+            5xl:  4.688em, // 75px
+            6xl:  5.0em,   // 80px
+            7xl:  5.313em, // 85px
+            8xl:  6.25em,  // 100px
+            9xl:  7.813em  // 125px
         ),
         margin: (
             should-generate-utility-units: true,
@@ -102,24 +101,24 @@ $config: (
             utility-unit-end: 3
         )
     ),
-    /* font settings, used for fonts and icon fonts */
+    // font settings, used for fonts and icon fonts
     fonts: (
         sizes: (
-            xxxs: 0.75em,  /* 12px */
-            xxs:  0.813em, /* 13px */
-            xs:   0.875em, /* 14px */
-            sm:   0.938em, /* 15px */
-            std:  1.0em,   /* 16px */
-            lg:   1.125em, /* 18px */
-            xl:   1.25em,  /* 20px */
-            xxl:  1.375em, /* 22px */
-            xxxl: 1.5em,   /* 24px */
-            4xl:  1.625em, /* 26px */
-            5xl:  1.875em, /* 30px */
-            6xl:  2.25em,  /* 36px */
-            7xl:  2.5em,   /* 40px */
-            8xl:  3.0em,   /* 48px */
-            9xl:  4.375em  /* 70px */
+            xxxs: 0.75em,  // 12px
+            xxs:  0.813em, // 13px
+            xs:   0.875em, // 14px
+            sm:   0.938em, // 15px
+            std:  1.0em,   // 16px
+            lg:   1.125em, // 18px
+            xl:   1.25em,  // 20px
+            xxl:  1.375em, // 22px
+            xxxl: 1.5em,   // 24px
+            4xl:  1.625em, // 26px
+            5xl:  1.875em, // 30px
+            6xl:  2.25em,  // 36px
+            7xl:  2.5em,   // 40px
+            8xl:  3.0em,   // 48px
+            9xl:  4.375em  // 70px
         ),
         families: (
             sourcesanspro: (
@@ -127,7 +126,7 @@ $config: (
             )
         )
     ),
-    /* dimensions used for width and height percentages */
+    // dimensions used for width and height percentages
     dimension-fractions: (
         (1, 6),
         (1, 4),
@@ -138,7 +137,7 @@ $config: (
         (5, 6),
         (1, 1)
     ),
-    /* settings for borders and border radii */
+    // settings for borders and border radii
     borders: (
         styles: (none, solid),
         border-width-start: 0,
