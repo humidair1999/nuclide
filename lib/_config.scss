@@ -128,6 +128,7 @@ $config: (
     ),
     // dimensions used for width and height percentages
     dimension-fractions: (
+        (1, 10),
         (1, 6),
         (1, 4),
         (1, 3),
@@ -135,6 +136,7 @@ $config: (
         (2, 3),
         (3, 4),
         (5, 6),
+        (9, 10),
         (1, 1)
     ),
     // settings for borders and border radii
