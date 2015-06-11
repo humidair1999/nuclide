@@ -1,10 +1,10 @@
 /* TABLE */
 
-.tbl-a { table-layout: auto; }
-.tbl-f { table-layout: fixed; }
+.tbl-a, %tbl-a { table-layout: auto; }
+.tbl-f, %tbl-f { table-layout: fixed; }
 
-.cps-t { caption-side: top; }
-.cps-b { caption-side: bottom; }
+.cps-t, %cps-t { caption-side: top; }
+.cps-b, %cps-b { caption-side: bottom; }
 
-.ec-s { empty-cells: show; }
-.ec-h { empty-cells: hide; }
+.ec-s, %ec-s { empty-cells: show; }
+.ec-h, %ec-h { empty-cells: hide; }
