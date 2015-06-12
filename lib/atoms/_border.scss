@@ -118,7 +118,6 @@ $border-config: map-get($config, borders);
         border-radius: #{$radius-value}px;
         background-clip: padding-box;
     }
-
     .bdtrrds-#{$radius-value}, %bdtrrds-#{$radius-value} {
         border-top-right-radius: #{$radius-value}px;
         background-clip: padding-box;
