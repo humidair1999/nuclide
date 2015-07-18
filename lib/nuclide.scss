@@ -1,4 +1,4 @@
-/* IMPORTS: CONFIG, GLOBAL STYLES, UTILITIES, ETC. */
+// IMPORTS: CONFIG, GLOBAL STYLES, UTILITIES, ETC.
 
 @import 'config';
 @import 'webfonts';
@@ -8,11 +8,12 @@
 @import 'globals';
 @import 'garbage';
 
-/* IMPORTS: ATOMIC */
+// IMPORTS: ATOMIC
+
 // abbreviations from Emmet's cheat sheet:
 //  http://docs.emmet.io/cheat-sheet/
 
-/* visual formatting */
+/* ATOM SECTION: VISUAL FORMATTING */
 @import 'atoms/position';
 @import 'atoms/z-index';
 @import 'atoms/float';
@@ -24,48 +25,49 @@
 @import 'atoms/clip';
 @import 'atoms/cursor';
 
-/* margin & padding */
+/* ATOM SECTION: MARGIN & PADDING */
 @import 'atoms/margin';
 @import 'atoms/padding';
 
-/* box sizing */
+/* ATOM SECTION: BOX SIZING */
 @import 'atoms/box-size';
 @import 'atoms/box-shadow';
 @import 'atoms/size';
 
-/* font */
+/* ATOM SECTION: FONT */
 @import 'atoms/font';
 
-/* text */
+/* ATOM SECTION: TEXT */
 @import 'atoms/alignment';
 @import 'atoms/text';
 
-/* background */
+/* ATOM SECTION: BACKGROUND */
 @import 'atoms/background';
 
-/* color */
+/* ATOM SECTION: COLOR */
 @import 'atoms/color';
 @import 'atoms/opacity';
 
-/* generated content */
+/* ATOM SECTION: GENERATED CONTENT */
 @import 'atoms/content';
 
-/* outline */
+/* ATOM SECTION: OUTLINE */
 @import 'atoms/outline';
 
-/* tables */
+/* ATOM SECTION: TABLE */
 @import 'atoms/table';
 
-/* border */
+/* ATOM SECTION: BORDER */
 @import 'atoms/border';
 
-/* lists */
+/* ATOM SECTION: LIST */
 @import 'atoms/list';
 
-/* print */
+/* ATOM SECTION: PRINT */
 @import 'atoms/print';
 
-/* IMPORTS: MOLECULAR */
+// IMPORTS: MOLECULAR
+
 // include first- or third-party molecules that utilize nuclide's atoms here; the
 //  official nuclide-molecules repo is a good starting place:
 //  https://github.com/jkymarsh/nuclide-molecules
