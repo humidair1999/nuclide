@@ -53,6 +53,10 @@ hr {
 }
 
 // include your global styles per tag here
+strong {
+    @extend %fw-b;
+
+}
 p {
     @extend %lh-1-2;
 }
@@ -63,6 +67,16 @@ h1 {
 }
 
 h2 {
+    @extend %fz-8xl;
+    @extend %fw-3;
+}
+
+h3 {
+    @extend %fz-7xl;
+    @extend %fw-3;
+}
+
+h4 {
     @extend %fz-4xl;
     @extend %fw-3;
 }

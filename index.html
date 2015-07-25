@@ -8,9 +8,17 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
+        <link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/simple-line-icons.css">
         <link rel="stylesheet" href="css/nuclide.css">
+
+        <style>
+            .ff-code {
+                font-family: "Inconsolata", "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+            }
+        </style>
 
         <!--[if lt IE 9]>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
@@ -22,13 +30,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <header class="debug">
-            <!-- TODO: add github icon? -->
+        <header class="cf debug">
+            <a href="https://github.com/jkymarsh/nuclide" class="fl-r d-b p-xs debug">view on github</a>
 
-            <div class="pt-9xl pb-9xl ta-c debug">
+            <div class="cl-b pt-9xl pb-9xl ta-c debug">
                 <h1 class="mb-xxxs debug">nuclide</h1>
 
-                <h2 class="mb-lg debug">harness the power of Atomic CSS</h2>
+                <h4 class="mb-lg debug">harness the power of Atomic CSS</h4>
 
                 <a href="https://github.com/jkymarsh/nuclide/archive/master.zip" class="d-ib p-sm mr-sm debug">
                     <i class="icon-cloud-download mr-xxxs fz-lg va-m debug"></i>
@@ -48,11 +56,13 @@
             <div class="w-9-10-mobile
                 w-1-2-tablet
                 mr-a ml-a debug">
-                <p class="mb-sm debug">
-                    <a href="https://github.com/jkymarsh/nuclide">nuclide</a> is a responsive, mobile-first, Sass-based CSS framework that follows Atomic design conventions.
+                <h2 class="mb-xs debug">what is it?</h2>
+
+                <p class="mb-std debug">
+                    <a href="https://github.com/jkymarsh/nuclide">nuclide</a> is a <strong>responsive, mobile-first, Sass-based CSS framework</strong> that follows Atomic design conventions.
                 </p>
 
-                <p class="mb-sm debug">
+                <p class="mb-std debug">
                     It was designed out of the desire for a CSS framework that's powerful, flexible, maintainable, extensible, and easy to trace and comprehend.
                 </p>
 
@@ -62,8 +72,160 @@
             </div>
         </section>
 
-        <!-- <section class="pt-xl pb-xl debug">
-            hjhj
-        </section> -->
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">why would i use it?</h2>
+
+                <ul class="mb-xl debug">
+                    <li class="mb-std lh-1-2 debug">
+                        <strong>It's powerful:</strong> the Atomic design pattern, combined with programmatic generation of styles (colors and color variations, sizing units, fonts and font sizes, etc.) based on your configuration, removes much of the work of classical CSS frameworks
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <strong>It's simple:</strong> following Atomic conventions makes your HTML descriptive, your styles easily traceable, and cross-referencing specific properties across elements and components a breeze
+                    </li>
+                    <li class="lh-1-2 debug">
+                        <strong>It's smart:</strong> nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making Molecule creation powerful and intuitive
+                    </li>
+                </ul>
+
+                <p class="debug">
+                    nuclide can give you the freedom and flexibility not provided by frameworks like <a href="http://getbootstrap.com/">Bootstrap</a> and <a href="http://foundation.zurb.com/">Foundation</a>.
+                </p>
+            </div>
+        </section>
+
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">how do i use it?</h2>
+
+                <p class="mb-std debug">
+                    nuclide uses modern Sass features, so make sure you have <strong>Sass 3.3 or greater</strong> installed.
+                </p>
+
+                <ol class="mb-std list-dc debug">
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="https://github.com/jkymarsh/nuclide/archive/master.zip">Download</a> or <a href="https://github.com/jkymarsh/nuclide">clone</a> nuclide
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <span class="ff-code">cd</span> into the <span class="ff-code">nuclide</span> directory and run <span class="ff-code">sass</span>, using the <span class="ff-code">--watch</span> option:<br>
+                        <span class="d-b p-sm ff-code debug">sass --watch lib/nuclide.scss:css/nuclide.css</span>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        In the <span class="ff-code">lib</span> directory, tweak the <span class="ff-code">config</span>, <span class="ff-code">webfonts</span>, and other relevant Sass files with your own project's colors, values, fonts, and styles
+                    </li>
+                    <li class="lh-1-2 debug">
+                        If you're using any Molecules, don't forget to <span class="ff-code">@import</span> them within <span class="ff-code">nuclide.scss</span>
+                    </li>
+                </ol>
+
+                <p class="mb-std debug">
+                    nuclide will generate a slew of Atomic classes for you, many of them responsive (and mobile-first) in nature, allowing you to design from the ground up across devices:
+                </p>
+
+                <div class="mb-std p-sm ff-code debug">
+                    &lt;div class="m-sm-mobile m-lg-tablet m-xl-desktop ta-c"><br>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="fz-sm-mobile fz-lg-tablet fz-xl-desktop c-cornflower fw-5">just a test!&lt;/span><br>
+                    &lt;/div>
+                </div>
+
+                <p class="mb-std debug">
+                    <strong>Go forth and code!</strong>
+                </p>
+
+                <p class="debug">
+                    Oh, nuclide also works great with <a href="https://github.com/jkymarsh/tiny-responsive-grid">trg</a> and <a href="https://github.com/jkymarsh/lament-configurator">lament configurator</a>!
+                </p>
+            </div>
+        </section>
+
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">molecules</h2>
+
+                <p class="mb-std debug">
+                    Molecules are combinations of Atomic classes used in conjunction to form more complex components, such as navigation, media elements, styled tables, buttons, form elements, and so on.
+                </p>
+
+                <p class="mb-std debug">
+                    One intent of nuclide is to create a basis of common Atomic classes from which other developers and designers will create beautiful, elegant, responsive Molecules and share them with the community!
+                </p>
+
+                <p class="debug">
+                    Check out the <a href="https://github.com/jkymarsh/nuclide-molecules">nuclide-molecules repo</a> for sample Molecules.
+                </p>
+            </div>
+        </section>
+
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">caveats</h2>
+
+                <ul class="list-d debug">
+                    <li class="mb-std lh-1-2 debug">
+                        nuclide doesn't include a normalize, reset, grid, etc. Don't forget to include your favorites!
+                    </li>
+                    <li class="lh-1-2 debug">
+                        Unfortunately, Sass doesn't currently support the use of @extend within media queries, which hampers nuclide's ability to be 100% inheritance-based, particularly for Molecules. <a href="https://github.com/sass/sass/issues/1050">They're working on it</a>.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">inspiration and sources</h2>
+
+                <ul class="list-d debug">
+                    <li class="mb-std lh-1-2 debug">
+                        Class names and styles from the <a href="http://docs.emmet.io/cheat-sheet/">Emmet toolkit</a>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        Structure and convention concepts from <a href="https://github.com/csswizardry/inuit.css/">inuit-css</a>
+                    </li>
+                    <li class="lh-1-2 debug">
+                        Basis for other styles from <a href="https://github.com/nemophrost/atomic-css">nemophrost's atomic-css project</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="pt-5xl pb-5xl debug">
+            <div class="w-9-10-mobile
+                w-1-2-tablet
+                mr-a ml-a debug">
+                <h2 class="mb-xs debug">Atomic CSS resources</h2>
+
+                <ul class="debug">
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="http://bradfrostweb.com/blog/post/atomic-web-design/">http://bradfrostweb.com/blog/post/atomic-web-design/</a>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/">https://www.lucidchart.com/techblog/2014/01/31/atomic-css-tool-set/</a>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/">http://www.smashingmagazine.com/2013/10/21/challenging-css-best-practices-atomic-approach/</a>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="http://www.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/">http://www.smashingmagazine.com/2013/08/02/other-interface-atomic-design-sass/</a>
+                    </li>
+                    <li class="mb-std lh-1-2 debug">
+                        <a href="http://krasimir.github.io/organic-css/">http://krasimir.github.io/organic-css/</a>
+                    </li>
+                    <li class="lh-1-2 debug">
+                        <a href="http://java.dzone.com/articles/atomic-css-tool-set">http://java.dzone.com/articles/atomic-css-tool-set</a>
+                    </li>
+                </ul>
+            </div>
+        </section>
     </body>
 </html>

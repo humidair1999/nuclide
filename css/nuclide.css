@@ -3124,7 +3124,7 @@ hr {
 .fw-n {
   font-weight: normal; }
 
-.fw-b {
+.fw-b, strong {
   font-weight: bold; }
 
 .fw-br {
@@ -3139,7 +3139,7 @@ hr {
 .fw-2 {
   font-weight: 200; }
 
-.fw-3, body, h1, h2 {
+.fw-3, body, h1, h2, h3, h4 {
   font-weight: 300; }
 
 .fw-4 {
@@ -3205,7 +3205,7 @@ hr {
 .fz-xxxl {
   font-size: 1.5em; }
 
-.fz-4xl, h2 {
+.fz-4xl, h4 {
   font-size: 1.625em; }
 
 .fz-5xl {
@@ -3214,10 +3214,10 @@ hr {
 .fz-6xl {
   font-size: 2.25em; }
 
-.fz-7xl {
+.fz-7xl, h3 {
   font-size: 2.5em; }
 
-.fz-8xl {
+.fz-8xl, h2 {
   font-size: 3em; }
 
 .fz-9xl, h1 {
