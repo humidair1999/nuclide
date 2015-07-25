@@ -1,0 +1,21 @@
+/* =COLOR */
+
+// grab portions of global config necessary for this file
+$color-config: map-get($config, colors);
+
+.c-w, %c-w { color: white; }
+.c-b, %c-b { color: black; }
+
+@mixin atomic-color-set($color-name, $color-hex) {
+    .c-#{$color-name}-xlt, %c-#{$color-name}-xlt { color: lighten($color-hex, 10%); }
+    .c-#{$color-name}-lt,  %c-#{$color-name}-lt {  color: lighten($color-hex, 5%); }
+    .c-#{$color-name},     %c-#{$color-name} {     color: $color-hex; }
+    .c-#{$color-name}-dk,  %c-#{$color-name}-dk {  color: darken($color-hex, 5%); }
+    .c-#{$color-name}-xdk, %c-#{$color-name}-xdk { color: darken($color-hex, 10%); }
+}
+
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-colors) == true {
+        @include atomic-color-set($color-name, map-get($color-settings, value));
+    }
+}

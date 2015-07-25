@@ -1,0 +1,21 @@
+/* =OUTLINE */
+
+.ol-n, %ol-n { outline: none; }
+
+.olw-tn, %olw-tn { outline-width: thin; }
+.olw-m,  %olw-m {  outline-width: medium; }
+.olw-tc, %olw-tc { outline-width: thick; }
+
+.ols-n,  %ols-n {  outline-style: none; }
+.ols-dt, %ols-dt { outline-style: dotted; }
+.ols-ds, %ols-ds { outline-style: dashed; }
+.ols-s,  %ols-s {  outline-style: solid; }
+.ols-db, %ols-db { outline-style: double; }
+.ols-g,  %ols-g {  outline-style: groove; }
+.ols-r,  %ols-r {  outline-style: ridge; }
+.ols-i,  %ols-i {  outline-style: inset; }
+.ols-o,  %ols-o {  outline-style: outset; }
+
+.olc-w, %olc-w { outline-color: white; }
+.olc-b, %olc-b { outline-color: black; }
+.olc-i, %olc-i { outline-color: invert; }

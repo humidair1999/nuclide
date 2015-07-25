@@ -1,0 +1,20 @@
+/* =DISPLAY */
+
+.d-n,  %d-n {  display: none; }
+.d-b,  %d-b {  display: block; }
+.d-i,  %d-i {  display: inline; }
+.d-ib, %d-ib { display: inline-block; }
+
+.d-ri, %d-ri { display: run-in; }
+.d-cp, %d-cp { display: compact; }
+
+.d-tb,    %d-tb {    display: table; }
+.d-itb,   %d-itb {   display: inline-table; }
+.d-tbcp,  %d-tbcp {  display: table-caption; }
+.d-tbcl,  %d-tbcl {  display: table-column; }
+.d-tbclg, %d-tbclg { display: table-column-group; }
+.d-tbhg,  %d-tbhg {  display: table-header-group; }
+.d-tbfg,  %d-tbfg {  display: table-footer-group; }
+.d-tbr,   %d-tbr {   display: table-row; }
+.d-tbrg,  %d-tbrg {  display: table-row-group; }
+.d-tbc,   %d-tbc {   display: table-cell; }

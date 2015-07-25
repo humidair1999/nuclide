@@ -1,0 +1,80 @@
+/* =FONT */
+
+// grab portions of global config necessary for this file
+$breakpoint-config: map-get($config, breakpoints);
+$fonts-config: map-get($config, fonts);
+$font-families-config: map-get($fonts-config, families);
+
+.fw-n,  %fw-n {  font-weight: normal; }
+.fw-b,  %fw-b {  font-weight: bold; }
+.fw-br, %fw-br { font-weight: bolder; }
+.fw-lr, %fw-lr { font-weight: lighter; }
+
+.fw-1, %fw-1 { font-weight: 100; }
+.fw-2, %fw-2 { font-weight: 200; }
+.fw-3, %fw-3 { font-weight: 300; }
+.fw-4, %fw-4 { font-weight: 400; }
+.fw-5, %fw-5 { font-weight: 500; }
+.fw-6, %fw-6 { font-weight: 600; }
+.fw-7, %fw-7 { font-weight: 700; }
+.fw-8, %fw-8 { font-weight: 800; }
+
+.fs-n, %fs-n { font-style: normal; }
+.fs-i, %fs-i { font-style: italic; }
+.fs-o, %fs-o { font-style: oblique; }
+
+.fv-n,  %fv-n {  font-variant: normal; }
+.fv-sc, %fv-sc { font-variant: small-caps; }
+
+.fz-i,   %fz-i {   font-size: inherit; }
+.fz-100, %fz-100 { font-size: 100%; }
+
+// standard font sizes, independent of device
+
+@mixin atomic-font-size-set-standard($suffix, $font-size) {
+    .fz-#{$suffix}, %fz-#{$suffix} { font-size: $font-size; }
+}
+
+@each $size-suffix, $size-value in map-get($fonts-config, sizes) {
+    @include atomic-font-size-set-standard($size-suffix, $size-value);
+}
+
+// device-specific font sizes
+
+@mixin atomic-font-size-set-device($suffix, $device, $font-size) {
+    .fz-#{$suffix}-#{$device}, %fz-#{$suffix}-#{$device} { font-size: $font-size; }
+}
+
+// mobile
+
+@each $size-suffix, $size-value in map-get($fonts-config, sizes) {
+    @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
+}
+
+// tablet
+
+@media (min-width: map-get($breakpoint-config, tablet)) {
+    @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
+        @include atomic-font-size-set-device($size-suffix, "tablet", $size-value);
+    }
+}
+
+// desktop
+
+@media (min-width: map-get($breakpoint-config, desktop)) {
+    @each $size-suffix, $size-value in map-get($fonts-config, sizes) {
+        @include atomic-font-size-set-device($size-suffix, "desktop", $size-value);
+    }
+}
+
+.ff-s,  %ff-s {  font-family: serif; }
+.ff-ss, %ff-ss { font-family: sans-serif; }
+.ff-c,  %ff-c {  font-family: cursive; }
+.ff-f,  %ff-f {  font-family: fantasy; }
+.ff-m,  %ff-m {  font-family: monospace; }
+.ff-a,  %ff-a {  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif; }
+.ff-i,  %ff-i {  font-family: inherit; }
+
+@each $font-name, $font-settings in $font-families-config {
+    .ff-#{$font-name}, %ff-#{$font-name} { font-family: unquote(map-get($font-settings, stack)); }
+}

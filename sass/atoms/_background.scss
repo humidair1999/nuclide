@@ -1,0 +1,37 @@
+/* =BACKGROUND */
+
+// grab portions of global config necessary for this file
+$color-config: map-get($config, colors);
+
+.bg-n, %bg-n { background: none; }
+
+.bgc-w, %bgc-w { background-color: white; }
+.bgc-b, %bgc-b { background-color: black; }
+.bgc-t, %bgc-t { background-color: transparent; }
+
+@mixin atomic-background-color-set($color-name, $color-hex) {
+    .bgc-#{$color-name}-xlt, %bgc-#{$color-name}-xlt { background-color: lighten($color-hex, 10%); }
+    .bgc-#{$color-name}-lt,  %bgc-#{$color-name}-lt {  background-color: lighten($color-hex, 5%); }
+    .bgc-#{$color-name},     %bgc-#{$color-name} {     background-color: $color-hex; }
+    .bgc-#{$color-name}-dk,  %bgc-#{$color-name}-dk {  background-color: darken($color-hex, 5%); }
+    .bgc-#{$color-name}-xdk, %bgc-#{$color-name}-xdk { background-color: darken($color-hex, 10%); }
+}
+
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-backgrounds) == true {
+        @include atomic-background-color-set($color-name, map-get($color-settings, value));
+    }
+}
+
+.bgi-n, %bgi-n { background-image: none; }
+
+.bgr-n,  %bgr-n {  background-repeat: no-repeat; }
+.bgr-x,  %bgr-x {  background-repeat: repeat-x; }
+.bgr-y,  %bgr-y {  background-repeat: repeat-y; }
+.bgr-sp, %bgr-sp { background-repeat: space; }
+.bgr-rd, %bgr-rd { background-repeat: round; }
+
+.bga-f, %bga-f { background-attachment: fixed; }
+.bga-s, %bga-s { background-attachment: scroll; }
+
+.bgp-0, %bgp-0 { background-position: 0 0; }

@@ -1,0 +1,17 @@
+/* =LIST */
+
+.lis-n, %lis-n { list-style: none; }
+
+.lisp-i, %lisp-i { list-style-position: inside; }
+.lisp-o, %lisp-o { list-style-position: outside; }
+
+.list-n,    %list-n {    list-style-type: none; }
+.list-d,    %list-d {    list-style-type: disc; }
+.list-c,    %list-c {    list-style-type: circle; }
+.list-s,    %list-s {    list-style-type: square; }
+.list-dc,   %list-dc {   list-style-type: decimal; }
+.list-dclz, %list-dclz { list-style-type: decimal-leading-zero; }
+.list-lr,   %list-lr {   list-style-type: lower-roman; }
+.list-ur,   %list-ur {   list-style-type: upper-roman; }
+
+.lisi-n, %lisi-n { list-style-image: none; }

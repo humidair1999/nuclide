@@ -1,0 +1,16 @@
+/* =OVERFLOW */
+
+.ov-v, %ov-v { overflow: visible; }
+.ov-h, %ov-h { overflow: hidden; }
+.ov-s, %ov-s { overflow: scroll; }
+.ov-a, %ov-a { overflow: auto; }
+
+.ovx-v, %ovx-v { overflow-x: visible; }
+.ovx-h, %ovx-h { overflow-x: hidden; }
+.ovx-s, %ovx-s { overflow-x: scroll; }
+.ovx-a, %ovx-a { overflow-x: auto; }
+
+.ovy-v, %ovy-v { overflow-y: visible; }
+.ovy-h, %ovy-h { overflow-y: hidden; }
+.ovy-s, %ovy-s { overflow-y: scroll; }
+.ovy-a, %ovy-a { overflow-y: auto; }

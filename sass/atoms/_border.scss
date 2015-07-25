@@ -1,0 +1,141 @@
+/* =BORDER */
+
+// grab portions of global config necessary for this file
+$color-config: map-get($config, colors);
+$border-config: map-get($config, borders);
+
+.bdcl-c, %bdcl-c { border-collapse: collapse; }
+.bdcl-s, %bdcl-s { border-collapse: separate; }
+
+// border: none
+
+.bd-n,  %bd-n {  border:        none; }
+.bdt-n, %bdt-n { border-top:    none; }
+.bdr-n, %bdr-n { border-right:  none; }
+.bdb-n, %bdb-n { border-bottom: none; }
+.bdl-n, %bdl-n { border-left:   none; }
+
+// border styles
+
+.bds-h,      %bds-h {      border-style: hidden; }
+.bds-dt,     %bds-dt {     border-style: dotted; }
+.bds-ds,     %bds-ds {     border-style: dashed; }
+.bds-db,     %bds-db {     border-style: double; }
+.bds-dtds,   %bds-dtds {   border-style: dot-dash; }
+.bds-dtdtds, %bds-dtdtds { border-style: dot-dot-dash; }
+.bds-w,      %bds-w {      border-style: wave; }
+.bds-g,      %bds-g {      border-style: groove; }
+.bds-r,      %bds-r {      border-style: ridge; }
+.bds-i,      %bds-i {      border-style: inset; }
+.bds-o,      %bds-o {      border-style: outset; }
+
+// generated border styles
+
+@mixin atomic-border-style-set($border-style) {
+    .bds-#{$border-style},  %bds-#{$border-style} {  border-style:        $border-style; }
+    .bdts-#{$border-style}, %bdts-#{$border-style} { border-top-style:    $border-style; }
+    .bdrs-#{$border-style}, %bdrs-#{$border-style} { border-right-style:  $border-style; }
+    .bdbs-#{$border-style}, %bdbs-#{$border-style} { border-bottom-style: $border-style; }
+    .bdls-#{$border-style}, %bdls-#{$border-style} { border-left-style:   $border-style; }
+}
+
+@each $border-style in map-get($border-config, styles) {
+    @include atomic-border-style-set($border-style);
+}
+
+// generated border widths
+
+@mixin atomic-border-width-set($edge-width) {
+    @if $edge-width == 0 {
+        .bdw-#{$edge-width},  %bdw-#{$edge-width} {  border-width:        #{$edge-width}; }
+        .bdtw-#{$edge-width}, %bdtw-#{$edge-width} { border-top-width:    #{$edge-width}; }
+        .bdrw-#{$edge-width}, %bdrw-#{$edge-width} { border-right-width:  #{$edge-width}; }
+        .bdbw-#{$edge-width}, %bdbw-#{$edge-width} { border-bottom-width: #{$edge-width}; }
+        .bdlw-#{$edge-width}, %bdlw-#{$edge-width} { border-left-width:   #{$edge-width}; }
+    } @else {
+        .bdw-#{$edge-width},  %bdw-#{$edge-width} {  border-width:        #{$edge-width}px; }
+        .bdtw-#{$edge-width}, %bdtw-#{$edge-width} { border-top-width:    #{$edge-width}px; }
+        .bdrw-#{$edge-width}, %bdrw-#{$edge-width} { border-right-width:  #{$edge-width}px; }
+        .bdbw-#{$edge-width}, %bdbw-#{$edge-width} { border-bottom-width: #{$edge-width}px; }
+        .bdlw-#{$edge-width}, %bdlw-#{$edge-width} { border-left-width:   #{$edge-width}px; }
+    }
+}
+
+@for $integer from map-get($border-config, border-width-start) through map-get($border-config, border-width-end) {
+    @include atomic-border-width-set($integer);
+}
+
+// generated border colors
+
+.bdc-t,  %bdc-t {  border-color:        transparent; }
+.bdtc-t, %bdtc-t { border-top-color:    transparent; }
+.bdrc-t, %bdrc-t { border-right-color:  transparent; }
+.bdbc-t, %bdbc-t { border-bottom-color: transparent; }
+.bdlc-t, %bdlc-t { border-left-color:   transparent; }
+
+.bdc-w,  %bdc-w {  border-color:        white; }
+.bdtc-w, %bdtc-w { border-top-color:    white; }
+.bdrc-w, %bdrc-w { border-right-color:  white; }
+.bdbc-w, %bdbc-w { border-bottom-color: white; }
+.bdlc-w, %bdlc-w { border-left-color:   white; }
+
+.bdc-b,  %bdc-b {  border-color:        black; }
+.bdtc-b, %bdtc-b { border-top-color:    black; }
+.bdrc-b, %bdrc-b { border-right-color:  black; }
+.bdbc-b, %bdbc-b { border-bottom-color: black; }
+.bdlc-b, %bdlc-b { border-left-color:   black; }
+
+@mixin atomic-border-color-set($color-name, $color-value) {
+    .bdc-#{$color-name}-lt,  %bdc-#{$color-name}-lt {  border-color:        lighten($color-value, 5%); }
+    .bdtc-#{$color-name}-lt, %bdtc-#{$color-name}-lt { border-top-color:    lighten($color-value, 5%); }
+    .bdrc-#{$color-name}-lt, %bdrc-#{$color-name}-lt { border-right-color:  lighten($color-value, 5%); }
+    .bdbc-#{$color-name}-lt, %bdbc-#{$color-name}-lt { border-bottom-color: lighten($color-value, 5%); }
+    .bdlc-#{$color-name}-lt, %bdlc-#{$color-name}-lt { border-left-color:   lighten($color-value, 5%); }
+
+    .bdc-#{$color-name},  %bdc-#{$color-name} {  border-color:        $color-value; }
+    .bdtc-#{$color-name}, %bdtc-#{$color-name} { border-top-color:    $color-value; }
+    .bdrc-#{$color-name}, %bdrc-#{$color-name} { border-right-color:  $color-value; }
+    .bdbc-#{$color-name}, %bdbc-#{$color-name} { border-bottom-color: $color-value; }
+    .bdlc-#{$color-name}, %bdlc-#{$color-name} { border-left-color:   $color-value; }
+
+    .bdc-#{$color-name}-dk,  %bdc-#{$color-name}-dk {  border-color:        darken($color-value, 5%); }
+    .bdtc-#{$color-name}-dk, %bdtc-#{$color-name}-dk { border-top-color:    darken($color-value, 5%); }
+    .bdrc-#{$color-name}-dk, %bdrc-#{$color-name}-dk { border-right-color:  darken($color-value, 5%); }
+    .bdbc-#{$color-name}-dk, %bdbc-#{$color-name}-dk { border-bottom-color: darken($color-value, 5%); }
+    .bdlc-#{$color-name}-dk, %bdlc-#{$color-name}-dk { border-left-color:   darken($color-value, 5%); }
+}
+
+@each $color-name, $color-settings in $color-config {
+    @if map-get($color-settings, should-generate-borders) == true {
+        @include atomic-border-color-set($color-name, map-get($color-settings, value));
+    }
+}
+
+// border-radius generation
+
+@mixin atomic-border-radius-set($radius-value) {
+    .bdrds-#{$radius-value}, %bdrds-#{$radius-value} {
+        border-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdtrrds-#{$radius-value}, %bdtrrds-#{$radius-value} {
+        border-top-right-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdtlrds-#{$radius-value}, %bdtlrds-#{$radius-value} {
+        border-top-left-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdbrrds-#{$radius-value}, %bdbrrds-#{$radius-value} {
+        border-bottom-right-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+    .bdblrds-#{$radius-value}, %bdblrds-#{$radius-value} {
+        border-bottom-left-radius: #{$radius-value}px;
+        background-clip: padding-box;
+    }
+}
+
+@for $integer from map-get($border-config, border-radius-start) through map-get($border-config, border-radius-end) {
+    @include atomic-border-radius-set($integer);
+}

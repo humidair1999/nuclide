@@ -1,0 +1,44 @@
+/* =TEXT */
+
+.td-n, %td-n { text-decoration: none; }
+.td-u, %td-u { text-decoration: underline; }
+.td-o, %td-o { text-decoration: overline; }
+.td-l, %td-l { text-decoration: line-through; }
+
+.ti--, %ti-- { text-indent: -9999px; }
+
+.tt-n, %tt-n { text-transform: none; }
+.tt-c, %tt-c { text-transform: capitalize; }
+.tt-u, %tt-u { text-transform: uppercase; }
+.tt-l, %tt-l { text-transform: lowercase; }
+
+.tsh-n, %tsh-n { text-shadow: none; }
+
+.lh-n, %lh-n { line-height: normal; }
+
+.lg-1-0, %lg-1-0 { line-height: 1; }
+.lh-1-2, %lh-1-2 { line-height: 1.2; }
+.lh-1-4, %lh-1-4 { line-height: 1.4; }
+.lh-1-6, %lh-1-6 { line-height: 1.6; }
+.lh-1-8, %lh-1-8 { line-height: 1.8; }
+.lh-2-0, %lh-2-0 { line-height: 2.0; }
+
+.lts-n, %lts-n { letter-spacing: normal; }
+
+.whs-n,  %whs-n {  white-space: normal; }
+.whs-p,  %whs-p {  white-space: pre; }
+.whs-nw, %whs-nw { white-space: nowrap; }
+.whs-pw, %whs-pw { white-space: pre-wrap; }
+.whs-pl, %whs-pl { white-space: pre-line; }
+
+.wob-n,  %wob-n {  word-break: normal; }
+.wob-k,  %wob-k {  word-break: keep-all; }
+.wob-l,  %wob-l {  word-break: loose; }
+.wob-bs, %wob-bs { word-break: break-strict; }
+.wob-ba, %wob-ba { word-break: break-all; }
+
+.wow-nm, %wow-nm { word-wrap: normal; }
+.wow-n,  %wow-n {  word-wrap: none; }
+.wow-u,  %wow-u {  word-wrap: unrestricted; }
+.wow-s,  %wow-s {  word-wrap: suppress; }
+.wow-b,  %wow-b {  word-wrap: break-word; }

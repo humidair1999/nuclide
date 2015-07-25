@@ -1,0 +1,16 @@
+/* =CONTENT */
+
+.cnt-n,     %cnt-n {     content: normal; }
+.cnt-oq,    %cnt-oq {    content: open-quote; }
+.cnt-noq,   %cnt-noq {   content: no-open-quote; }
+.cnt-cq,    %cnt-cq {    content: close-quote; }
+.cnt-ncq,   %cnt-ncq {   content: no-close-quote; }
+.cnt-empty, %cnt-empty { content: ""; }
+
+.q-n,  %q-n {  quotes: none; }
+.q-ru, %q-ru { quotes: '\00AB' '\00BB' '\201E' '\201C'; }
+.q-en, %q-en { quotes: '\201C' '\201D' '\2018' '\2019'; }
+
+.coi-n, %coi-n { counter-increment: none; }
+
+.cor-n, %cor-n { counter-reset: none; }

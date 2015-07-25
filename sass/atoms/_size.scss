@@ -1,0 +1,77 @@
+/* =SIZE */
+
+// grab portions of global config necessary for this file
+$breakpoint-config: map-get($config, breakpoints);
+$dimension-fractions-config: map-get($config, dimension-fractions);
+
+// standard sizes, independent of device
+
+@mixin atomic-size-set-standard($numerator, $denominator) {
+    .w-#{$numerator}-#{$denominator},   %w-#{$numerator}-#{$denominator} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .h-#{$numerator}-#{$denominator},   %h-#{$numerator}-#{$denominator} {   height:     percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .miw-#{$numerator}-#{$denominator}, %miw-#{$numerator}-#{$denominator} { min-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mih-#{$numerator}-#{$denominator}, %mih-#{$numerator}-#{$denominator} { min-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .maw-#{$numerator}-#{$denominator}, %maw-#{$numerator}-#{$denominator} { max-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mah-#{$numerator}-#{$denominator}, %mah-#{$numerator}-#{$denominator} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+}
+
+.w-a, %w-a { width: auto; }
+.h-a, %h-a { height: auto; }
+
+.maw-n, %maw-n { max-width: none; }
+.mah-n, %mah-n { max-height: none; }
+
+@each $fraction in $dimension-fractions-config {
+    @include atomic-size-set-standard(nth($fraction, 1), nth($fraction, 2));
+}
+
+// device-specific sizes
+
+@mixin atomic-size-set-device($numerator, $denominator, $device) {
+    .w-#{$numerator}-#{$denominator}-#{$device},   %w-#{$numerator}-#{$denominator}-#{$device} {   width:      percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .h-#{$numerator}-#{$denominator}-#{$device},   %h-#{$numerator}-#{$denominator}-#{$device} {   height:     percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .miw-#{$numerator}-#{$denominator}-#{$device}, %miw-#{$numerator}-#{$denominator}-#{$device} { min-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mih-#{$numerator}-#{$denominator}-#{$device}, %mih-#{$numerator}-#{$denominator}-#{$device} { min-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .maw-#{$numerator}-#{$denominator}-#{$device}, %maw-#{$numerator}-#{$denominator}-#{$device} { max-width:  percentage(floor(100000 * $numerator / $denominator) / 100000); }
+    .mah-#{$numerator}-#{$denominator}-#{$device}, %mah-#{$numerator}-#{$denominator}-#{$device} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
+}
+
+// mobile
+
+.w-a-mobile, %w-a-mobile { width: auto; }
+.h-a-mobile, %h-a-mobile { height: auto; }
+
+.maw-n-mobile, %maw-n-mobile { max-width: none; }
+.mah-n-mobile, %mah-n-mobile { max-height: none; }
+
+@each $fraction in $dimension-fractions-config {
+    @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "mobile");
+}
+
+// tablet
+
+@media (min-width: map-get($breakpoint-config, tablet)) {
+    .w-a-tablet, %w-a-tablet { width: auto; }
+    .h-a-tablet, %h-a-tablet { height: auto; }
+
+    .maw-n-tablet, %maw-n-tablet { max-width: none; }
+    .mah-n-tablet, %mah-n-tablet { max-height: none; }
+
+    @each $fraction in $dimension-fractions-config {
+        @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "tablet");
+    }
+}
+
+// desktop
+
+@media (min-width: map-get($breakpoint-config, desktop)) {
+    .w-a-desktop, %w-a-desktop { width: auto; }
+    .h-a-desktop, %h-a-desktop { height: auto; }
+
+    .maw-n-desktop, %maw-n-desktop { max-width: none; }
+    .mah-n-desktop, %mah-n-desktop { max-height: none; }
+
+    @each $fraction in $dimension-fractions-config {
+        @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "desktop");
+    }
+}

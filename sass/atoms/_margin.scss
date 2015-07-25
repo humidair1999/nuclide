@@ -1,0 +1,120 @@
+/* =MARGIN */
+
+// grab portions of global config necessary for this file
+$breakpoint-config: map-get($config, breakpoints);
+$spacing-units-config: map-get($config, spacing-units);
+$margin-config: map-get($spacing-units-config, margin);
+
+// standard margin mixins and includes, independent of device
+
+@mixin atomic-margin-set-standard($suffix, $margin) {
+    .m-#{$suffix},  %m-#{$suffix} {  margin:        $margin; }
+    .mt-#{$suffix}, %mt-#{$suffix} { margin-top:    $margin; }
+    .mr-#{$suffix}, %mr-#{$suffix} { margin-right:  $margin; }
+    .mb-#{$suffix}, %mb-#{$suffix} { margin-bottom: $margin; }
+    .ml-#{$suffix}, %ml-#{$suffix} { margin-left:   $margin; }
+}
+
+@mixin atomic-utility-margin-set-standard($integer, $fraction) {
+    .m-#{$integer}-#{$fraction},  %m-#{$integer}-#{$fraction} {  margin:        ((($integer * 10) + $fraction) / 10) + em; }
+    .mt-#{$integer}-#{$fraction}, %mt-#{$integer}-#{$fraction} { margin-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .mr-#{$integer}-#{$fraction}, %mr-#{$integer}-#{$fraction} { margin-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .mb-#{$integer}-#{$fraction}, %mb-#{$integer}-#{$fraction} { margin-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .ml-#{$integer}-#{$fraction}, %ml-#{$integer}-#{$fraction} { margin-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
+@include atomic-margin-set-standard("0", 0);
+@include atomic-margin-set-standard("a", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+    @include atomic-margin-set-standard($size-suffix, $size-value);
+}
+
+@if map-get($margin-config, should-generate-utility-units) {
+    @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-margin-set-standard($integer, $fraction);
+            }
+        }
+    }
+}
+
+// device-specific margin mixins and includes
+
+@mixin atomic-margin-set-device($suffix, $device, $margin) {
+    .m-#{$suffix}-#{$device},  %m-#{$suffix}-#{$device} {  margin:        $margin; }
+    .mt-#{$suffix}-#{$device}, %mt-#{$suffix}-#{$device} { margin-top:    $margin; }
+    .mr-#{$suffix}-#{$device}, %mr-#{$suffix}-#{$device} { margin-right:  $margin; }
+    .mb-#{$suffix}-#{$device}, %mb-#{$suffix}-#{$device} { margin-bottom: $margin; }
+    .ml-#{$suffix}-#{$device}, %ml-#{$suffix}-#{$device} { margin-left:   $margin; }
+}
+
+@mixin atomic-utility-margin-set-device($integer, $fraction, $device) {
+    .m-#{$integer}-#{$fraction}-#{$device},  %m-#{$integer}-#{$fraction}-#{$device} {  margin:        ((($integer * 10) + $fraction) / 10) + em; }
+    .mt-#{$integer}-#{$fraction}-#{$device}, %mt-#{$integer}-#{$fraction}-#{$device} { margin-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .mr-#{$integer}-#{$fraction}-#{$device}, %mr-#{$integer}-#{$fraction}-#{$device} { margin-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .mb-#{$integer}-#{$fraction}-#{$device}, %mb-#{$integer}-#{$fraction}-#{$device} { margin-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .ml-#{$integer}-#{$fraction}-#{$device}, %ml-#{$integer}-#{$fraction}-#{$device} { margin-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
+// mobile
+
+@include atomic-margin-set-device("0", "mobile", 0);
+@include atomic-margin-set-device("a", "mobile", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+    @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
+}
+
+@if map-get($margin-config, should-generate-utility-units) {
+    @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-margin-set-device($integer, $fraction, "mobile");
+            }
+        }
+    }
+}
+
+// tablet
+
+@media (min-width: map-get($breakpoint-config, tablet)) {
+    @include atomic-margin-set-device("0", "tablet", 0);
+    @include atomic-margin-set-device("a", "tablet", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+        @include atomic-margin-set-device($size-suffix, "tablet", $size-value);
+    }
+
+    @if map-get($margin-config, should-generate-utility-units) {
+        @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-margin-set-device($integer, $fraction, "tablet");
+                }
+            }
+        }
+    }
+}
+
+// desktop
+
+@media (min-width: map-get($breakpoint-config, desktop)) {
+    @include atomic-margin-set-device("0", "desktop", 0);
+    @include atomic-margin-set-device("a", "desktop", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+        @include atomic-margin-set-device($size-suffix, "desktop", $size-value);
+    }
+
+    @if map-get($margin-config, should-generate-utility-units) {
+        @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-margin-set-device($integer, $fraction, "desktop");
+                }
+            }
+        }
+    }
+}

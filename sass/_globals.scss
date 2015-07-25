@@ -1,0 +1,55 @@
+/* =GLOBALS - GLOBAL STYLES AND CLASSES */
+
+// don't forget to include a css normalize or reset!
+
+// http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+html {
+    @extend %bxz-bb;
+}
+
+*, *:before, *:after {
+    @extend %bxz-i;
+}
+
+// http://stackoverflow.com/questions/5290777/webkit-css-reset
+* {
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 0;
+}
+
+// http://www.filamentgroup.com/lab/how-we-learned-to-leave-body-font-size-alone.html
+body {
+    @extend %ff-sourcesanspro;
+    @extend %fw-3;
+    @extend %fs-n;
+    @extend %c-tundora;
+    @extend %fz-100;
+}
+
+a {
+    @extend %td-n;
+    @extend %c-robinsegg;
+}
+
+a:hover {
+    @extend %c-robinsegg-lt;
+}
+
+a:active, a:focus {
+    @extend %c-robinsegg-dk;
+}
+
+// https://css-tricks.com/snippets/css/cross-browser-hr-styling/
+// https://css-tricks.com/examples/hrs/
+hr {
+    @extend %w-1-1;
+    @extend %bd-n;
+    @extend %bgc-gallery;
+
+    height: 1px;
+}
+
+// include your global styles per tag here

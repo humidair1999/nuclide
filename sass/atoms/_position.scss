@@ -1,0 +1,15 @@
+/* =POSITION */
+
+.pos-r, %pos-r { position: relative; }
+.pos-s, %pos-s { position: static; }
+.pos-a, %pos-a { position: absolute; }
+.pos-f, %pos-f { position: fixed; }
+
+.t-0, %t-0 { top:    0; }
+.r-0, %r-0 { right:  0; }
+.b-0, %b-0 { bottom: 0; }
+.l-0, %l-0 { left:   0; }
+.t-a, %t-a { top:    auto; }
+.r-a, %r-a { right:  auto; }
+.b-a, %b-a { bottom: auto; }
+.l-a, %l-a { left:   auto; }

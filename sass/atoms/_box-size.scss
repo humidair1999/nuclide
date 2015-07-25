@@ -1,0 +1,17 @@
+/* =BOX-SIZE */
+
+.bxz-i, %bxz-i {
+    -moz-box-sizing: inherit;
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+.bxz-cb, %bxz-cb {
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+.bxz-bb, %bxz-bb {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}

@@ -1,0 +1,120 @@
+/* =PADDING */
+
+// grab portions of global config necessary for this file
+$breakpoint-config: map-get($config, breakpoints);
+$spacing-units-config: map-get($config, spacing-units);
+$padding-config: map-get($spacing-units-config, padding);
+
+// standard padding mixins and includes, independent of device
+
+@mixin atomic-padding-set-standard($suffix, $padding) {
+    .p-#{$suffix},  %p-#{$suffix} {  padding:        $padding; }
+    .pt-#{$suffix}, %pt-#{$suffix} { padding-top:    $padding; }
+    .pr-#{$suffix}, %pr-#{$suffix} { padding-right:  $padding; }
+    .pb-#{$suffix}, %pb-#{$suffix} { padding-bottom: $padding; }
+    .pl-#{$suffix}, %pl-#{$suffix} { padding-left:   $padding; }
+}
+
+@mixin atomic-utility-padding-set-standard($integer, $fraction) {
+    .p-#{$integer}-#{$fraction},  %p-#{$integer}-#{$fraction} {  padding:        ((($integer * 10) + $fraction) / 10) + em; }
+    .pt-#{$integer}-#{$fraction}, %pt-#{$integer}-#{$fraction} { padding-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .pr-#{$integer}-#{$fraction}, %pr-#{$integer}-#{$fraction} { padding-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .pb-#{$integer}-#{$fraction}, %pb-#{$integer}-#{$fraction} { padding-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .pl-#{$integer}-#{$fraction}, %pl-#{$integer}-#{$fraction} { padding-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
+@include atomic-padding-set-standard("0", 0);
+@include atomic-padding-set-standard("a", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+    @include atomic-padding-set-standard($size-suffix, $size-value);
+}
+
+@if map-get($padding-config, should-generate-utility-units) {
+    @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-padding-set-standard($integer, $fraction);
+            }
+        }
+    }
+}
+
+// device-specific padding mixins and includes
+
+@mixin atomic-padding-set-device($suffix, $device, $padding) {
+    .p-#{$suffix}-#{$device},  %p-#{$suffix}-#{$device} {  padding:        $padding; }
+    .pt-#{$suffix}-#{$device}, %pt-#{$suffix}-#{$device} { padding-top:    $padding; }
+    .pr-#{$suffix}-#{$device}, %pr-#{$suffix}-#{$device} { padding-right:  $padding; }
+    .pb-#{$suffix}-#{$device}, %pb-#{$suffix}-#{$device} { padding-bottom: $padding; }
+    .pl-#{$suffix}-#{$device}, %pl-#{$suffix}-#{$device} { padding-left:   $padding; }
+}
+
+@mixin atomic-utility-padding-set-device($integer, $fraction, $device) {
+    .p-#{$integer}-#{$fraction}-#{$device},  %p-#{$integer}-#{$fraction}-#{$device} {  padding:        ((($integer * 10) + $fraction) / 10) + em; }
+    .pt-#{$integer}-#{$fraction}-#{$device}, %pt-#{$integer}-#{$fraction}-#{$device} { padding-top:    ((($integer * 10) + $fraction) / 10) + em; }
+    .pr-#{$integer}-#{$fraction}-#{$device}, %pr-#{$integer}-#{$fraction}-#{$device} { padding-right:  ((($integer * 10) + $fraction) / 10) + em; }
+    .pb-#{$integer}-#{$fraction}-#{$device}, %pb-#{$integer}-#{$fraction}-#{$device} { padding-bottom: ((($integer * 10) + $fraction) / 10) + em; }
+    .pl-#{$integer}-#{$fraction}-#{$device}, %pl-#{$integer}-#{$fraction}-#{$device} { padding-left:   ((($integer * 10) + $fraction) / 10) + em; }
+}
+
+// mobile
+
+@include atomic-padding-set-device("0", "mobile", 0);
+@include atomic-padding-set-device("a", "mobile", auto);
+
+@each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+    @include atomic-padding-set-device($size-suffix, "mobile", $size-value);
+}
+
+@if map-get($padding-config, should-generate-utility-units) {
+    @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
+        @for $fraction from 0 through 9 {
+            @if $integer > 0 or $fraction > 0 {
+                @include atomic-utility-padding-set-device($integer, $fraction, "mobile");
+            }
+        }
+    }
+}
+
+// tablet
+
+@media (min-width: map-get($breakpoint-config, tablet)) {
+    @include atomic-padding-set-device("0", "tablet", 0);
+    @include atomic-padding-set-device("a", "tablet", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+        @include atomic-padding-set-device($size-suffix, "tablet", $size-value);
+    }
+
+    @if map-get($padding-config, should-generate-utility-units) {
+        @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-padding-set-device($integer, $fraction, "tablet");
+                }
+            }
+        }
+    }
+}
+
+// desktop
+
+@media (min-width: map-get($breakpoint-config, desktop)) {
+    @include atomic-padding-set-device("0", "desktop", 0);
+    @include atomic-padding-set-device("a", "desktop", auto);
+
+    @each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
+        @include atomic-padding-set-device($size-suffix, "desktop", $size-value);
+    }
+
+    @if map-get($padding-config, should-generate-utility-units) {
+        @for $integer from map-get($padding-config, utility-unit-start) to map-get($padding-config, utility-unit-end) {
+            @for $fraction from 0 through 9 {
+                @if $integer > 0 or $fraction > 0 {
+                    @include atomic-utility-padding-set-device($integer, $fraction, "desktop");
+                }
+            }
+        }
+    }
+}
