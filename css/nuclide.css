@@ -3205,7 +3205,7 @@ hr {
 .fz-xxxl {
   font-size: 1.5em; }
 
-.fz-4xl, h4 {
+.fz-4xl {
   font-size: 1.625em; }
 
 .fz-5xl {
@@ -3217,7 +3217,7 @@ hr {
 .fz-7xl, h3 {
   font-size: 2.5em; }
 
-.fz-8xl, h2 {
+.fz-8xl {
   font-size: 3em; }
 
 .fz-9xl, h1 {
@@ -3244,7 +3244,7 @@ hr {
 .fz-xl-mobile {
   font-size: 1.25em; }
 
-.fz-xxl-mobile {
+.fz-xxl-mobile, h4 {
   font-size: 1.375em; }
 
 .fz-xxxl-mobile {
@@ -3256,7 +3256,7 @@ hr {
 .fz-5xl-mobile {
   font-size: 1.875em; }
 
-.fz-6xl-mobile {
+.fz-6xl-mobile, h2 {
   font-size: 2.25em; }
 
 .fz-7xl-mobile {
@@ -3296,7 +3296,7 @@ hr {
   .fz-xxxl-tablet {
     font-size: 1.5em; }
 
-  .fz-4xl-tablet {
+  .fz-4xl-tablet, h4 {
     font-size: 1.625em; }
 
   .fz-5xl-tablet {
@@ -3308,7 +3308,7 @@ hr {
   .fz-7xl-tablet {
     font-size: 2.5em; }
 
-  .fz-8xl-tablet {
+  .fz-8xl-tablet, h2 {
     font-size: 3em; }
 
   .fz-9xl-tablet {

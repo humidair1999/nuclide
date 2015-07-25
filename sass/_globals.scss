@@ -63,20 +63,26 @@ p {
 
 h1 {
     @extend %fz-9xl;
+
     @extend %fw-3;
 }
 
 h2 {
-    @extend %fz-8xl;
+    @extend %fz-6xl-mobile;
+    @extend %fz-8xl-tablet;
+
     @extend %fw-3;
 }
 
 h3 {
     @extend %fz-7xl;
+
     @extend %fw-3;
 }
 
 h4 {
-    @extend %fz-4xl;
+    @extend %fz-xxl-mobile;
+    @extend %fz-4xl-tablet;
+
     @extend %fw-3;
 }

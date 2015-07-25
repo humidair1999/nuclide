@@ -63,7 +63,7 @@
                 </p>
 
                 <p class="mb-std debug">
-                    It was designed out of the desire for a CSS framework that's powerful, flexible, maintainable, extensible, and easy to trace and comprehend.
+                    It was designed out of the desire for a CSS framework that's <strong>powerful, flexible, maintainable, extensible, and easy to trace and comprehend</strong>.
                 </p>
 
                 <p class="debug">
@@ -86,7 +86,7 @@
                         <strong>It's simple:</strong> following Atomic conventions makes your HTML descriptive, your styles easily traceable, and cross-referencing specific properties across elements and components a breeze
                     </li>
                     <li class="lh-1-2 debug">
-                        <strong>It's smart:</strong> nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making Molecule creation powerful and intuitive
+                        <strong>It's smart:</strong> nuclide leverages the concepts of composition and inheritance to create combinations of styles that draw from base Atomic classes, making <a href="#molecules">Molecule</a> creation powerful and intuitive
                     </li>
                 </ul>
 
@@ -106,7 +106,7 @@
                     nuclide uses modern Sass features, so make sure you have <strong>Sass 3.3 or greater</strong> installed.
                 </p>
 
-                <ol class="mb-std list-dc debug">
+                <ol class="mb-std pl-lg list-dc debug">
                     <li class="mb-std lh-1-2 debug">
                         <a href="https://github.com/jkymarsh/nuclide/archive/master.zip">Download</a> or <a href="https://github.com/jkymarsh/nuclide">clone</a> nuclide
                     </li>
@@ -118,7 +118,7 @@
                         In the <span class="ff-code">lib</span> directory, tweak the <span class="ff-code">config</span>, <span class="ff-code">webfonts</span>, and other relevant Sass files with your own project's colors, values, fonts, and styles
                     </li>
                     <li class="lh-1-2 debug">
-                        If you're using any Molecules, don't forget to <span class="ff-code">@import</span> them within <span class="ff-code">nuclide.scss</span>
+                        If you're using any <a href="#molecules">Molecules</a>, don't forget to <span class="ff-code">@import</span> them within <span class="ff-code">nuclide.scss</span>
                     </li>
                 </ol>
 
@@ -146,7 +146,7 @@
             <div class="w-9-10-mobile
                 w-1-2-tablet
                 mr-a ml-a debug">
-                <h2 class="mb-xs debug">molecules</h2>
+                <h2 id="molecules" class="mb-xs debug">molecules</h2>
 
                 <p class="mb-std debug">
                     Molecules are combinations of Atomic classes used in conjunction to form more complex components, such as navigation, media elements, styled tables, buttons, form elements, and so on.
@@ -168,12 +168,12 @@
                 mr-a ml-a debug">
                 <h2 class="mb-xs debug">caveats</h2>
 
-                <ul class="list-d debug">
+                <ul class="pl-lg list-d debug">
                     <li class="mb-std lh-1-2 debug">
                         nuclide doesn't include a normalize, reset, grid, etc. Don't forget to include your favorites!
                     </li>
                     <li class="lh-1-2 debug">
-                        Unfortunately, Sass doesn't currently support the use of @extend within media queries, which hampers nuclide's ability to be 100% inheritance-based, particularly for Molecules. <a href="https://github.com/sass/sass/issues/1050">They're working on it</a>.
+                        Unfortunately, Sass doesn't currently support the use of <span class="ff-code">@extend</span> within media queries, which hampers nuclide's ability to be 100% inheritance-based, particularly for Molecules. <a href="https://github.com/sass/sass/issues/1050">They're working on it</a>.
                     </li>
                 </ul>
             </div>
@@ -185,7 +185,7 @@
                 mr-a ml-a debug">
                 <h2 class="mb-xs debug">inspiration and sources</h2>
 
-                <ul class="list-d debug">
+                <ul class="pl-lg list-d debug">
                     <li class="mb-std lh-1-2 debug">
                         Class names and styles from the <a href="http://docs.emmet.io/cheat-sheet/">Emmet toolkit</a>
                     </li>
