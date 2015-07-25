@@ -36,6 +36,3 @@ build/
 .DS_Store
 
 .sass-cache/
-
-css/nuclide.css
-css/nuclide.css.map
