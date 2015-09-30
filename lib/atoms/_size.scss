@@ -36,18 +36,6 @@ $dimension-fractions-config: map-get($config, dimension-fractions);
     .mah-#{$numerator}-#{$denominator}-#{$device}, %mah-#{$numerator}-#{$denominator}-#{$device} { max-height: percentage(floor(100000 * $numerator / $denominator) / 100000); }
 }
 
-// mobile
-
-.w-a-mobile, %w-a-mobile { width: auto; }
-.h-a-mobile, %h-a-mobile { height: auto; }
-
-.maw-n-mobile, %maw-n-mobile { max-width: none; }
-.mah-n-mobile, %mah-n-mobile { max-height: none; }
-
-@each $fraction in $dimension-fractions-config {
-    @include atomic-size-set-device(nth($fraction, 1), nth($fraction, 2), "mobile");
-}
-
 // tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {

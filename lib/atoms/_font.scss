@@ -45,12 +45,6 @@ $font-families-config: map-get($fonts-config, families);
     .fz-#{$suffix}-#{$device}, %fz-#{$suffix}-#{$device} { font-size: $font-size; }
 }
 
-// mobile
-
-@each $size-suffix, $size-value in map-get($fonts-config, sizes) {
-    @include atomic-font-size-set-device($size-suffix, "mobile", $size-value);
-}
-
 // tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
