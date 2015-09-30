@@ -58,25 +58,6 @@ $margin-config: map-get($spacing-units-config, margin);
     .ml-#{$integer}-#{$fraction}-#{$device}, %ml-#{$integer}-#{$fraction}-#{$device} { margin-left:   ((($integer * 10) + $fraction) / 10) + em; }
 }
 
-// mobile
-
-@include atomic-margin-set-device("0", "mobile", 0);
-@include atomic-margin-set-device("a", "mobile", auto);
-
-@each $size-suffix, $size-value in map-get($spacing-units-config, sizes) {
-    @include atomic-margin-set-device($size-suffix, "mobile", $size-value);
-}
-
-@if map-get($margin-config, should-generate-utility-units) {
-    @for $integer from map-get($margin-config, utility-unit-start) to map-get($margin-config, utility-unit-end) {
-        @for $fraction from 0 through 9 {
-            @if $integer > 0 or $fraction > 0 {
-                @include atomic-utility-margin-set-device($integer, $fraction, "mobile");
-            }
-        }
-    }
-}
-
 // tablet
 
 @media (min-width: map-get($breakpoint-config, tablet)) {
