@@ -10,8 +10,8 @@ $config: (
     debug-border-size: 1px,
     // responsive breakpoints
     breakpoints: (
-        tablet:  50em,    // 800px
-        desktop: 96.875em // 1550px
+        tablet:  50em, // 800px @ 16px base font size
+        desktop: 75em  // 1200px @ 16px base font size
     ),
     // colors used throughout project, including text
     //  http://chir.ag/projects/name-that-color/
