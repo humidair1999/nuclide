@@ -24,11 +24,18 @@
 
 // used for debugging layout issues
 .debug {
-    border: 1px solid red;
+    border-width: map-get($config, debug-border-size);
+    border-style: solid;
+    border-color: red;
+}
+
+.debug--molecule {
+    @extend .debug;
+    border-color: blue;
 }
 
 // https://css-tricks.com/snippets/css/clear-fix/
-.cf:after {
+.clearfix:after {
     content: "";
     display: table;
     clear: both;

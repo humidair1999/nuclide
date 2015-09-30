@@ -6,6 +6,8 @@
 //  of useful atomic classes and styles
 
 $config: (
+    // debug borders
+    debug-border-size: 1px,
     // responsive breakpoints
     breakpoints: (
         tablet:  50em,    // 800px
